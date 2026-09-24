@@ -1,0 +1,3 @@
+# Needed only for new certificate production, not python -S verify.py.
+numpy
+scipy

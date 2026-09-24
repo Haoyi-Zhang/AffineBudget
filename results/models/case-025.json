@@ -1,0 +1,434 @@
+{
+  "case_id": "case-025",
+  "certificate": {
+    "guards": [
+      {
+        "guard": {
+          "jobs": [
+            1,
+            8
+          ],
+          "left": "a1",
+          "right": "a8",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            8,
+            15
+          ],
+          "left": "a8",
+          "right": "a15",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            4,
+            11
+          ],
+          "left": "a4",
+          "right": "a11",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            11,
+            18
+          ],
+          "left": "a11",
+          "right": "a18",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            0,
+            2
+          ],
+          "left": "a0",
+          "right": "a2",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            2,
+            7
+          ],
+          "left": "a2",
+          "right": "a7",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            7,
+            9
+          ],
+          "left": "a7",
+          "right": "a9",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            9,
+            14
+          ],
+          "left": "a9",
+          "right": "a14",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            14,
+            16
+          ],
+          "left": "a14",
+          "right": "a16",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            3,
+            5
+          ],
+          "left": "a3",
+          "right": "a5",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            5,
+            10
+          ],
+          "left": "a5",
+          "right": "a10",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            10,
+            12
+          ],
+          "left": "a10",
+          "right": "a12",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            12,
+            17
+          ],
+          "left": "a12",
+          "right": "a17",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            17,
+            19
+          ],
+          "left": "a17",
+          "right": "a19",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      }
+    ],
+    "lower_weights": [
+      "1"
+    ],
+    "orders": {
+      "bank0": [
+        1,
+        8,
+        15
+      ],
+      "bank1": [
+        4,
+        11,
+        18
+      ],
+      "barrier0": [
+        6
+      ],
+      "barrier1": [
+        13
+      ],
+      "barrier2": [
+        20
+      ],
+      "core0": [
+        0,
+        2,
+        7,
+        9,
+        14,
+        16
+      ],
+      "core1": [
+        3,
+        5,
+        10,
+        12,
+        17,
+        19
+      ]
+    },
+    "radii": [
+      "1",
+      "1"
+    ]
+  },
+  "clients": 2,
+  "family": "fork-join",
+  "jobs": 21,
+  "measurement": {
+    "checker_wall_seconds": 0.005153560000053403,
+    "cpu_seconds": 0.019988627000000037,
+    "peak_rss_kib": 120060,
+    "producer_wall_seconds": 0.004117222999980186,
+    "wall_seconds": 0.02130360700004985,
+    "workers": 1
+  },
+  "samples": [
+    {
+      "absolute_error": "1/2",
+      "makespan": "81/2",
+      "point": [
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/4",
+      "makespan": "161/4",
+      "point": [
+        -1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "0",
+      "makespan": "40",
+      "point": [
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/4",
+      "makespan": "161/4",
+      "point": [
+        0,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "0",
+      "makespan": "40",
+      "point": [
+        0,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/4",
+      "makespan": "159/4",
+      "point": [
+        0,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "0",
+      "makespan": "40",
+      "point": [
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/4",
+      "makespan": "159/4",
+      "point": [
+        1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/2",
+      "makespan": "79/2",
+      "point": [
+        1,
+        1
+      ],
+      "same_order": true
+    }
+  ],
+  "seed": 1,
+  "verdict": {
+    "certified": true,
+    "downward_bound": "1/2",
+    "global_bound": "1/2",
+    "guard_bounds": [
+      "-23/2",
+      "-23/2",
+      "-11",
+      "-12",
+      "-25/4",
+      "-19/4",
+      "-25/4",
+      "-19/4",
+      "-25/4",
+      "-33/4",
+      "-11/4",
+      "-33/4",
+      "-15/4",
+      "-33/4"
+    ],
+    "interval_bounds": [
+      "-23/2",
+      "-23/2",
+      "-11",
+      "-12",
+      "-25/4",
+      "-19/4",
+      "-21/4",
+      "-19/4",
+      "-25/4",
+      "-33/4",
+      "-7/4",
+      "-33/4",
+      "-15/4",
+      "-33/4"
+    ],
+    "interval_order_certified": true,
+    "nominal_makespan": "40",
+    "order_certified": true,
+    "single_bounds": [
+      "-23/2",
+      "-23/2",
+      "-11",
+      "-12",
+      "-25/4",
+      "-19/4",
+      "-25/4",
+      "-19/4",
+      "-25/4",
+      "-33/4",
+      "-11/4",
+      "-33/4",
+      "-15/4",
+      "-33/4"
+    ],
+    "single_order_certified": true,
+    "stats": {
+      "edges": 99,
+      "max_frontier": 1,
+      "total_forms": 44,
+      "vertices": 44
+    },
+    "upward_bound": "1/2"
+  }
+}

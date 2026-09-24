@@ -1,0 +1,58 @@
+{
+  "recorded_initial_batch_cpu_seconds": 19.70738764,
+  "pilot_cpu_seconds": 0.415981116,
+  "reduction_cpu_seconds": 0.026794938999999962,
+  "latest_direct_verification": {
+    "tests": 31,
+    "failures": 0,
+    "errors": 0,
+    "cpu_seconds": 5.486064721,
+    "wall_seconds": 5.487953342999845,
+    "peak_rss_kib": 15916,
+    "workers": 1,
+    "scope": "finite exact tests; not mechanized general proofs"
+  },
+  "latest_clean_reproduction": {
+    "steps": 25,
+    "child_failures": 0,
+    "workers": 1,
+    "wall_seconds": 33.65057463500057,
+    "aggregate_cpu_seconds": 33.637795165,
+    "peak_child_rss_kib": 122668,
+    "reconciliation": {
+      "scientific_fields_equal": true,
+      "counts": {
+        "inputs": 54,
+        "models": 48,
+        "oracles": 2089,
+        "allocation": 4,
+        "structure": 6,
+        "reduction_formulas": 512,
+        "changed_order_constant_makespan_control": 1
+      },
+      "tolerance": 0,
+      "not_compared": "solver weight vectors and measurement times; fresh inputs compared exactly and fresh witnesses checked against them"
+    },
+    "verification": {
+      "tests": 31,
+      "failures": 0,
+      "errors": 0,
+      "cpu_seconds": 5.575634459000001,
+      "wall_seconds": 5.581304317000104,
+      "peak_rss_kib": 92720,
+      "workers": 1,
+      "scope": "finite exact tests; not mechanized general proofs"
+    }
+  },
+  "interrupted_orchestration_calls": {
+    "count": 2,
+    "description": "Two attempts to run all four resumable phases inside one outer tool invocation were terminated by that invocation budget during the final phase. Completed phase receipts were preserved; the final phase was rerun separately and completed. No scientific child failure is counted as a completed reproduction.",
+    "counted_as_completed_reproduction": false
+  },
+  "accounting_scope": "Measured receipts only. Early development work was not exhaustively instrumented, so no exact all-process CPU total is claimed.",
+  "experimental_workers": 1,
+  "numerical_threads": 1,
+  "campaign_cpu_ceiling_seconds": 28800,
+  "reserved_repair_reproduction_budget_seconds": 7200,
+  "input_immutability_check": "All 54 source-tree input files were byte-identical before and after the final four-phase reproduction."
+}

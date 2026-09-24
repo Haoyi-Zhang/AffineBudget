@@ -1,0 +1,1748 @@
+{
+  "case_id": "case-021",
+  "certificate": {
+    "guards": [
+      {
+        "guard": {
+          "jobs": [
+            1,
+            7
+          ],
+          "left": "a1",
+          "right": "a7",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            7,
+            13
+          ],
+          "left": "a7",
+          "right": "a13",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            13,
+            19
+          ],
+          "left": "a13",
+          "right": "a19",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            19,
+            25
+          ],
+          "left": "a19",
+          "right": "a25",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            25,
+            31
+          ],
+          "left": "a25",
+          "right": "a31",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            31,
+            37
+          ],
+          "left": "a31",
+          "right": "a37",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            37,
+            49
+          ],
+          "left": "a37",
+          "right": "a49",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            49,
+            43
+          ],
+          "left": "a49",
+          "right": "a43",
+          "strict": true
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            43,
+            55
+          ],
+          "left": "a43",
+          "right": "a55",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            55,
+            61
+          ],
+          "left": "a55",
+          "right": "a61",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            61,
+            67
+          ],
+          "left": "a61",
+          "right": "a67",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            67,
+            73
+          ],
+          "left": "a67",
+          "right": "a73",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            73,
+            79
+          ],
+          "left": "a73",
+          "right": "a79",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            79,
+            85
+          ],
+          "left": "a79",
+          "right": "a85",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            85,
+            91
+          ],
+          "left": "a85",
+          "right": "a91",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            4,
+            10
+          ],
+          "left": "a4",
+          "right": "a10",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            10,
+            16
+          ],
+          "left": "a10",
+          "right": "a16",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            16,
+            22
+          ],
+          "left": "a16",
+          "right": "a22",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            22,
+            28
+          ],
+          "left": "a22",
+          "right": "a28",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            28,
+            34
+          ],
+          "left": "a28",
+          "right": "a34",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            34,
+            40
+          ],
+          "left": "a34",
+          "right": "a40",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            40,
+            46
+          ],
+          "left": "a40",
+          "right": "a46",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            46,
+            52
+          ],
+          "left": "a46",
+          "right": "a52",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            52,
+            58
+          ],
+          "left": "a52",
+          "right": "a58",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            58,
+            64
+          ],
+          "left": "a58",
+          "right": "a64",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            64,
+            70
+          ],
+          "left": "a64",
+          "right": "a70",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            70,
+            76
+          ],
+          "left": "a70",
+          "right": "a76",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            76,
+            82
+          ],
+          "left": "a76",
+          "right": "a82",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            82,
+            88
+          ],
+          "left": "a82",
+          "right": "a88",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            88,
+            94
+          ],
+          "left": "a88",
+          "right": "a94",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            0,
+            2
+          ],
+          "left": "a0",
+          "right": "a2",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            2,
+            48
+          ],
+          "left": "a2",
+          "right": "a48",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            48,
+            50
+          ],
+          "left": "a48",
+          "right": "a50",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            3,
+            5
+          ],
+          "left": "a3",
+          "right": "a5",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            5,
+            51
+          ],
+          "left": "a5",
+          "right": "a51",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            51,
+            53
+          ],
+          "left": "a51",
+          "right": "a53",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            30,
+            32
+          ],
+          "left": "a30",
+          "right": "a32",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            32,
+            78
+          ],
+          "left": "a32",
+          "right": "a78",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            78,
+            80
+          ],
+          "left": "a78",
+          "right": "a80",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            33,
+            35
+          ],
+          "left": "a33",
+          "right": "a35",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            35,
+            81
+          ],
+          "left": "a35",
+          "right": "a81",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            81,
+            83
+          ],
+          "left": "a81",
+          "right": "a83",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            36,
+            38
+          ],
+          "left": "a36",
+          "right": "a38",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            38,
+            84
+          ],
+          "left": "a38",
+          "right": "a84",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            84,
+            86
+          ],
+          "left": "a84",
+          "right": "a86",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            39,
+            41
+          ],
+          "left": "a39",
+          "right": "a41",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            41,
+            87
+          ],
+          "left": "a41",
+          "right": "a87",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            87,
+            89
+          ],
+          "left": "a87",
+          "right": "a89",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            42,
+            44
+          ],
+          "left": "a42",
+          "right": "a44",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            44,
+            90
+          ],
+          "left": "a44",
+          "right": "a90",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            90,
+            92
+          ],
+          "left": "a90",
+          "right": "a92",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            45,
+            47
+          ],
+          "left": "a45",
+          "right": "a47",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            47,
+            93
+          ],
+          "left": "a47",
+          "right": "a93",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            93,
+            95
+          ],
+          "left": "a93",
+          "right": "a95",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            6,
+            8
+          ],
+          "left": "a6",
+          "right": "a8",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            8,
+            54
+          ],
+          "left": "a8",
+          "right": "a54",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            54,
+            56
+          ],
+          "left": "a54",
+          "right": "a56",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            9,
+            11
+          ],
+          "left": "a9",
+          "right": "a11",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            11,
+            57
+          ],
+          "left": "a11",
+          "right": "a57",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            57,
+            59
+          ],
+          "left": "a57",
+          "right": "a59",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            12,
+            14
+          ],
+          "left": "a12",
+          "right": "a14",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            14,
+            60
+          ],
+          "left": "a14",
+          "right": "a60",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            60,
+            62
+          ],
+          "left": "a60",
+          "right": "a62",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            15,
+            17
+          ],
+          "left": "a15",
+          "right": "a17",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            17,
+            63
+          ],
+          "left": "a17",
+          "right": "a63",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            63,
+            65
+          ],
+          "left": "a63",
+          "right": "a65",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            18,
+            20
+          ],
+          "left": "a18",
+          "right": "a20",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            20,
+            66
+          ],
+          "left": "a20",
+          "right": "a66",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            66,
+            68
+          ],
+          "left": "a66",
+          "right": "a68",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            21,
+            23
+          ],
+          "left": "a21",
+          "right": "a23",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            23,
+            69
+          ],
+          "left": "a23",
+          "right": "a69",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            69,
+            71
+          ],
+          "left": "a69",
+          "right": "a71",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            24,
+            26
+          ],
+          "left": "a24",
+          "right": "a26",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            26,
+            72
+          ],
+          "left": "a26",
+          "right": "a72",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            72,
+            74
+          ],
+          "left": "a72",
+          "right": "a74",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            27,
+            29
+          ],
+          "left": "a27",
+          "right": "a29",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            29,
+            75
+          ],
+          "left": "a29",
+          "right": "a75",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            75,
+            77
+          ],
+          "left": "a75",
+          "right": "a77",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      }
+    ],
+    "lower_weights": [
+      "1/2",
+      "1/2"
+    ],
+    "orders": {
+      "bank0": [
+        1,
+        7,
+        13,
+        19,
+        25,
+        31,
+        37,
+        49,
+        43,
+        55,
+        61,
+        67,
+        73,
+        79,
+        85,
+        91
+      ],
+      "bank1": [
+        4,
+        10,
+        16,
+        22,
+        28,
+        34,
+        40,
+        46,
+        52,
+        58,
+        64,
+        70,
+        76,
+        82,
+        88,
+        94
+      ],
+      "core0": [
+        0,
+        2,
+        48,
+        50
+      ],
+      "core1": [
+        3,
+        5,
+        51,
+        53
+      ],
+      "core10": [
+        30,
+        32,
+        78,
+        80
+      ],
+      "core11": [
+        33,
+        35,
+        81,
+        83
+      ],
+      "core12": [
+        36,
+        38,
+        84,
+        86
+      ],
+      "core13": [
+        39,
+        41,
+        87,
+        89
+      ],
+      "core14": [
+        42,
+        44,
+        90,
+        92
+      ],
+      "core15": [
+        45,
+        47,
+        93,
+        95
+      ],
+      "core2": [
+        6,
+        8,
+        54,
+        56
+      ],
+      "core3": [
+        9,
+        11,
+        57,
+        59
+      ],
+      "core4": [
+        12,
+        14,
+        60,
+        62
+      ],
+      "core5": [
+        15,
+        17,
+        63,
+        65
+      ],
+      "core6": [
+        18,
+        20,
+        66,
+        68
+      ],
+      "core7": [
+        21,
+        23,
+        69,
+        71
+      ],
+      "core8": [
+        24,
+        26,
+        72,
+        74
+      ],
+      "core9": [
+        27,
+        29,
+        75,
+        77
+      ]
+    },
+    "radii": [
+      "1",
+      "1"
+    ]
+  },
+  "clients": 16,
+  "family": "staggered-bank",
+  "jobs": 96,
+  "measurement": {
+    "checker_wall_seconds": 0.02521127800002887,
+    "cpu_seconds": 0.12427522099999999,
+    "peak_rss_kib": 121900,
+    "producer_wall_seconds": 0.0270645840000725,
+    "wall_seconds": 0.1274902170000587,
+    "workers": 1
+  },
+  "samples": [
+    {
+      "absolute_error": "1/2",
+      "makespan": "113/2",
+      "point": [
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "3/4",
+      "makespan": "227/4",
+      "point": [
+        -1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1",
+      "makespan": "57",
+      "point": [
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/4",
+      "makespan": "223/4",
+      "point": [
+        0,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "0",
+      "makespan": "56",
+      "point": [
+        0,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/4",
+      "makespan": "225/4",
+      "point": [
+        0,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "3/4",
+      "makespan": "221/4",
+      "point": [
+        1,
+        -1
+      ],
+      "same_order": false
+    },
+    {
+      "absolute_error": "3/4",
+      "makespan": "221/4",
+      "point": [
+        1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/2",
+      "makespan": "111/2",
+      "point": [
+        1,
+        1
+      ],
+      "same_order": true
+    }
+  ],
+  "seed": 0,
+  "verdict": {
+    "certified": false,
+    "downward_bound": "7/8",
+    "global_bound": "1",
+    "guard_bounds": [
+      "-3",
+      "0",
+      "0",
+      "-3",
+      "0",
+      "0",
+      "-1",
+      "0",
+      "-5",
+      "-7/4",
+      "-3/4",
+      "-23/4",
+      "-7/4",
+      "-3/4",
+      "-8",
+      "0",
+      "-3",
+      "0",
+      "0",
+      "-3",
+      "0",
+      "0",
+      "-3",
+      "-3/4",
+      "-23/4",
+      "-7/4",
+      "-3/4",
+      "-23/4",
+      "-7/4",
+      "-3/4",
+      "-21/4",
+      "-7/4",
+      "-71/4",
+      "-29/4",
+      "-7/4",
+      "-77/4",
+      "-65/4",
+      "-7/4",
+      "-83/4",
+      "-16",
+      "-7/4",
+      "-79/4",
+      "-17",
+      "-7/4",
+      "-81/4",
+      "-71/4",
+      "-7/4",
+      "-77/4",
+      "-22",
+      "-7/4",
+      "-18",
+      "-37/2",
+      "-7/4",
+      "-75/4",
+      "-37/4",
+      "-7/4",
+      "-83/4",
+      "-8",
+      "-7/4",
+      "-79/4",
+      "-11",
+      "-7/4",
+      "-85/4",
+      "-43/4",
+      "-7/4",
+      "-81/4",
+      "-47/4",
+      "-7/4",
+      "-87/4",
+      "-25/2",
+      "-7/4",
+      "-83/4",
+      "-29/2",
+      "-7/4",
+      "-85/4",
+      "-53/4",
+      "-7/4",
+      "-81/4"
+    ],
+    "interval_bounds": [
+      "-2",
+      "1",
+      "1",
+      "-2",
+      "1",
+      "1",
+      "-1",
+      "0",
+      "-5",
+      "-3/4",
+      "3/4",
+      "-15/4",
+      "3/4",
+      "9/4",
+      "-9/2",
+      "1",
+      "-2",
+      "1",
+      "1",
+      "-2",
+      "1",
+      "1",
+      "-3",
+      "1/4",
+      "-17/4",
+      "1/4",
+      "7/4",
+      "-11/4",
+      "7/4",
+      "13/4",
+      "-21/4",
+      "-3/4",
+      "-67/4",
+      "-29/4",
+      "-3/4",
+      "-73/4",
+      "-65/4",
+      "5/4",
+      "-79/4",
+      "-16",
+      "7/4",
+      "-73/4",
+      "-17",
+      "7/4",
+      "-79/4",
+      "-71/4",
+      "9/4",
+      "-73/4",
+      "-22",
+      "7/4",
+      "-35/2",
+      "-37/2",
+      "11/4",
+      "-73/4",
+      "-37/4",
+      "-3/4",
+      "-79/4",
+      "-8",
+      "-1/4",
+      "-73/4",
+      "-11",
+      "-1/4",
+      "-79/4",
+      "-43/4",
+      "1/4",
+      "-73/4",
+      "-47/4",
+      "1/4",
+      "-79/4",
+      "-25/2",
+      "3/4",
+      "-73/4",
+      "-29/2",
+      "3/4",
+      "-79/4",
+      "-53/4",
+      "5/4",
+      "-73/4"
+    ],
+    "interval_order_certified": false,
+    "nominal_makespan": "56",
+    "order_certified": false,
+    "single_bounds": [
+      "-3",
+      "0",
+      "0",
+      "-3",
+      "0",
+      "0",
+      "-1",
+      "0",
+      "-5",
+      "-7/4",
+      "-3/4",
+      "-23/4",
+      "-7/4",
+      "-3/4",
+      "-8",
+      "0",
+      "-3",
+      "0",
+      "0",
+      "-3",
+      "0",
+      "0",
+      "-3",
+      "-3/4",
+      "-23/4",
+      "-7/4",
+      "-3/4",
+      "-23/4",
+      "-7/4",
+      "-3/4",
+      "-21/4",
+      "-7/4",
+      "-71/4",
+      "-29/4",
+      "-7/4",
+      "-77/4",
+      "-65/4",
+      "-7/4",
+      "-83/4",
+      "-16",
+      "-7/4",
+      "-79/4",
+      "-17",
+      "-7/4",
+      "-81/4",
+      "-71/4",
+      "-7/4",
+      "-77/4",
+      "-22",
+      "-7/4",
+      "-18",
+      "-37/2",
+      "-7/4",
+      "-75/4",
+      "-37/4",
+      "-7/4",
+      "-83/4",
+      "-8",
+      "-7/4",
+      "-79/4",
+      "-11",
+      "-7/4",
+      "-85/4",
+      "-43/4",
+      "-7/4",
+      "-81/4",
+      "-47/4",
+      "-7/4",
+      "-87/4",
+      "-25/2",
+      "-7/4",
+      "-83/4",
+      "-29/2",
+      "-7/4",
+      "-85/4",
+      "-53/4",
+      "-7/4",
+      "-81/4"
+    ],
+    "single_order_certified": false,
+    "stats": {
+      "edges": 446,
+      "max_frontier": 2,
+      "total_forms": 195,
+      "vertices": 194
+    },
+    "upward_bound": "1"
+  }
+}

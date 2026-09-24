@@ -1,0 +1,135 @@
+{
+  "date": "2026-09-17",
+  "scope": "Clean candidate-archive extraction, finite exact checks, bibliography audit, figure-data export, manuscript rebuild, text/render reconciliation, template comparison, and package-policy scan; not independent peer review or mechanized proof",
+  "project_payload_root": "error-budgeted-parallel-simulation-certificates-manycore",
+  "project_root_entries": [
+    "CURRENT-STATE.md",
+    "artifact",
+    "paper",
+    "research-plan.md"
+  ],
+  "standalone_payload_root": "error-budgeted-parallel-simulation",
+  "project_clean_extraction_verification": {
+    "tests": 31,
+    "failures": 0,
+    "errors": 0,
+    "cpu_seconds": 5.569222607,
+    "wall_seconds": 5.572665449999931,
+    "peak_rss_kib": 16328,
+    "workers": 1,
+    "scope": "finite exact tests; not mechanized general proofs"
+  },
+  "standalone_clean_extraction_verification": {
+    "tests": 31,
+    "failures": 0,
+    "errors": 0,
+    "cpu_seconds": 5.429801271,
+    "wall_seconds": 5.433760258999882,
+    "peak_rss_kib": 16200,
+    "workers": 1,
+    "scope": "finite exact tests; not mechanized general proofs"
+  },
+  "clean_reproduction": {
+    "phases": 4,
+    "steps": 25,
+    "child_failures": 0,
+    "workers": 1,
+    "aggregate_cpu_seconds": 33.637795165,
+    "peak_child_rss_kib": 122668,
+    "scientific_fields_equal": true,
+    "tolerance": 0,
+    "counts": {
+      "inputs": 54,
+      "models": 48,
+      "oracles": 2089,
+      "allocation": 4,
+      "structure": 6,
+      "reduction_formulas": 512,
+      "changed_order_constant_makespan_control": 1
+    },
+    "source_inputs_unchanged": true
+  },
+  "bibliography_audit": {
+    "calibration_groups": {
+      "adjacent": 5,
+      "influential": 5,
+      "same venue": 12
+    },
+    "calibration_rows": 22,
+    "cited_references": 65,
+    "doi_records": 59,
+    "failures": [],
+    "live_manuscript_checked": true,
+    "official_non_doi_records": 6,
+    "references": 65,
+    "status": "pass",
+    "unused_references": []
+  },
+  "paper": {
+    "compilation_exit": 0,
+    "content_pages": 20,
+    "reference_pages": 4,
+    "total_pages": 24,
+    "main_sections": 8,
+    "figures": 4,
+    "tables": 5,
+    "bibliography_entries": 65,
+    "unique_cited_entries": 65,
+    "doi_records": 59,
+    "official_non_doi_records": 6,
+    "uncited_bibliography_keys": [],
+    "missing_bibliography_keys": [],
+    "undefined_references_or_citations": 0,
+    "overfull_warnings": 0,
+    "underfull_output_page_warnings": 3,
+    "rebuilt_text_equal_pages": 24,
+    "rebuilt_pixel_equal_pages": 24,
+    "pixel_comparison_dpi": 108,
+    "visually_inspected_pages_pdfium_200_dpi": 24,
+    "poppler_rebuild_comparison_pages": 24,
+    "font_records": 18,
+    "all_fonts_embedded_subset_unicode": true,
+    "anonymous_pdf_author_metadata": true,
+    "page_size_points": [
+      486,
+      720
+    ]
+  },
+  "template_assets": {
+    "acmart_cls_byte_equal_to_supplied_template": true,
+    "acm_reference_format_bst_byte_equal_to_supplied_template": true,
+    "class_version": "2.20 (2026-08-16)",
+    "publisher_assets_modified": false
+  },
+  "code_and_data_checks": {
+    "python_compileall": true,
+    "shell_syntax": true,
+    "json_files_parsed": 2224,
+    "csv_rectangularity_checked": true,
+    "figure_data_exports_equal": true,
+    "todo_or_project_placeholder_hits": 0
+  },
+  "literature_calibration": {
+    "unique_full_papers": 22,
+    "same_venue": 12,
+    "influential": 5,
+    "adjacent": 5
+  },
+  "packaging_policy": {
+    "single_project_root": true,
+    "single_standalone_root": true,
+    "standalone_repository_has_no_paper_directory": true,
+    "no_nested_archives": true,
+    "no_font_files": true,
+    "no_prompt_or_chat_history": true,
+    "no_vcs_history": true,
+    "no_checksum_or_commit_manifest": true,
+    "no_invented_repository_url": true,
+    "no_symlinks": true,
+    "project_archive_mib": 1.8,
+    "standalone_archive_mib": 0.94
+  },
+  "scientific_completion_gate": "PASS for the declared finite affine-timed FCFS model and internal reproducibility scope; no unresolved scientific or artifact P0/P1 found in the final self-audit",
+  "external_submission_readiness": "HOLD pending live TACO portal-specific class/supplement/link verification, human authorship accountability, originality review, and truthful required AI-use disclosure",
+  "review_boundary": "Internal artifact-only self-audit; not acceptance, independent peer review, hardware validation, production-simulator accuracy, or speedup evidence"
+}

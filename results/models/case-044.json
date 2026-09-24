@@ -1,0 +1,1134 @@
+{
+  "case_id": "case-044",
+  "certificate": {
+    "guards": [
+      {
+        "guard": {
+          "jobs": [
+            1,
+            7
+          ],
+          "left": "a1",
+          "right": "a7",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            7,
+            13
+          ],
+          "left": "a7",
+          "right": "a13",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            13,
+            19
+          ],
+          "left": "a13",
+          "right": "a19",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            19,
+            28
+          ],
+          "left": "a19",
+          "right": "a28",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            28,
+            34
+          ],
+          "left": "a28",
+          "right": "a34",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            34,
+            40
+          ],
+          "left": "a34",
+          "right": "a40",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ],
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            40,
+            46
+          ],
+          "left": "a40",
+          "right": "a46",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            4,
+            10
+          ],
+          "left": "a4",
+          "right": "a10",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            10,
+            16
+          ],
+          "left": "a10",
+          "right": "a16",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            16,
+            25
+          ],
+          "left": "a16",
+          "right": "a25",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            25,
+            22
+          ],
+          "left": "a25",
+          "right": "a22",
+          "strict": true
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            22,
+            31
+          ],
+          "left": "a22",
+          "right": "a31",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            31,
+            37
+          ],
+          "left": "a31",
+          "right": "a37",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            37,
+            43
+          ],
+          "left": "a37",
+          "right": "a43",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            0,
+            2
+          ],
+          "left": "a0",
+          "right": "a2",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            2,
+            24
+          ],
+          "left": "a2",
+          "right": "a24",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            24,
+            26
+          ],
+          "left": "a24",
+          "right": "a26",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            3,
+            5
+          ],
+          "left": "a3",
+          "right": "a5",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            5,
+            27
+          ],
+          "left": "a5",
+          "right": "a27",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            27,
+            29
+          ],
+          "left": "a27",
+          "right": "a29",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            6,
+            8
+          ],
+          "left": "a6",
+          "right": "a8",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            8,
+            30
+          ],
+          "left": "a8",
+          "right": "a30",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            30,
+            32
+          ],
+          "left": "a30",
+          "right": "a32",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            9,
+            11
+          ],
+          "left": "a9",
+          "right": "a11",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            11,
+            33
+          ],
+          "left": "a11",
+          "right": "a33",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "1",
+            "0"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            33,
+            35
+          ],
+          "left": "a33",
+          "right": "a35",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "1",
+            "0",
+            "0"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            12,
+            14
+          ],
+          "left": "a12",
+          "right": "a14",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            14,
+            36
+          ],
+          "left": "a14",
+          "right": "a36",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            36,
+            38
+          ],
+          "left": "a36",
+          "right": "a38",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            15,
+            17
+          ],
+          "left": "a15",
+          "right": "a17",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            17,
+            39
+          ],
+          "left": "a17",
+          "right": "a39",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            39,
+            41
+          ],
+          "left": "a39",
+          "right": "a41",
+          "strict": false
+        },
+        "weights": [
+          [
+            "0",
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            18,
+            20
+          ],
+          "left": "a18",
+          "right": "a20",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            20,
+            42
+          ],
+          "left": "a20",
+          "right": "a42",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            42,
+            44
+          ],
+          "left": "a42",
+          "right": "a44",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            21,
+            23
+          ],
+          "left": "a21",
+          "right": "a23",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            23,
+            45
+          ],
+          "left": "a23",
+          "right": "a45",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            45,
+            47
+          ],
+          "left": "a45",
+          "right": "a47",
+          "strict": false
+        },
+        "weights": [
+          [
+            "0",
+            "1"
+          ]
+        ]
+      }
+    ],
+    "lower_weights": [
+      "0",
+      "1",
+      "0"
+    ],
+    "orders": {
+      "channel0": [
+        1,
+        7,
+        13,
+        19,
+        28,
+        34,
+        40,
+        46
+      ],
+      "channel1": [
+        4,
+        10,
+        16,
+        25,
+        22,
+        31,
+        37,
+        43
+      ],
+      "core0": [
+        0,
+        2,
+        24,
+        26
+      ],
+      "core1": [
+        3,
+        5,
+        27,
+        29
+      ],
+      "core2": [
+        6,
+        8,
+        30,
+        32
+      ],
+      "core3": [
+        9,
+        11,
+        33,
+        35
+      ],
+      "core4": [
+        12,
+        14,
+        36,
+        38
+      ],
+      "core5": [
+        15,
+        17,
+        39,
+        41
+      ],
+      "core6": [
+        18,
+        20,
+        42,
+        44
+      ],
+      "core7": [
+        21,
+        23,
+        45,
+        47
+      ]
+    },
+    "radii": [
+      "1",
+      "1",
+      "1"
+    ]
+  },
+  "clients": 8,
+  "family": "pipeline",
+  "jobs": 48,
+  "measurement": {
+    "checker_wall_seconds": 0.014893620999941959,
+    "cpu_seconds": 0.155994046,
+    "peak_rss_kib": 122180,
+    "producer_wall_seconds": 0.02782654800000728,
+    "wall_seconds": 0.15726683399998365,
+    "workers": 1
+  },
+  "samples": [
+    {
+      "absolute_error": "3/2",
+      "makespan": "33",
+      "point": [
+        -1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/2",
+      "makespan": "34",
+      "point": [
+        -1,
+        -1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1",
+      "makespan": "71/2",
+      "point": [
+        -1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1",
+      "makespan": "67/2",
+      "point": [
+        -1,
+        0,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "0",
+      "makespan": "69/2",
+      "point": [
+        -1,
+        0,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "3/2",
+      "makespan": "36",
+      "point": [
+        -1,
+        0,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/2",
+      "makespan": "34",
+      "point": [
+        -1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "5/4",
+      "makespan": "143/4",
+      "point": [
+        -1,
+        1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "3",
+      "makespan": "75/2",
+      "point": [
+        -1,
+        1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "3/2",
+      "makespan": "33",
+      "point": [
+        0,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/2",
+      "makespan": "34",
+      "point": [
+        0,
+        -1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "3/4",
+      "makespan": "141/4",
+      "point": [
+        0,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1",
+      "makespan": "67/2",
+      "point": [
+        0,
+        0,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "0",
+      "makespan": "69/2",
+      "point": [
+        0,
+        0,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "7/4",
+      "makespan": "145/4",
+      "point": [
+        0,
+        0,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/4",
+      "makespan": "137/4",
+      "point": [
+        0,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "3/2",
+      "makespan": "36",
+      "point": [
+        0,
+        1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "13/4",
+      "makespan": "151/4",
+      "point": [
+        0,
+        1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "3/2",
+      "makespan": "33",
+      "point": [
+        1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/2",
+      "makespan": "34",
+      "point": [
+        1,
+        -1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/2",
+      "makespan": "35",
+      "point": [
+        1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1",
+      "makespan": "67/2",
+      "point": [
+        1,
+        0,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/4",
+      "makespan": "139/4",
+      "point": [
+        1,
+        0,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "2",
+      "makespan": "73/2",
+      "point": [
+        1,
+        0,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "0",
+      "makespan": "69/2",
+      "point": [
+        1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "7/4",
+      "makespan": "145/4",
+      "point": [
+        1,
+        1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "7/2",
+      "makespan": "38",
+      "point": [
+        1,
+        1,
+        1
+      ],
+      "same_order": true
+    }
+  ],
+  "seed": 2,
+  "verdict": {
+    "certified": true,
+    "downward_bound": "3/2",
+    "global_bound": "7/2",
+    "guard_bounds": [
+      "-5",
+      "-2",
+      "-2",
+      "-3/2",
+      "-3",
+      "-11/2",
+      "-4",
+      "-2",
+      "-5",
+      "0",
+      "-1",
+      "-4",
+      "-1/2",
+      "-5/2",
+      "-7",
+      "-3/2",
+      "-17/2",
+      "-6",
+      "-3/2",
+      "-7",
+      "-8",
+      "-3/2",
+      "-17/2",
+      "-7",
+      "-3/2",
+      "-7",
+      "-13/2",
+      "-3/2",
+      "-8",
+      "-8",
+      "-3/2",
+      "-8",
+      "-7",
+      "-3/2",
+      "-15/2",
+      "-10",
+      "-3/2",
+      "-6"
+    ],
+    "interval_bounds": [
+      "-4",
+      "-1",
+      "-1",
+      "-1",
+      "-1",
+      "-7/2",
+      "-2",
+      "-1",
+      "-4",
+      "1/2",
+      "-1/2",
+      "-7/2",
+      "1/2",
+      "-1/2",
+      "-7",
+      "-1/2",
+      "-17/2",
+      "-6",
+      "0",
+      "-6",
+      "-8",
+      "-1/2",
+      "-17/2",
+      "-7",
+      "1/2",
+      "-11/2",
+      "-13/2",
+      "1/2",
+      "-15/2",
+      "-8",
+      "0",
+      "-7",
+      "-7",
+      "3/2",
+      "-13/2",
+      "-10",
+      "2",
+      "-3"
+    ],
+    "interval_order_certified": false,
+    "nominal_makespan": "69/2",
+    "order_certified": true,
+    "single_bounds": [
+      "-5",
+      "-2",
+      "-2",
+      "-3/2",
+      "-3",
+      "-11/2",
+      "-4",
+      "-2",
+      "-5",
+      "0",
+      "-1",
+      "-4",
+      "-1/2",
+      "-5/2",
+      "-7",
+      "-3/2",
+      "-17/2",
+      "-6",
+      "-3/2",
+      "-7",
+      "-8",
+      "-3/2",
+      "-17/2",
+      "-7",
+      "-3/2",
+      "-7",
+      "-13/2",
+      "-3/2",
+      "-8",
+      "-8",
+      "-3/2",
+      "-8",
+      "-7",
+      "-3/2",
+      "-15/2",
+      "-10",
+      "-3/2",
+      "-6"
+    ],
+    "single_order_certified": true,
+    "stats": {
+      "edges": 222,
+      "max_frontier": 3,
+      "total_forms": 118,
+      "vertices": 98
+    },
+    "upward_bound": "7/2"
+  }
+}

@@ -1,0 +1,402 @@
+{
+  "case_id": "case-010",
+  "certificate": {
+    "guards": [
+      {
+        "guard": {
+          "jobs": [
+            4,
+            5
+          ],
+          "left": "a4",
+          "right": "a5",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            9,
+            10
+          ],
+          "left": "a9",
+          "right": "a10",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            14,
+            15
+          ],
+          "left": "a14",
+          "right": "a15",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            19,
+            20
+          ],
+          "left": "a19",
+          "right": "a20",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            24,
+            25
+          ],
+          "left": "a24",
+          "right": "a25",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            29,
+            30
+          ],
+          "left": "a29",
+          "right": "a30",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            34,
+            35
+          ],
+          "left": "a34",
+          "right": "a35",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            39,
+            40
+          ],
+          "left": "a39",
+          "right": "a40",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      }
+    ],
+    "lower_weights": [
+      "0",
+      "0",
+      "1"
+    ],
+    "orders": {
+      "bank0": [
+        4,
+        5
+      ],
+      "bank1": [
+        9,
+        10
+      ],
+      "bank2": [
+        14,
+        15
+      ],
+      "bank3": [
+        19,
+        20
+      ],
+      "bank4": [
+        24,
+        25
+      ],
+      "bank5": [
+        29,
+        30
+      ],
+      "bank6": [
+        34,
+        35
+      ],
+      "bank7": [
+        39,
+        40
+      ],
+      "prefix": [
+        0
+      ],
+      "prepA0": [
+        1
+      ],
+      "prepA1": [
+        6
+      ],
+      "prepA2": [
+        11
+      ],
+      "prepA3": [
+        16
+      ],
+      "prepA4": [
+        21
+      ],
+      "prepA5": [
+        26
+      ],
+      "prepA6": [
+        31
+      ],
+      "prepA7": [
+        36
+      ],
+      "prepB0": [
+        2
+      ],
+      "prepB1": [
+        7
+      ],
+      "prepB2": [
+        12
+      ],
+      "prepB3": [
+        17
+      ],
+      "prepB4": [
+        22
+      ],
+      "prepB5": [
+        27
+      ],
+      "prepB6": [
+        32
+      ],
+      "prepB7": [
+        37
+      ],
+      "prepC0": [
+        3
+      ],
+      "prepC1": [
+        8
+      ],
+      "prepC2": [
+        13
+      ],
+      "prepC3": [
+        18
+      ],
+      "prepC4": [
+        23
+      ],
+      "prepC5": [
+        28
+      ],
+      "prepC6": [
+        33
+      ],
+      "prepC7": [
+        38
+      ]
+    },
+    "radii": [
+      "1",
+      "1"
+    ]
+  },
+  "clients": 16,
+  "family": "shared-prefix",
+  "jobs": 41,
+  "measurement": {
+    "checker_wall_seconds": 0.009236963000034848,
+    "cpu_seconds": 0.051261578000000085,
+    "peak_rss_kib": 121580,
+    "producer_wall_seconds": 0.02421064199995726,
+    "wall_seconds": 0.05397517300002619,
+    "workers": 1
+  },
+  "samples": [
+    {
+      "absolute_error": "7/4",
+      "makespan": "57/4",
+      "point": [
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/4",
+      "makespan": "65/4",
+      "point": [
+        -1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "9/4",
+      "makespan": "73/4",
+      "point": [
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "2",
+      "makespan": "14",
+      "point": [
+        0,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "0",
+      "makespan": "16",
+      "point": [
+        0,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "2",
+      "makespan": "18",
+      "point": [
+        0,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "7/4",
+      "makespan": "57/4",
+      "point": [
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/4",
+      "makespan": "65/4",
+      "point": [
+        1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "9/4",
+      "makespan": "73/4",
+      "point": [
+        1,
+        1
+      ],
+      "same_order": true
+    }
+  ],
+  "seed": 1,
+  "verdict": {
+    "certified": true,
+    "downward_bound": "2",
+    "global_bound": "9/4",
+    "guard_bounds": [
+      "-1/4",
+      "-1/4",
+      "-1/4",
+      "-1/4",
+      "-1/4",
+      "-1/4",
+      "-1/4",
+      "-1/4"
+    ],
+    "interval_bounds": [
+      "19/4",
+      "19/4",
+      "19/4",
+      "19/4",
+      "19/4",
+      "19/4",
+      "19/4",
+      "19/4"
+    ],
+    "interval_order_certified": false,
+    "nominal_makespan": "16",
+    "order_certified": true,
+    "single_bounds": [
+      "3/4",
+      "3/4",
+      "3/4",
+      "3/4",
+      "3/4",
+      "3/4",
+      "3/4",
+      "3/4"
+    ],
+    "single_order_certified": false,
+    "stats": {
+      "edges": 179,
+      "max_frontier": 3,
+      "total_forms": 110,
+      "vertices": 84
+    },
+    "upward_bound": "9/4"
+  }
+}

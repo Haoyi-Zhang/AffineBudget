@@ -1,0 +1,204 @@
+{
+  "case_id": "case-005",
+  "certificate": {
+    "guards": [
+      {
+        "guard": {
+          "jobs": [
+            4,
+            5
+          ],
+          "left": "a4",
+          "right": "a5",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            9,
+            10
+          ],
+          "left": "a9",
+          "right": "a10",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      }
+    ],
+    "lower_weights": [
+      "0",
+      "0",
+      "1"
+    ],
+    "orders": {
+      "bank0": [
+        4,
+        5
+      ],
+      "bank1": [
+        9,
+        10
+      ],
+      "prefix": [
+        0
+      ],
+      "prepA0": [
+        1
+      ],
+      "prepA1": [
+        6
+      ],
+      "prepB0": [
+        2
+      ],
+      "prepB1": [
+        7
+      ],
+      "prepC0": [
+        3
+      ],
+      "prepC1": [
+        8
+      ]
+    },
+    "radii": [
+      "1",
+      "1"
+    ]
+  },
+  "clients": 4,
+  "family": "shared-prefix",
+  "jobs": 11,
+  "measurement": {
+    "checker_wall_seconds": 0.0030321479999884104,
+    "cpu_seconds": 0.015987193000000177,
+    "peak_rss_kib": 121452,
+    "producer_wall_seconds": 0.00804147799999555,
+    "wall_seconds": 0.01676464100000885,
+    "workers": 1
+  },
+  "samples": [
+    {
+      "absolute_error": "31/4",
+      "makespan": "29/4",
+      "point": [
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/4",
+      "makespan": "61/4",
+      "point": [
+        -1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "33/4",
+      "makespan": "93/4",
+      "point": [
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "8",
+      "makespan": "7",
+      "point": [
+        0,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "0",
+      "makespan": "15",
+      "point": [
+        0,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "8",
+      "makespan": "23",
+      "point": [
+        0,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "31/4",
+      "makespan": "29/4",
+      "point": [
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/4",
+      "makespan": "61/4",
+      "point": [
+        1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "33/4",
+      "makespan": "93/4",
+      "point": [
+        1,
+        1
+      ],
+      "same_order": true
+    }
+  ],
+  "seed": 2,
+  "verdict": {
+    "certified": true,
+    "downward_bound": "8",
+    "global_bound": "33/4",
+    "guard_bounds": [
+      "-1/4",
+      "-1/4"
+    ],
+    "interval_bounds": [
+      "67/4",
+      "67/4"
+    ],
+    "interval_order_certified": false,
+    "nominal_makespan": "15",
+    "order_certified": true,
+    "single_bounds": [
+      "3/4",
+      "3/4"
+    ],
+    "single_order_certified": false,
+    "stats": {
+      "edges": 47,
+      "max_frontier": 3,
+      "total_forms": 32,
+      "vertices": 24
+    },
+    "upward_bound": "33/4"
+  }
+}

@@ -1,0 +1,425 @@
+{
+  "case_id": "case-013",
+  "certificate": {
+    "guards": [
+      {
+        "guard": {
+          "jobs": [
+            1,
+            7
+          ],
+          "left": "a1",
+          "right": "a7",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            7,
+            13
+          ],
+          "left": "a7",
+          "right": "a13",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            4,
+            10
+          ],
+          "left": "a4",
+          "right": "a10",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            10,
+            16
+          ],
+          "left": "a10",
+          "right": "a16",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            0,
+            2
+          ],
+          "left": "a0",
+          "right": "a2",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            2,
+            6
+          ],
+          "left": "a2",
+          "right": "a6",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            6,
+            8
+          ],
+          "left": "a6",
+          "right": "a8",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            8,
+            12
+          ],
+          "left": "a8",
+          "right": "a12",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            12,
+            14
+          ],
+          "left": "a12",
+          "right": "a14",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            3,
+            5
+          ],
+          "left": "a3",
+          "right": "a5",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            5,
+            9
+          ],
+          "left": "a5",
+          "right": "a9",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            9,
+            11
+          ],
+          "left": "a9",
+          "right": "a11",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            11,
+            15
+          ],
+          "left": "a11",
+          "right": "a15",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            15,
+            17
+          ],
+          "left": "a15",
+          "right": "a17",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      }
+    ],
+    "lower_weights": [
+      "1"
+    ],
+    "orders": {
+      "bank0": [
+        1,
+        7,
+        13
+      ],
+      "bank1": [
+        4,
+        10,
+        16
+      ],
+      "core0": [
+        0,
+        2,
+        6,
+        8,
+        12,
+        14
+      ],
+      "core1": [
+        3,
+        5,
+        9,
+        11,
+        15,
+        17
+      ]
+    },
+    "radii": [
+      "1",
+      "1"
+    ]
+  },
+  "clients": 2,
+  "family": "staggered-bank",
+  "jobs": 18,
+  "measurement": {
+    "checker_wall_seconds": 0.00442958999997245,
+    "cpu_seconds": 0.019193459000000024,
+    "peak_rss_kib": 119980,
+    "producer_wall_seconds": 0.003929559999960475,
+    "wall_seconds": 0.01921170200000688,
+    "workers": 1
+  },
+  "samples": [
+    {
+      "absolute_error": "1/2",
+      "makespan": "75/2",
+      "point": [
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/4",
+      "makespan": "149/4",
+      "point": [
+        -1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "0",
+      "makespan": "37",
+      "point": [
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/4",
+      "makespan": "149/4",
+      "point": [
+        0,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "0",
+      "makespan": "37",
+      "point": [
+        0,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/4",
+      "makespan": "147/4",
+      "point": [
+        0,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "0",
+      "makespan": "37",
+      "point": [
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/4",
+      "makespan": "147/4",
+      "point": [
+        1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/2",
+      "makespan": "73/2",
+      "point": [
+        1,
+        1
+      ],
+      "same_order": true
+    }
+  ],
+  "seed": 1,
+  "verdict": {
+    "certified": true,
+    "downward_bound": "1/2",
+    "global_bound": "1/2",
+    "guard_bounds": [
+      "-8",
+      "-9",
+      "-10",
+      "-11",
+      "-25/4",
+      "-7/4",
+      "-25/4",
+      "-11/4",
+      "-25/4",
+      "-33/4",
+      "-7/4",
+      "-33/4",
+      "-11/4",
+      "-33/4"
+    ],
+    "interval_bounds": [
+      "-8",
+      "-9",
+      "-10",
+      "-11",
+      "-25/4",
+      "-3/4",
+      "-25/4",
+      "-11/4",
+      "-25/4",
+      "-33/4",
+      "-3/4",
+      "-33/4",
+      "-11/4",
+      "-33/4"
+    ],
+    "interval_order_certified": true,
+    "nominal_makespan": "37",
+    "order_certified": true,
+    "single_bounds": [
+      "-8",
+      "-9",
+      "-10",
+      "-11",
+      "-25/4",
+      "-7/4",
+      "-25/4",
+      "-11/4",
+      "-25/4",
+      "-33/4",
+      "-7/4",
+      "-33/4",
+      "-11/4",
+      "-33/4"
+    ],
+    "single_order_certified": true,
+    "stats": {
+      "edges": 84,
+      "max_frontier": 1,
+      "total_forms": 38,
+      "vertices": 38
+    },
+    "upward_bound": "1/2"
+  }
+}

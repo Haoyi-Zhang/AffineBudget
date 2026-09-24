@@ -1,0 +1,10 @@
+{
+  "tests": 31,
+  "failures": 0,
+  "errors": 0,
+  "cpu_seconds": 5.486064721,
+  "wall_seconds": 5.487953342999845,
+  "peak_rss_kib": 15916,
+  "workers": 1,
+  "scope": "finite exact tests; not mechanized general proofs"
+}

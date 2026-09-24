@@ -1,0 +1,167 @@
+{
+  "model": {
+    "domain": [
+      "1"
+    ],
+    "jobs": [
+      {
+        "id": 0,
+        "resource": "bank",
+        "deps": [],
+        "release": [
+          "0",
+          "0"
+        ],
+        "service": [
+          "3",
+          "0"
+        ]
+      },
+      {
+        "id": 1,
+        "resource": "bank",
+        "deps": [],
+        "release": [
+          "1",
+          "0"
+        ],
+        "service": [
+          "1",
+          "0"
+        ]
+      },
+      {
+        "id": 2,
+        "resource": "bank",
+        "deps": [],
+        "release": [
+          "1",
+          "1/2"
+        ],
+        "service": [
+          "1",
+          "0"
+        ]
+      }
+    ]
+  },
+  "certificate": {
+    "radii": [
+      "1"
+    ],
+    "orders": {
+      "bank": [
+        0,
+        1,
+        2
+      ]
+    },
+    "guards": [
+      {
+        "guard": {
+          "left": "a0",
+          "right": "a1",
+          "strict": false,
+          "jobs": [
+            0,
+            1
+          ]
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "left": "a1",
+          "right": "a2",
+          "strict": false,
+          "jobs": [
+            1,
+            2
+          ]
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      }
+    ],
+    "lower_weights": [
+      "1"
+    ]
+  },
+  "verdict": {
+    "certified": false,
+    "order_certified": false,
+    "global_bound": "0",
+    "upward_bound": "0",
+    "downward_bound": "0",
+    "nominal_makespan": "5",
+    "guard_bounds": [
+      "-1",
+      "1/2"
+    ],
+    "interval_order_certified": false,
+    "single_order_certified": false,
+    "interval_bounds": [
+      "-1",
+      "1/2"
+    ],
+    "single_bounds": [
+      "-1",
+      "1/2"
+    ],
+    "stats": {
+      "vertices": 8,
+      "edges": 11,
+      "max_frontier": 1,
+      "total_forms": 8
+    }
+  },
+  "samples": [
+    {
+      "point": -1,
+      "orders": {
+        "bank": [
+          0,
+          2,
+          1
+        ]
+      },
+      "makespan": "5"
+    },
+    {
+      "point": 0,
+      "orders": {
+        "bank": [
+          0,
+          1,
+          2
+        ]
+      },
+      "makespan": "5"
+    },
+    {
+      "point": 1,
+      "orders": {
+        "bank": [
+          0,
+          1,
+          2
+        ]
+      },
+      "makespan": "5"
+    }
+  ],
+  "interpretation": "guard completeness is about order, not all true makespan error bounds",
+  "measurement": {
+    "cpu_seconds": 0.0011789280000000027,
+    "wall_seconds": 0.002183713000249554,
+    "peak_rss_kib": 9472,
+    "workers": 1
+  }
+}

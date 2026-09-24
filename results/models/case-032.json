@@ -1,0 +1,1016 @@
+{
+  "case_id": "case-032",
+  "certificate": {
+    "guards": [
+      {
+        "guard": {
+          "jobs": [
+            1,
+            7
+          ],
+          "left": "a1",
+          "right": "a7",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            7,
+            13
+          ],
+          "left": "a7",
+          "right": "a13",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            13,
+            19
+          ],
+          "left": "a13",
+          "right": "a19",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            19,
+            26
+          ],
+          "left": "a19",
+          "right": "a26",
+          "strict": false
+        },
+        "weights": [
+          [
+            "2/5",
+            "3/5"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            26,
+            44
+          ],
+          "left": "a26",
+          "right": "a44",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            44,
+            38
+          ],
+          "left": "a44",
+          "right": "a38",
+          "strict": true
+        },
+        "weights": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            38,
+            32
+          ],
+          "left": "a38",
+          "right": "a32",
+          "strict": true
+        },
+        "weights": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            4,
+            10
+          ],
+          "left": "a4",
+          "right": "a10",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            10,
+            16
+          ],
+          "left": "a10",
+          "right": "a16",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            16,
+            22
+          ],
+          "left": "a16",
+          "right": "a22",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            22,
+            35
+          ],
+          "left": "a22",
+          "right": "a35",
+          "strict": false
+        },
+        "weights": [
+          [
+            "2/5",
+            "3/5"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            35,
+            29
+          ],
+          "left": "a35",
+          "right": "a29",
+          "strict": true
+        },
+        "weights": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            29,
+            47
+          ],
+          "left": "a29",
+          "right": "a47",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            47,
+            41
+          ],
+          "left": "a47",
+          "right": "a41",
+          "strict": true
+        },
+        "weights": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            0,
+            2
+          ],
+          "left": "a0",
+          "right": "a2",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            2,
+            25
+          ],
+          "left": "a2",
+          "right": "a25",
+          "strict": false
+        },
+        "weights": [
+          [
+            "3/5",
+            "2/5"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            25,
+            27
+          ],
+          "left": "a25",
+          "right": "a27",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "1/5",
+            "4/5"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            3,
+            5
+          ],
+          "left": "a3",
+          "right": "a5",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            5,
+            28
+          ],
+          "left": "a5",
+          "right": "a28",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/5",
+            "4/5"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            28,
+            30
+          ],
+          "left": "a28",
+          "right": "a30",
+          "strict": false
+        },
+        "weights": [
+          [
+            "3/5",
+            "2/5"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            6,
+            8
+          ],
+          "left": "a6",
+          "right": "a8",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            8,
+            31
+          ],
+          "left": "a8",
+          "right": "a31",
+          "strict": false
+        },
+        "weights": [
+          [
+            "3/5",
+            "2/5"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            31,
+            33
+          ],
+          "left": "a31",
+          "right": "a33",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "4/5",
+            "1/5"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            9,
+            11
+          ],
+          "left": "a9",
+          "right": "a11",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            11,
+            34
+          ],
+          "left": "a11",
+          "right": "a34",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/5",
+            "4/5"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            34,
+            36
+          ],
+          "left": "a34",
+          "right": "a36",
+          "strict": false
+        },
+        "weights": [
+          [
+            "4/5",
+            "1/5"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            12,
+            14
+          ],
+          "left": "a12",
+          "right": "a14",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            14,
+            37
+          ],
+          "left": "a14",
+          "right": "a37",
+          "strict": false
+        },
+        "weights": [
+          [
+            "4/5",
+            "1/5"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            37,
+            39
+          ],
+          "left": "a37",
+          "right": "a39",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "3/5",
+            "2/5"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            15,
+            17
+          ],
+          "left": "a15",
+          "right": "a17",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            17,
+            40
+          ],
+          "left": "a17",
+          "right": "a40",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/5",
+            "4/5"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            40,
+            42
+          ],
+          "left": "a40",
+          "right": "a42",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/5",
+            "4/5"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            18,
+            20
+          ],
+          "left": "a18",
+          "right": "a20",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            20,
+            43
+          ],
+          "left": "a20",
+          "right": "a43",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            43,
+            45
+          ],
+          "left": "a43",
+          "right": "a45",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0"
+          ],
+          [
+            "2/5",
+            "3/5"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            21,
+            23
+          ],
+          "left": "a21",
+          "right": "a23",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            23,
+            46
+          ],
+          "left": "a23",
+          "right": "a46",
+          "strict": false
+        },
+        "weights": [
+          [
+            "0",
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            46,
+            48
+          ],
+          "left": "a46",
+          "right": "a48",
+          "strict": false
+        },
+        "weights": [
+          [
+            "2/5",
+            "3/5"
+          ],
+          [
+            "0",
+            "1"
+          ]
+        ]
+      }
+    ],
+    "lower_weights": [
+      "0",
+      "1",
+      "0"
+    ],
+    "orders": {
+      "bank0": [
+        1,
+        7,
+        13,
+        19,
+        26,
+        44,
+        38,
+        32
+      ],
+      "bank1": [
+        4,
+        10,
+        16,
+        22,
+        35,
+        29,
+        47,
+        41
+      ],
+      "barrier0": [
+        24
+      ],
+      "barrier1": [
+        49
+      ],
+      "core0": [
+        0,
+        2,
+        25,
+        27
+      ],
+      "core1": [
+        3,
+        5,
+        28,
+        30
+      ],
+      "core2": [
+        6,
+        8,
+        31,
+        33
+      ],
+      "core3": [
+        9,
+        11,
+        34,
+        36
+      ],
+      "core4": [
+        12,
+        14,
+        37,
+        39
+      ],
+      "core5": [
+        15,
+        17,
+        40,
+        42
+      ],
+      "core6": [
+        18,
+        20,
+        43,
+        45
+      ],
+      "core7": [
+        21,
+        23,
+        46,
+        48
+      ]
+    },
+    "radii": [
+      "1",
+      "1"
+    ]
+  },
+  "clients": 8,
+  "family": "fork-join",
+  "jobs": 50,
+  "measurement": {
+    "checker_wall_seconds": 0.01544825899998159,
+    "cpu_seconds": 0.13594021199999995,
+    "peak_rss_kib": 122108,
+    "producer_wall_seconds": 0.08908705299995745,
+    "wall_seconds": 0.13964171099996747,
+    "workers": 1
+  },
+  "samples": [
+    {
+      "absolute_error": "1/4",
+      "makespan": "169/4",
+      "point": [
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/2",
+      "makespan": "42",
+      "point": [
+        -1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1",
+      "makespan": "87/2",
+      "point": [
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "3/4",
+      "makespan": "167/4",
+      "point": [
+        0,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "0",
+      "makespan": "85/2",
+      "point": [
+        0,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "3/2",
+      "makespan": "44",
+      "point": [
+        0,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "3/4",
+      "makespan": "167/4",
+      "point": [
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/2",
+      "makespan": "43",
+      "point": [
+        1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "2",
+      "makespan": "89/2",
+      "point": [
+        1,
+        1
+      ],
+      "same_order": true
+    }
+  ],
+  "seed": 2,
+  "verdict": {
+    "certified": true,
+    "downward_bound": "3/4",
+    "global_bound": "2",
+    "guard_bounds": [
+      "-5",
+      "-2",
+      "-2",
+      "-45/4",
+      "0",
+      "-1",
+      "-1",
+      "-2",
+      "-5",
+      "-2",
+      "-177/20",
+      "-1",
+      "0",
+      "-1",
+      "-29/4",
+      "-51/4",
+      "-29/4",
+      "-25/4",
+      "-251/20",
+      "-9",
+      "-33/4",
+      "-35/4",
+      "-31/2",
+      "-29/4",
+      "-171/20",
+      "-29/4",
+      "-7",
+      "-27/4",
+      "-51/4",
+      "-33/4",
+      "-91/20",
+      "-27/2",
+      "-31/4",
+      "-11/4",
+      "-11",
+      "-7",
+      "-11/4",
+      "-43/4"
+    ],
+    "interval_bounds": [
+      "-4",
+      "-1",
+      "-1",
+      "-43/4",
+      "5/2",
+      "3/2",
+      "3/2",
+      "-1",
+      "-4",
+      "-1",
+      "-35/4",
+      "3/4",
+      "7/4",
+      "3/4",
+      "-29/4",
+      "-12",
+      "-6",
+      "-25/4",
+      "-23/2",
+      "-9",
+      "-33/4",
+      "-8",
+      "-61/4",
+      "-29/4",
+      "-29/4",
+      "-27/4",
+      "-7",
+      "-23/4",
+      "-25/2",
+      "-33/4",
+      "-7/2",
+      "-27/2",
+      "-31/4",
+      "-3/2",
+      "-41/4",
+      "-7",
+      "-5/4",
+      "-43/4"
+    ],
+    "interval_order_certified": false,
+    "nominal_makespan": "85/2",
+    "order_certified": true,
+    "single_bounds": [
+      "-5",
+      "-2",
+      "-2",
+      "-43/4",
+      "0",
+      "-1",
+      "-1",
+      "-2",
+      "-5",
+      "-2",
+      "-35/4",
+      "-1",
+      "0",
+      "-1",
+      "-29/4",
+      "-49/4",
+      "-29/4",
+      "-25/4",
+      "-25/2",
+      "-9",
+      "-33/4",
+      "-33/4",
+      "-31/2",
+      "-29/4",
+      "-17/2",
+      "-29/4",
+      "-7",
+      "-13/2",
+      "-51/4",
+      "-33/4",
+      "-9/2",
+      "-27/2",
+      "-31/4",
+      "-11/4",
+      "-11",
+      "-7",
+      "-11/4",
+      "-43/4"
+    ],
+    "single_order_certified": true,
+    "stats": {
+      "edges": 244,
+      "max_frontier": 3,
+      "total_forms": 161,
+      "vertices": 102
+    },
+    "upward_bound": "2"
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "complete": true,
+  "phases": [
+    {
+      "phase": "models",
+      "complete": true,
+      "steps": 5,
+      "child_failures": 0,
+      "workers": 1,
+      "wall_seconds": 8.055216629000142,
+      "aggregate_cpu_seconds": 8.055799747,
+      "peak_child_rss_kib": 122668
+    },
+    {
+      "phase": "oracles",
+      "complete": true,
+      "steps": 9,
+      "child_failures": 0,
+      "workers": 1,
+      "wall_seconds": 11.874943232000078,
+      "aggregate_cpu_seconds": 11.871585509000003,
+      "peak_child_rss_kib": 121776
+    },
+    {
+      "phase": "allocation",
+      "complete": true,
+      "steps": 7,
+      "child_failures": 0,
+      "workers": 1,
+      "wall_seconds": 6.5344226080001135,
+      "aggregate_cpu_seconds": 6.528630668,
+      "peak_child_rss_kib": 122164
+    },
+    {
+      "phase": "verify",
+      "complete": true,
+      "steps": 4,
+      "child_failures": 0,
+      "workers": 1,
+      "wall_seconds": 7.185992166000233,
+      "aggregate_cpu_seconds": 7.181779241,
+      "peak_child_rss_kib": 100912
+    }
+  ],
+  "steps": 25,
+  "child_failures": 0,
+  "workers": 1,
+  "wall_seconds": 33.65057463500057,
+  "aggregate_cpu_seconds": 33.637795165,
+  "peak_child_rss_kib": 122668,
+  "reconciliation": {
+    "scientific_fields_equal": true,
+    "counts": {
+      "inputs": 54,
+      "models": 48,
+      "oracles": 2089,
+      "allocation": 4,
+      "structure": 6,
+      "reduction_formulas": 512,
+      "changed_order_constant_makespan_control": 1
+    },
+    "tolerance": 0,
+    "not_compared": "solver weight vectors and measurement times; fresh inputs compared exactly and fresh witnesses checked against them"
+  },
+  "verification": {
+    "tests": 31,
+    "failures": 0,
+    "errors": 0,
+    "cpu_seconds": 5.575634459000001,
+    "wall_seconds": 5.581304317000104,
+    "peak_rss_kib": 92720,
+    "workers": 1,
+    "scope": "finite exact tests; not mechanized general proofs"
+  },
+  "scope": "clean generation and scientific reconciliation; not independent review or mechanized proof"
+}

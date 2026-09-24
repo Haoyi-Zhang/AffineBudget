@@ -1,0 +1,195 @@
+#!/usr/bin/env python3
+"""Offline, standard-library audit of bibliography identity and manuscript use.
+
+The standalone repository audits the frozen scholarly/reference snapshots.  When the
+artifact is inside the complete project, the same command additionally compares the
+snapshots against the live manuscript bibliography and citation commands.
+"""
+from __future__ import annotations
+
+import csv
+import json
+import re
+import sys
+from collections import Counter
+from pathlib import Path
+from typing import Dict, Iterable, List, Mapping, Set
+
+ROOT = Path(__file__).resolve().parent
+SCHOLARLY = ROOT / "scholarly"
+EXPECTED_REFERENCES = 65
+EXPECTED_CALIBRATION = {"same venue": 12, "influential": 5, "adjacent": 5}
+
+
+def parse_bib(path: Path) -> List[Dict[str, str]]:
+    text = path.read_text(encoding="utf-8")
+    entries: List[Dict[str, str]] = []
+    pos = 0
+    while True:
+        match = re.search(r"@(\w+)\s*\{\s*([^,]+),", text[pos:])
+        if not match:
+            break
+        entry_type = match.group(1).lower()
+        key = match.group(2).strip()
+        cursor = pos + match.end()
+        depth = 1
+        end = cursor
+        while end < len(text) and depth:
+            if text[end] == "{":
+                depth += 1
+            elif text[end] == "}":
+                depth -= 1
+            end += 1
+        if depth:
+            raise ValueError(f"unterminated BibTeX entry: {key}")
+        body = text[cursor : end - 1]
+
+        def field(name: str) -> str:
+            found = re.search(
+                rf"(?is)(?:^|,)\s*{re.escape(name)}\s*=\s*"
+                r"\{((?:[^{}]|\{[^{}]*\})*)\}",
+                body,
+            )
+            return found.group(1).strip() if found else ""
+
+        entries.append(
+            {
+                "bib_key": key,
+                "entry_type": entry_type,
+                "title": field("title"),
+                "year": field("year"),
+                "doi": field("doi"),
+            }
+        )
+        pos = end
+    return entries
+
+
+def normalized_title(title: str) -> str:
+    plain = re.sub(r"[{}\\]", "", title).lower()
+    return re.sub(r"[^a-z0-9]+", "", plain)
+
+
+def manuscript_citations(project_root: Path) -> Mapping[str, Set[str]]:
+    paper = project_root / "paper"
+    files = [paper / "main.tex", *sorted((paper / "sections").glob("*.tex"))]
+    contexts: Dict[str, Set[str]] = {}
+    for path in files:
+        text = path.read_text(encoding="utf-8")
+        for match in re.finditer(r"\\cite[a-zA-Z*]*\s*\{([^}]*)\}", text):
+            for key in match.group(1).split(","):
+                contexts.setdefault(key.strip(), set()).add(path.stem)
+    return contexts
+
+
+def require(condition: bool, message: str, failures: List[str]) -> None:
+    if not condition:
+        failures.append(message)
+
+
+def audit() -> Dict[str, object]:
+    failures: List[str] = []
+    bib_path = SCHOLARLY / "references.bib"
+    entries = parse_bib(bib_path)
+    keys = [row["bib_key"] for row in entries]
+    require(len(entries) == EXPECTED_REFERENCES, f"expected {EXPECTED_REFERENCES} BibTeX entries, found {len(entries)}", failures)
+    require(len(set(keys)) == len(keys), "duplicate BibTeX keys", failures)
+
+    dois = [row["doi"].lower() for row in entries if row["doi"]]
+    require(len(dois) == len(set(dois)), "duplicate DOI values", failures)
+    titles = [normalized_title(row["title"]) for row in entries]
+    require(all(titles), "empty normalized title", failures)
+    require(len(titles) == len(set(titles)), "duplicate normalized titles", failures)
+    require(all(re.fullmatch(r"(?:19|20)\d{2}", row["year"]) for row in entries), "invalid or missing publication year", failures)
+
+    with (ROOT / "bibliography-audit.csv").open(newline="", encoding="utf-8") as handle:
+        audit_rows = list(csv.DictReader(handle))
+    audit_by_key = {row["bib_key"]: row for row in audit_rows}
+    require(len(audit_rows) == EXPECTED_REFERENCES, f"expected {EXPECTED_REFERENCES} audit rows, found {len(audit_rows)}", failures)
+    require(set(audit_by_key) == set(keys), "bibliography audit key coverage differs from BibTeX", failures)
+    required_audit_fields = {
+        "title",
+        "year",
+        "entry_type",
+        "identifier",
+        "primary_record",
+        "record_type",
+        "verification_scope",
+        "metadata_status",
+        "manuscript_contexts",
+        "citation_status",
+        "audit_note",
+        "verified_on",
+    }
+    for entry in entries:
+        row = audit_by_key.get(entry["bib_key"], {})
+        missing = sorted(field for field in required_audit_fields if not row.get(field, "").strip())
+        require(not missing, f"{entry['bib_key']}: empty audit fields {missing}", failures)
+        require(row.get("metadata_status") == "verified", f"{entry['bib_key']}: metadata not verified", failures)
+        require(row.get("citation_status") == "cited-and-relevant", f"{entry['bib_key']}: citation relevance not accepted", failures)
+        require(row.get("year") == entry["year"], f"{entry['bib_key']}: year differs between audit and BibTeX", failures)
+        require(row.get("entry_type") == entry["entry_type"], f"{entry['bib_key']}: entry type differs between audit and BibTeX", failures)
+        require(normalized_title(row.get("title", "")) == normalized_title(entry["title"]), f"{entry['bib_key']}: title differs between audit and BibTeX", failures)
+        require(row.get("primary_record", "").startswith("https://"), f"{entry['bib_key']}: primary record is not HTTPS", failures)
+        if entry["doi"]:
+            expected_identifier = "doi:" + entry["doi"]
+            expected_record = "https://doi.org/" + entry["doi"]
+            require(row.get("identifier", "").lower() == expected_identifier.lower(), f"{entry['bib_key']}: DOI identifier mismatch", failures)
+            require(row.get("primary_record", "").lower() == expected_record.lower(), f"{entry['bib_key']}: DOI record mismatch", failures)
+
+    with (SCHOLARLY / "citation-usage.csv").open(newline="", encoding="utf-8") as handle:
+        usage_rows = list(csv.DictReader(handle))
+    usage = {row["bib_key"]: row["manuscript_contexts"] for row in usage_rows}
+    require(len(usage_rows) == EXPECTED_REFERENCES, f"expected {EXPECTED_REFERENCES} citation-usage rows, found {len(usage_rows)}", failures)
+    require(set(usage) == set(keys), "citation-usage key coverage differs from BibTeX", failures)
+    for key in keys:
+        require(bool(usage.get(key, "").strip()), f"{key}: no manuscript citation context", failures)
+        require(usage.get(key, "") == audit_by_key.get(key, {}).get("manuscript_contexts", ""), f"{key}: citation contexts differ between audit files", failures)
+
+    with (ROOT / "literature-calibration.csv").open(newline="", encoding="utf-8") as handle:
+        calibration = list(csv.DictReader(handle))
+    group_counts = Counter(row["group"] for row in calibration)
+    require(dict(group_counts) == EXPECTED_CALIBRATION, f"literature calibration counts differ: {dict(group_counts)}", failures)
+    calibration_keys = [row["bib_key"] for row in calibration]
+    require(len(calibration_keys) == len(set(calibration_keys)) == sum(EXPECTED_CALIBRATION.values()), "literature calibration keys are missing or duplicated", failures)
+    require(set(calibration_keys) <= set(keys), "literature calibration contains an unknown BibTeX key", failures)
+    for row in calibration:
+        missing = [name for name, value in row.items() if not value.strip()]
+        require(not missing, f"{row.get('bib_key','?')}: empty literature-calibration fields {missing}", failures)
+        require(row["url"].startswith("https://"), f"{row['bib_key']}: calibration URL is not HTTPS", failures)
+
+    # Inside the complete project, prove that the standalone snapshots still match
+    # the actual manuscript rather than merely agreeing with one another.
+    project_root = ROOT.parent
+    paper_bib = project_root / "paper" / "references.bib"
+    live_manuscript_checked = paper_bib.exists()
+    if live_manuscript_checked:
+        require(paper_bib.read_bytes() == bib_path.read_bytes(), "paper/references.bib differs from artifact scholarly snapshot", failures)
+        live = manuscript_citations(project_root)
+        require(set(live) == set(keys), "live manuscript citation keys differ from bibliography", failures)
+        for key in keys:
+            require(";".join(sorted(live.get(key, set()))) == usage[key], f"{key}: live manuscript contexts differ from citation snapshot", failures)
+
+    report: Dict[str, object] = {
+        "references": len(entries),
+        "doi_records": len(dois),
+        "official_non_doi_records": len(entries) - len(dois),
+        "cited_references": sum(bool(usage.get(key, "").strip()) for key in keys),
+        "unused_references": sorted(set(keys) - set(usage)),
+        "calibration_rows": len(calibration),
+        "calibration_groups": dict(group_counts),
+        "live_manuscript_checked": live_manuscript_checked,
+        "failures": failures,
+        "status": "pass" if not failures else "fail",
+    }
+    return report
+
+
+def main() -> int:
+    report = audit()
+    print(json.dumps(report, indent=2, sort_keys=True))
+    return 0 if report["status"] == "pass" else 1
+
+
+if __name__ == "__main__":
+    sys.exit(main())

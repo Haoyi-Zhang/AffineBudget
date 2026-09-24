@@ -1,0 +1,371 @@
+{
+  "case_id": "case-007",
+  "clients": 8,
+  "domain": [
+    "1",
+    "1"
+  ],
+  "family": "shared-prefix",
+  "jobs": [
+    {
+      "deps": [],
+      "id": 0,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "prefix",
+      "service": [
+        "10",
+        "0",
+        "2"
+      ]
+    },
+    {
+      "deps": [
+        0
+      ],
+      "id": 1,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "prepA0",
+      "service": [
+        "2",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        0
+      ],
+      "id": 2,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "prepB0",
+      "service": [
+        "9/4",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        0
+      ],
+      "id": 3,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "prepC0",
+      "service": [
+        "9/4",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        1
+      ],
+      "id": 4,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "bank0",
+      "service": [
+        "1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        2,
+        3
+      ],
+      "id": 5,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "bank0",
+      "service": [
+        "1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        0
+      ],
+      "id": 6,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "prepA1",
+      "service": [
+        "3",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        0
+      ],
+      "id": 7,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "prepB1",
+      "service": [
+        "13/4",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        0
+      ],
+      "id": 8,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "prepC1",
+      "service": [
+        "13/4",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        6
+      ],
+      "id": 9,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "bank1",
+      "service": [
+        "1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        7,
+        8
+      ],
+      "id": 10,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "bank1",
+      "service": [
+        "1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        0
+      ],
+      "id": 11,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "prepA2",
+      "service": [
+        "4",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        0
+      ],
+      "id": 12,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "prepB2",
+      "service": [
+        "17/4",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        0
+      ],
+      "id": 13,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "prepC2",
+      "service": [
+        "17/4",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        11
+      ],
+      "id": 14,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "bank2",
+      "service": [
+        "1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        12,
+        13
+      ],
+      "id": 15,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "bank2",
+      "service": [
+        "1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        0
+      ],
+      "id": 16,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "prepA3",
+      "service": [
+        "2",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        0
+      ],
+      "id": 17,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "prepB3",
+      "service": [
+        "9/4",
+        "1",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        0
+      ],
+      "id": 18,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "prepC3",
+      "service": [
+        "9/4",
+        "-1",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        16
+      ],
+      "id": 19,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "bank3",
+      "service": [
+        "1",
+        "0",
+        "0"
+      ]
+    },
+    {
+      "deps": [
+        17,
+        18
+      ],
+      "id": 20,
+      "release": [
+        "0",
+        "0",
+        "0"
+      ],
+      "resource": "bank3",
+      "service": [
+        "1",
+        "0",
+        "0"
+      ]
+    }
+  ],
+  "seed": 1
+}

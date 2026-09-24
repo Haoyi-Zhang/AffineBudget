@@ -1,0 +1,610 @@
+{
+  "case_id": "case-029",
+  "certificate": {
+    "guards": [
+      {
+        "guard": {
+          "jobs": [
+            1,
+            7
+          ],
+          "left": "a1",
+          "right": "a7",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            7,
+            14
+          ],
+          "left": "a7",
+          "right": "a14",
+          "strict": false
+        },
+        "weights": [
+          [
+            "2/3",
+            "0",
+            "1/3"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            14,
+            20
+          ],
+          "left": "a14",
+          "right": "a20",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            4,
+            10
+          ],
+          "left": "a4",
+          "right": "a10",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            10,
+            23
+          ],
+          "left": "a10",
+          "right": "a23",
+          "strict": false
+        },
+        "weights": [
+          [
+            "0",
+            "1",
+            "0"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            23,
+            17
+          ],
+          "left": "a23",
+          "right": "a17",
+          "strict": true
+        },
+        "weights": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            0,
+            2
+          ],
+          "left": "a0",
+          "right": "a2",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            2,
+            13
+          ],
+          "left": "a2",
+          "right": "a13",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0",
+            "0"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            13,
+            15
+          ],
+          "left": "a13",
+          "right": "a15",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "2/3",
+            "0",
+            "1/3"
+          ],
+          [
+            "1/3",
+            "0",
+            "2/3"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            3,
+            5
+          ],
+          "left": "a3",
+          "right": "a5",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            5,
+            16
+          ],
+          "left": "a5",
+          "right": "a16",
+          "strict": false
+        },
+        "weights": [
+          [
+            "0",
+            "1",
+            "0"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            16,
+            18
+          ],
+          "left": "a16",
+          "right": "a18",
+          "strict": false
+        },
+        "weights": [
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            6,
+            8
+          ],
+          "left": "a6",
+          "right": "a8",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            8,
+            19
+          ],
+          "left": "a8",
+          "right": "a19",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0",
+            "0"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            19,
+            21
+          ],
+          "left": "a19",
+          "right": "a21",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "1",
+            "0",
+            "0"
+          ],
+          [
+            "2/3",
+            "0",
+            "1/3"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            9,
+            11
+          ],
+          "left": "a9",
+          "right": "a11",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1",
+            "0"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            11,
+            22
+          ],
+          "left": "a11",
+          "right": "a22",
+          "strict": false
+        },
+        "weights": [
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            22,
+            24
+          ],
+          "left": "a22",
+          "right": "a24",
+          "strict": false
+        },
+        "weights": [
+          [
+            "0",
+            "1",
+            "0"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ],
+          [
+            "0",
+            "0",
+            "1"
+          ]
+        ]
+      }
+    ],
+    "lower_weights": [
+      "1/2",
+      "0",
+      "1/2",
+      "0"
+    ],
+    "orders": {
+      "bank0": [
+        1,
+        7,
+        14,
+        20
+      ],
+      "bank1": [
+        4,
+        10,
+        23,
+        17
+      ],
+      "barrier0": [
+        12
+      ],
+      "barrier1": [
+        25
+      ],
+      "core0": [
+        0,
+        2,
+        13,
+        15
+      ],
+      "core1": [
+        3,
+        5,
+        16,
+        18
+      ],
+      "core2": [
+        6,
+        8,
+        19,
+        21
+      ],
+      "core3": [
+        9,
+        11,
+        22,
+        24
+      ]
+    },
+    "radii": [
+      "1",
+      "1"
+    ]
+  },
+  "clients": 4,
+  "family": "fork-join",
+  "jobs": 26,
+  "measurement": {
+    "checker_wall_seconds": 0.010871903999941424,
+    "cpu_seconds": 0.10398736099999994,
+    "peak_rss_kib": 121852,
+    "producer_wall_seconds": 0.08022056599997995,
+    "wall_seconds": 0.10616174899996622,
+    "workers": 1
+  },
+  "samples": [
+    {
+      "absolute_error": "1/4",
+      "makespan": "121/4",
+      "point": [
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/2",
+      "makespan": "30",
+      "point": [
+        -1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/2",
+      "makespan": "31",
+      "point": [
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "3/4",
+      "makespan": "119/4",
+      "point": [
+        0,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "0",
+      "makespan": "61/2",
+      "point": [
+        0,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1",
+      "makespan": "63/2",
+      "point": [
+        0,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/4",
+      "makespan": "121/4",
+      "point": [
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "1/2",
+      "makespan": "31",
+      "point": [
+        1,
+        0
+      ],
+      "same_order": true
+    },
+    {
+      "absolute_error": "3/2",
+      "makespan": "32",
+      "point": [
+        1,
+        1
+      ],
+      "same_order": true
+    }
+  ],
+  "seed": 2,
+  "verdict": {
+    "certified": true,
+    "downward_bound": "3/4",
+    "global_bound": "3/2",
+    "guard_bounds": [
+      "-5",
+      "-37/4",
+      "-2",
+      "-2",
+      "-10",
+      "-1",
+      "-29/4",
+      "-27/4",
+      "-29/4",
+      "-25/4",
+      "-27/4",
+      "-9",
+      "-33/4",
+      "-11/4",
+      "-10",
+      "-29/4",
+      "-11/4",
+      "-29/4"
+    ],
+    "interval_bounds": [
+      "-4",
+      "-9",
+      "1/4",
+      "-1",
+      "-10",
+      "1/4",
+      "-29/4",
+      "-25/4",
+      "-13/2",
+      "-25/4",
+      "-23/4",
+      "-9",
+      "-33/4",
+      "-9/4",
+      "-37/4",
+      "-29/4",
+      "-3/2",
+      "-7"
+    ],
+    "interval_order_certified": false,
+    "nominal_makespan": "61/2",
+    "order_certified": true,
+    "single_bounds": [
+      "-5",
+      "-9",
+      "-2",
+      "-2",
+      "-10",
+      "-1",
+      "-29/4",
+      "-27/4",
+      "-29/4",
+      "-25/4",
+      "-27/4",
+      "-9",
+      "-33/4",
+      "-11/4",
+      "-10",
+      "-29/4",
+      "-11/4",
+      "-29/4"
+    ],
+    "single_order_certified": true,
+    "stats": {
+      "edges": 124,
+      "max_frontier": 4,
+      "total_forms": 118,
+      "vertices": 54
+    },
+    "upward_bound": "3/2"
+  }
+}

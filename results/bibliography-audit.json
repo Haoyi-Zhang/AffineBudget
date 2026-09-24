@@ -1,0 +1,16 @@
+{
+  "calibration_groups": {
+    "adjacent": 5,
+    "influential": 5,
+    "same venue": 12
+  },
+  "calibration_rows": 22,
+  "cited_references": 65,
+  "doi_records": 59,
+  "failures": [],
+  "live_manuscript_checked": true,
+  "official_non_doi_records": 6,
+  "references": 65,
+  "status": "pass",
+  "unused_references": []
+}

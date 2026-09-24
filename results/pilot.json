@@ -1,0 +1,154 @@
+{
+  "phase": "pilot",
+  "workers": 1,
+  "wall_seconds": 0.4176290849999873,
+  "cpu_seconds": 0.415981116,
+  "peak_rss_kib": 120624,
+  "rows": [
+    {
+      "family": "shared-prefix",
+      "jobs": 6,
+      "verdict": {
+        "certified": true,
+        "order_certified": true,
+        "global_bound": "9/4",
+        "upward_bound": "9/4",
+        "downward_bound": "2",
+        "nominal_makespan": "14",
+        "guard_bounds": [
+          "-1/4"
+        ],
+        "interval_order_certified": false,
+        "single_order_certified": false,
+        "interval_bounds": [
+          "19/4"
+        ],
+        "single_bounds": [
+          "3/4"
+        ],
+        "stats": {
+          "vertices": 14,
+          "edges": 25,
+          "max_frontier": 3,
+          "total_forms": 19
+        }
+      },
+      "nominal": "14",
+      "negative_corner": "49/4"
+    },
+    {
+      "family": "fork-join",
+      "jobs": 26,
+      "verdict": {
+        "certified": true,
+        "order_certified": true,
+        "global_bound": "1",
+        "upward_bound": "1",
+        "downward_bound": "0",
+        "nominal_makespan": "28",
+        "guard_bounds": [
+          "-3",
+          "-10",
+          "-2",
+          "0",
+          "-45/4",
+          "-1",
+          "-21/4",
+          "-31/4",
+          "-21/4",
+          "-29/4",
+          "-19/4",
+          "-8",
+          "-37/4",
+          "-11/4",
+          "-37/4",
+          "-8",
+          "-11/4",
+          "-21/4"
+        ],
+        "interval_order_certified": false,
+        "single_order_certified": true,
+        "interval_bounds": [
+          "-2",
+          "-10",
+          "-3/4",
+          "1",
+          "-11",
+          "1",
+          "-21/4",
+          "-27/4",
+          "-21/4",
+          "-29/4",
+          "-17/4",
+          "-31/4",
+          "-37/4",
+          "-7/4",
+          "-37/4",
+          "-8",
+          "-2",
+          "-9/2"
+        ],
+        "single_bounds": [
+          "-3",
+          "-10",
+          "-2",
+          "0",
+          "-11",
+          "-1",
+          "-21/4",
+          "-31/4",
+          "-21/4",
+          "-29/4",
+          "-9/2",
+          "-8",
+          "-37/4",
+          "-11/4",
+          "-37/4",
+          "-8",
+          "-11/4",
+          "-21/4"
+        ],
+        "stats": {
+          "vertices": 54,
+          "edges": 124,
+          "max_frontier": 5,
+          "total_forms": 98
+        }
+      },
+      "nominal": "28",
+      "negative_corner": "113/4"
+    },
+    {
+      "family": "order-change-control",
+      "jobs": 3,
+      "verdict": {
+        "certified": false,
+        "order_certified": false,
+        "global_bound": "0",
+        "upward_bound": "0",
+        "downward_bound": "0",
+        "nominal_makespan": "202",
+        "guard_bounds": [
+          "1/100"
+        ],
+        "interval_order_certified": false,
+        "single_order_certified": false,
+        "interval_bounds": [
+          "1/100"
+        ],
+        "single_bounds": [
+          "1/100"
+        ],
+        "stats": {
+          "vertices": 8,
+          "edges": 11,
+          "max_frontier": 1,
+          "total_forms": 8
+        }
+      },
+      "nominal": "202",
+      "negative_corner": "10199/100"
+    }
+  ],
+  "mixture_oracle": "-1/4"
+}

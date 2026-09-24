@@ -1,0 +1,8 @@
+{
+  "status": "aggregate invocation interrupted at 40-second tool wall limit; no full-reproduction success claimed",
+  "completed_batch_count": 15,
+  "recorded_batch_cpu_seconds": 16.984733729000002,
+  "peak_recorded_batch_rss_kib": 122540,
+  "cpu_accounting_limitation": "partial child measurements omit startup and the interrupted child; a conservative extra 60 CPU seconds is reserved for this failed one-worker invocation",
+  "repair": "reproduction split into four bounded phases; original scientific results unchanged"
+}
