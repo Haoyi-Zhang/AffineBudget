@@ -1,0 +1,37 @@
+{
+  "checked_on": "2026-09-26",
+  "scope": "External identity recheck of the two corrected bibliography records. This stored receipt is not a substitute for a future live network query.",
+  "records": [
+    {
+      "bib_key": "lowepower2020gem5",
+      "title": "The gem5 Simulator: Version 20.0+",
+      "entry_type": "article",
+      "year": "2020",
+      "identifier": "arxiv:2007.03152",
+      "venue": "CoRR",
+      "official_project_record": "https://www.gem5.org/publications/",
+      "scholarly_record": "https://arxiv.org/abs/2007.03152",
+      "finding": "Official gem5 page lists the work as CoRR 2020 with arXiv:2007.03152; no ISPASS DOI is assigned.",
+      "author_count": 78,
+      "first_author": "Jason Lowe-Power",
+      "last_author": "Éder F. Zulian",
+      "source_author_scope": "official gem5 publication entry and arXiv record"
+    },
+    {
+      "bib_key": "ubal2007multi2sim",
+      "title": "Multi2Sim: A Simulation Framework to Evaluate Multicore-Multithreaded Processors",
+      "entry_type": "inproceedings",
+      "year": "2007",
+      "identifier": "doi:10.1109/SBAC-PAD.2007.17",
+      "venue": "19th International Symposium on Computer Architecture and High Performance Computing (SBAC-PAD)",
+      "pages": "62-68",
+      "publisher_record": "https://ieeexplore.ieee.org/document/4384043/",
+      "persistent_record": "https://doi.org/10.1109/SBAC-PAD.2007.17",
+      "finding": "Publisher record identifies SBAC-PAD 2007, not ISPASS.",
+      "author_count": 4,
+      "first_author": "Rafael Ubal",
+      "last_author": "Pedro López",
+      "source_author_scope": "publisher/DOI metadata cross-checked with DBLP bibliographic record"
+    }
+  ]
+}

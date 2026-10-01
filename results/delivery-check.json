@@ -1,6 +1,6 @@
 {
-  "date": "2026-09-17",
-  "scope": "Clean candidate-archive extraction, finite exact checks, bibliography audit, figure-data export, manuscript rebuild, text/render reconciliation, template comparison, and package-policy scan; not independent peer review or mechanized proof",
+  "date": "2026-09-26",
+  "scope": "Targeted repair and clean-extraction validation for the declared finite deterministic positive-service nonpreemptive FCFS conditional-certificate model; not external peer review, novelty certification, hardware validation, or a mechanized general proof.",
   "project_payload_root": "error-budgeted-parallel-simulation-certificates-manycore",
   "project_root_entries": [
     "CURRENT-STATE.md",
@@ -9,24 +9,48 @@
     "research-plan.md"
   ],
   "standalone_payload_root": "error-budgeted-parallel-simulation",
+  "targeted_repairs": {
+    "gem5_20_bibliographic_identity": "CoRR abs/2007.03152 / arXiv:2007.03152; unrelated ISPASS DOI removed; full official author list retained",
+    "multi2sim_bibliographic_identity": "SBAC-PAD 2007, pages 62-68, DOI 10.1109/SBAC-PAD.2007.17; ISPASS venue removed",
+    "input_contract": "54 inputs canonically serialized into an operating-system temporary directory and byte-compared; coefficient mutation must differ; separate source-tree before/after byte snapshot must remain unchanged",
+    "allocator_domain_filter": "per-coordinate catalog levels above the declared radius are excluded while original level indices, score, lexicographic tie-break, and frozen witnesses are retained"
+  },
   "project_clean_extraction_verification": {
-    "tests": 31,
+    "tests": 35,
     "failures": 0,
     "errors": 0,
-    "cpu_seconds": 5.569222607,
-    "wall_seconds": 5.572665449999931,
-    "peak_rss_kib": 16328,
+    "cpu_seconds": 10.324666366,
+    "wall_seconds": 10.331265066000014,
+    "peak_rss_kib": 17888,
     "workers": 1,
+    "input_reproducibility": {
+      "generated_inputs": 54,
+      "byte_equal_inputs": 54,
+      "temporary_directory_generation": true,
+      "coefficient_mutation_detected": true,
+      "source_inputs_unchanged": true,
+      "serialization": "json.dumps(indent=2, sort_keys=True) plus one LF",
+      "scope": "canonical generated-input identity and source-tree immutability; not scientific theorem validation"
+    },
     "scope": "finite exact tests; not mechanized general proofs"
   },
   "standalone_clean_extraction_verification": {
-    "tests": 31,
+    "tests": 35,
     "failures": 0,
     "errors": 0,
-    "cpu_seconds": 5.429801271,
-    "wall_seconds": 5.433760258999882,
-    "peak_rss_kib": 16200,
+    "cpu_seconds": 10.896907947,
+    "wall_seconds": 10.899777735000043,
+    "peak_rss_kib": 17876,
     "workers": 1,
+    "input_reproducibility": {
+      "generated_inputs": 54,
+      "byte_equal_inputs": 54,
+      "temporary_directory_generation": true,
+      "coefficient_mutation_detected": true,
+      "source_inputs_unchanged": true,
+      "serialization": "json.dumps(indent=2, sort_keys=True) plus one LF",
+      "scope": "canonical generated-input identity and source-tree immutability; not scientific theorem validation"
+    },
     "scope": "finite exact tests; not mechanized general proofs"
   },
   "clean_reproduction": {
@@ -34,8 +58,9 @@
     "steps": 25,
     "child_failures": 0,
     "workers": 1,
-    "aggregate_cpu_seconds": 33.637795165,
-    "peak_child_rss_kib": 122668,
+    "aggregate_cpu_seconds": 48.86825374600001,
+    "wall_seconds": 48.8840790050001,
+    "peak_child_rss_kib": 122672,
     "scientific_fields_equal": true,
     "tolerance": 0,
     "counts": {
@@ -47,7 +72,17 @@
       "reduction_formulas": 512,
       "changed_order_constant_makespan_control": 1
     },
-    "source_inputs_unchanged": true
+    "input_reproducibility": {
+      "generated_inputs": 54,
+      "byte_equal_inputs": 54,
+      "temporary_directory_generation": true,
+      "coefficient_mutation_detected": true,
+      "source_inputs_unchanged": true,
+      "serialization": "json.dumps(indent=2, sort_keys=True) plus one LF",
+      "scope": "canonical generated-input identity and source-tree immutability; not scientific theorem validation"
+    },
+    "unit_domain_allocation_files_byte_equal": true,
+    "validated_from_named_delivery_archive_extraction": true
   },
   "bibliography_audit": {
     "calibration_groups": {
@@ -57,10 +92,12 @@
     },
     "calibration_rows": 22,
     "cited_references": 65,
-    "doi_records": 59,
+    "doi_records": 58,
+    "external_identity_live_query": false,
+    "externally_rechecked_records": 2,
     "failures": [],
     "live_manuscript_checked": true,
-    "official_non_doi_records": 6,
+    "official_non_doi_records": 7,
     "references": 65,
     "status": "pass",
     "unused_references": []
@@ -75,61 +112,117 @@
     "tables": 5,
     "bibliography_entries": 65,
     "unique_cited_entries": 65,
-    "doi_records": 59,
-    "official_non_doi_records": 6,
-    "uncited_bibliography_keys": [],
-    "missing_bibliography_keys": [],
+    "doi_records": 58,
+    "official_non_doi_records": 7,
     "undefined_references_or_citations": 0,
     "overfull_warnings": 0,
-    "underfull_output_page_warnings": 3,
+    "underfull_output_page_warnings": 4,
     "rebuilt_text_equal_pages": 24,
     "rebuilt_pixel_equal_pages": 24,
     "pixel_comparison_dpi": 108,
     "visually_inspected_pages_pdfium_200_dpi": 24,
-    "poppler_rebuild_comparison_pages": 24,
     "font_records": 18,
     "all_fonts_embedded_subset_unicode": true,
     "anonymous_pdf_author_metadata": true,
     "page_size_points": [
       486,
       720
-    ]
+    ],
+    "four_figure_source_tree_byte_equal_to_received_project": true,
+    "rebuilt_from_named_delivery_archive": true,
+    "delivered_rebuilt_text_equal_pages": 24,
+    "delivered_rebuilt_pixel_equal_pages": 24
   },
   "template_assets": {
     "acmart_cls_byte_equal_to_supplied_template": true,
     "acm_reference_format_bst_byte_equal_to_supplied_template": true,
-    "class_version": "2.20 (2026-08-16)",
     "publisher_assets_modified": false
   },
   "code_and_data_checks": {
-    "python_compileall": true,
-    "shell_syntax": true,
-    "json_files_parsed": 2224,
-    "csv_rectangularity_checked": true,
-    "figure_data_exports_equal": true,
-    "todo_or_project_placeholder_hits": 0
-  },
-  "literature_calibration": {
-    "unique_full_papers": 22,
-    "same_venue": 12,
-    "influential": 5,
-    "adjacent": 5
+    "python_ast_files_parsed": 17,
+    "shell_scripts_syntax_checked": 2,
+    "json_files_parsed": 2226,
+    "csv_files_rectangularity_checked": 8,
+    "blocked_files": [],
+    "blocked_directories": [],
+    "unresolved_todo_fixme_tbd_or_placeholder_markers": 0,
+    "marker_scan_note": "Contextual prose uses of “placeholder” and the local topological-sort variable named todo are not unresolved work markers."
   },
   "packaging_policy": {
-    "single_project_root": true,
-    "single_standalone_root": true,
+    "exact_project_root_entries": true,
     "standalone_repository_has_no_paper_directory": true,
-    "no_nested_archives": true,
-    "no_font_files": true,
+    "no_nested_archives_or_font_files_or_bytecode": true,
+    "no_vcs_or_cache_directories": true,
     "no_prompt_or_chat_history": true,
-    "no_vcs_history": true,
     "no_checksum_or_commit_manifest": true,
     "no_invented_repository_url": true,
-    "no_symlinks": true,
-    "project_archive_mib": 1.8,
-    "standalone_archive_mib": 0.94
+    "no_symlinks": true
   },
-  "scientific_completion_gate": "PASS for the declared finite affine-timed FCFS model and internal reproducibility scope; no unresolved scientific or artifact P0/P1 found in the final self-audit",
-  "external_submission_readiness": "HOLD pending live TACO portal-specific class/supplement/link verification, human authorship accountability, originality review, and truthful required AI-use disclosure",
-  "review_boundary": "Internal artifact-only self-audit; not acceptance, independent peer review, hardware validation, production-simulator accuracy, or speedup evidence"
+  "scientific_gate": "PASS for the stated targeted repairs and documented clean reproduction within the declared model scope.",
+  "external_submission_readiness": "HOLD for actual-author accountability, live TACO portal/template/supplement checks, originality review, and truthful AI-use disclosure.",
+  "review_boundary": "Local targeted validation and artifact-only self-audit; not external blind review, novelty certification, acceptance, best-paper prediction, hardware validation, or production-simulator evidence.",
+  "allocator_regressions": {
+    "half_domain": {
+      "declared_domain": [
+        "1/2"
+      ],
+      "target": "1",
+      "candidate_count": 3,
+      "selected": {
+        "indices": [
+          2
+        ],
+        "radii": [
+          "1/2"
+        ],
+        "score": 2,
+        "feasible": true,
+        "bound": "0"
+      }
+    },
+    "zero_domain": {
+      "declared_domain": [
+        "0"
+      ],
+      "target": "1",
+      "candidate_count": 1,
+      "selected": {
+        "indices": [
+          0
+        ],
+        "radii": [
+          "0"
+        ],
+        "score": 0,
+        "feasible": true,
+        "bound": "0"
+      }
+    },
+    "mixed_domain": {
+      "declared_domain": [
+        "0",
+        "1/2",
+        "1"
+      ],
+      "target": "1",
+      "candidate_count": 12,
+      "selected": {
+        "indices": [
+          0,
+          2,
+          3
+        ],
+        "radii": [
+          "0",
+          "1/2",
+          "1"
+        ],
+        "score": 13,
+        "feasible": true,
+        "bound": "0"
+      }
+    },
+    "existing_unit_domain_outputs_byte_equal": true,
+    "policy": "frozen witnesses, original catalog-level indices, original weighted score, and lexicographic tie-break retained; no catch-all exception suppression"
+  }
 }

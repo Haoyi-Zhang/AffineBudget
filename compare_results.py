@@ -13,15 +13,17 @@ ROOT=Path(__file__).resolve().parent
 def load(p):return json.loads(p.read_text())
 def require(condition,why):
     if not condition:raise AssertionError(why)
+def compare_input_bytes(reference_inputs,fresh_inputs,names):
+    require({p.name for p in fresh_inputs.glob("*.json")}==set(names),
+            f"incomplete fresh inputs: {fresh_inputs}")
+    for name in names:
+        require((reference_inputs/name).read_bytes()==(fresh_inputs/name).read_bytes(),
+                f"generated input byte difference: {name}")
+    return len(names)
 def compare(reference,fresh):
     counts={}
     input_names=[f"case-{i:03d}.json" for i in range(48)]+[f"join-{i}.json" for i in range(1,7)]
-    require({p.name for p in (fresh/"inputs").glob("*.json")}==set(input_names),
-            f"incomplete fresh inputs: {fresh/'inputs'}")
-    for name in input_names:
-        require(load(ROOT/"inputs"/name)==load(fresh/"inputs"/name),
-                f"generated input difference: {name}")
-    counts["inputs"]=len(input_names)
+    counts["inputs"]=compare_input_bytes(ROOT/"inputs",fresh/"inputs",input_names)
     groups={"models":[f"case-{i:03d}.json" for i in range(48)],
       "oracles":[f"oracle-{i:04d}.json" for i in range(2089)],
       "allocation":[f"case-{i:03d}.json" for i in (7,19,31,43)],
@@ -65,7 +67,7 @@ def compare(reference,fresh):
         require(old[field]==new[field]==value,f"boundary control difference: {field}")
     counts["changed_order_constant_makespan_control"]=1
     return {"scientific_fields_equal":True,"counts":counts,"tolerance":0,
-      "not_compared":"solver weight vectors and measurement times; fresh inputs compared exactly and fresh witnesses checked against them"}
+      "not_compared":"solver weight vectors and measurement times; fresh inputs compared byte for byte and fresh witnesses checked against them"}
 
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("fresh",type=Path)

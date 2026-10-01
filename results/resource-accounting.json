@@ -3,21 +3,30 @@
   "pilot_cpu_seconds": 0.415981116,
   "reduction_cpu_seconds": 0.026794938999999962,
   "latest_direct_verification": {
-    "tests": 31,
+    "tests": 35,
     "failures": 0,
     "errors": 0,
-    "cpu_seconds": 5.486064721,
-    "wall_seconds": 5.487953342999845,
-    "peak_rss_kib": 15916,
+    "cpu_seconds": 10.060937847,
+    "wall_seconds": 10.082975124999962,
+    "peak_rss_kib": 17592,
     "workers": 1,
+    "input_reproducibility": {
+      "generated_inputs": 54,
+      "byte_equal_inputs": 54,
+      "temporary_directory_generation": true,
+      "coefficient_mutation_detected": true,
+      "source_inputs_unchanged": true,
+      "serialization": "json.dumps(indent=2, sort_keys=True) plus one LF",
+      "scope": "canonical generated-input identity and source-tree immutability; not scientific theorem validation"
+    },
     "scope": "finite exact tests; not mechanized general proofs"
   },
   "latest_clean_reproduction": {
     "steps": 25,
     "child_failures": 0,
     "workers": 1,
-    "wall_seconds": 33.65057463500057,
-    "aggregate_cpu_seconds": 33.637795165,
+    "wall_seconds": 46.82657737300008,
+    "aggregate_cpu_seconds": 46.801715889,
     "peak_child_rss_kib": 122668,
     "reconciliation": {
       "scientific_fields_equal": true,
@@ -31,16 +40,25 @@
         "changed_order_constant_makespan_control": 1
       },
       "tolerance": 0,
-      "not_compared": "solver weight vectors and measurement times; fresh inputs compared exactly and fresh witnesses checked against them"
+      "not_compared": "solver weight vectors and measurement times; fresh inputs compared byte for byte and fresh witnesses checked against them"
     },
     "verification": {
-      "tests": 31,
+      "tests": 35,
       "failures": 0,
       "errors": 0,
-      "cpu_seconds": 5.575634459000001,
-      "wall_seconds": 5.581304317000104,
-      "peak_rss_kib": 92720,
+      "cpu_seconds": 9.787738246,
+      "wall_seconds": 9.808258647000002,
+      "peak_rss_kib": 92712,
       "workers": 1,
+      "input_reproducibility": {
+        "generated_inputs": 54,
+        "byte_equal_inputs": 54,
+        "temporary_directory_generation": true,
+        "coefficient_mutation_detected": true,
+        "source_inputs_unchanged": true,
+        "serialization": "json.dumps(indent=2, sort_keys=True) plus one LF",
+        "scope": "canonical generated-input identity and source-tree immutability; not scientific theorem validation"
+      },
       "scope": "finite exact tests; not mechanized general proofs"
     }
   },
@@ -54,5 +72,5 @@
   "numerical_threads": 1,
   "campaign_cpu_ceiling_seconds": 28800,
   "reserved_repair_reproduction_budget_seconds": 7200,
-  "input_immutability_check": "All 54 source-tree input files were byte-identical before and after the final four-phase reproduction."
+  "input_immutability_check": "All 54 retained source-tree input files were byte-identical before and after the latest four-phase reproduction; a separate temporary-directory audit serialized all 54 generated inputs and compared their bytes with the retained files, and a coefficient mutation was detected."
 }

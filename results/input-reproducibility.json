@@ -1,0 +1,9 @@
+{
+  "byte_equal_inputs": 54,
+  "coefficient_mutation_detected": true,
+  "generated_inputs": 54,
+  "scope": "canonical generated-input identity and source-tree immutability; not scientific theorem validation",
+  "serialization": "json.dumps(indent=2, sort_keys=True) plus one LF",
+  "source_inputs_unchanged": true,
+  "temporary_directory_generation": true
+}

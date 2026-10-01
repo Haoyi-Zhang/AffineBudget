@@ -1,9 +1,9 @@
 {
   "phase": "pilot",
   "workers": 1,
-  "wall_seconds": 0.4176290849999873,
-  "cpu_seconds": 0.415981116,
-  "peak_rss_kib": 120624,
+  "wall_seconds": 0.39737777099998084,
+  "cpu_seconds": 0.39483030500000005,
+  "peak_rss_kib": 120620,
   "rows": [
     {
       "family": "shared-prefix",

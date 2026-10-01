@@ -6,7 +6,7 @@ import argparse,copy,csv,itertools,json,random,resource,time
 from pathlib import Path
 from fractions import Fraction as Q
 from simcert.algebra import *
-from simcert.model import prepare,simulate
+from simcert.model import prepare,simulate,validate
 from simcert.producer import make_certificate,optimize_mixture
 from simcert.checker import check
 from simcert.cases import suite,unstable,orthant_family
@@ -51,9 +51,13 @@ def oracle_run(index,item):
     return {"id":index,"left":[list(map(str,p)) for p in ps],"right":[list(map(str,q)) for q in qs],"radii":list(map(str,b)),"weights":[list(map(str,z)) for z in w],"bound":str(bound),"oracle":str(exact),"point":list(map(str,point)),"vertices":nv,"equal":bound==exact}
 
 def allocate(model,certificate,target=Q(1)):
-    levels=[Q(0),Q(1,4),Q(1,2),Q(1)];k=len(model["domain"]);rows=[]
-    for indices in itertools.product(range(4),repeat=k):
-        c=copy.deepcopy(certificate);c["radii"]=[str(levels[i]) for i in indices]
+    levels=(Q(0),Q(1,4),Q(1,2),Q(1));domain=validate(model);rows=[]
+    # Keep the original level indices for scoring and tie-breaking, but do not
+    # enumerate any radius outside the corresponding declared model domain.
+    admissible=[tuple((i,b) for i,b in enumerate(levels) if b<=limit) for limit in domain]
+    for choices in itertools.product(*admissible):
+        indices=tuple(i for i,b in choices);radii=tuple(b for i,b in choices)
+        c=copy.deepcopy(certificate);c["radii"]=[str(b) for b in radii]
         verdict=check(model,c,target);score=sum((j+1)*i for j,i in enumerate(indices))
         rows.append({"indices":list(indices),"radii":c["radii"],"score":score,"feasible":verdict["certified"],"bound":verdict["global_bound"]})
     feasible=[r for r in rows if r["feasible"]]

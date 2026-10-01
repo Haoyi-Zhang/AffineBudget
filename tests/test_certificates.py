@@ -33,13 +33,53 @@ class Certificates(unittest.TestCase):
         self.assertEqual(report["cited_references"],65)
         self.assertEqual(report["calibration_groups"],{"same venue":12,"influential":5,"adjacent":5})
 
-    def test_generated_inputs_match_retained(self):
-        from simcert.cases import suite,orthant_family
-        generated={m["case_id"]:m for m in suite()}
-        generated.update({f"join-{m}":orthant_family(m) for m in range(1,7)})
-        self.assertEqual(set(generated),{p.stem for p in (ROOT/"inputs").glob("*.json")})
-        for case_id,model in generated.items():
-            self.assertEqual(model,json.loads((ROOT/"inputs"/(case_id+".json")).read_text()))
+    def test_generated_inputs_are_byte_exact_and_mutations_are_detected(self):
+        from input_audit import audit
+        report=audit()
+        self.assertEqual(report["generated_inputs"],54)
+        self.assertEqual(report["byte_equal_inputs"],54)
+        self.assertTrue(report["temporary_directory_generation"])
+        self.assertTrue(report["coefficient_mutation_detected"])
+
+    def test_temporary_generation_leaves_retained_inputs_unchanged(self):
+        from input_audit import audit
+        self.assertTrue(audit()["source_inputs_unchanged"])
+
+    @staticmethod
+    def trivial_allocation_case(domain,case_id):
+        k=len(domain);zeros=["0"]*k
+        model={"case_id":case_id,"family":"allocation-regression","domain":list(domain),
+          "jobs":[{"id":0,"resource":"r","deps":[],"release":["0"]+zeros,"service":["1"]+zeros}]}
+        certificate={"radii":list(domain),"orders":{"r":[0]},"guards":[],"lower_weights":["1"]}
+        return model,certificate
+
+    def test_allocate_filters_half_domain_and_preserves_level_score(self):
+        from campaign import allocate
+        model,certificate=self.trivial_allocation_case(["1/2"],"allocation-domain-half")
+        result=allocate(model,certificate,target=Q(1))
+        self.assertEqual(len(result["candidates"]),3)
+        self.assertEqual([r["radii"] for r in result["candidates"]],[["0"],["1/4"],["1/2"]])
+        self.assertEqual(result["selected"]["radii"],["1/2"])
+        self.assertEqual(result["selected"]["indices"],[2])
+        self.assertEqual(result["selected"]["score"],2)
+        self.assertEqual(result["selected"]["bound"],"0")
+
+    def test_allocate_zero_domain_has_one_zero_entry(self):
+        from campaign import allocate
+        model,certificate=self.trivial_allocation_case(["0"],"allocation-domain-zero")
+        result=allocate(model,certificate,target=Q(1))
+        self.assertEqual(len(result["candidates"]),1)
+        self.assertEqual(result["selected"],{"indices":[0],"radii":["0"],"score":0,"feasible":True,"bound":"0"})
+
+    def test_allocate_filters_mixed_domains_per_coordinate(self):
+        from campaign import allocate
+        model,certificate=self.trivial_allocation_case(["0","1/2","1"],"allocation-domain-mixed")
+        result=allocate(model,certificate,target=Q(1))
+        self.assertEqual(len(result["candidates"]),12)
+        self.assertEqual(result["selected"]["indices"],[0,2,3])
+        self.assertEqual(result["selected"]["radii"],["0","1/2","1"])
+        self.assertEqual(result["selected"]["score"],13)
+        self.assertEqual(result["selected"]["bound"],"0")
 
     def test_reduction_equality_characterization(self):
         from reduction_check import formulas,evaluate
@@ -109,6 +149,8 @@ class Certificates(unittest.TestCase):
                 if v["certified"]:feasible.append(row)
             best=max(feasible,key=lambda x:(x["score"],tuple(x["indices"]))) if feasible else None
             self.assertEqual(best,data["selected"])
+            from campaign import allocate
+            self.assertEqual(allocate(model,original,Q(data["target"])),data)
     def test_independent_join_structure(self):
         for file in sorted((ROOT/"results/structure").glob("*.json")):
             d=json.loads(file.read_text());m=d["m"];model=json.loads((ROOT/"inputs"/file.name).read_text())

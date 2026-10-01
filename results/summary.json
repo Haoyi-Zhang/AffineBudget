@@ -42,8 +42,8 @@
       "single": 8
     }
   ],
-  "max_rss_kib": 122748,
-  "model_cpu_seconds": 6.926734685,
+  "max_rss_kib": 122540,
+  "model_cpu_seconds": 6.712056038,
   "models": 48,
   "oracle_equal": 2089,
   "oracle_unsound": 0,

@@ -19,6 +19,20 @@ ROOT = Path(__file__).resolve().parent
 SCHOLARLY = ROOT / "scholarly"
 EXPECTED_REFERENCES = 65
 EXPECTED_CALIBRATION = {"same venue": 12, "influential": 5, "adjacent": 5}
+EXPECTED_EXTERNAL_IDENTITIES = {
+    "lowepower2020gem5": {
+        "entry_type": "article", "year": "2020", "doi": "",
+        "identifier": "arxiv:2007.03152", "primary_record": "https://www.gem5.org/publications/",
+        "journal": "CoRR", "volume": "abs/2007.03152", "eprint": "2007.03152",
+        "author_count": 78, "first_author": "Jason Lowe-Power", "last_author": "Éder F. Zulian",
+    },
+    "ubal2007multi2sim": {
+        "entry_type": "inproceedings", "year": "2007", "doi": "10.1109/SBAC-PAD.2007.17",
+        "identifier": "doi:10.1109/SBAC-PAD.2007.17", "primary_record": "https://doi.org/10.1109/SBAC-PAD.2007.17",
+        "booktitle_contains": "SBAC-PAD", "pages": "62--68",
+        "author_count": 4, "first_author": "Rafael Ubal", "last_author": "Pedro López",
+    },
+}
 
 
 def parse_bib(path: Path) -> List[Dict[str, str]]:
@@ -57,8 +71,14 @@ def parse_bib(path: Path) -> List[Dict[str, str]]:
                 "bib_key": key,
                 "entry_type": entry_type,
                 "title": field("title"),
+                "author": field("author"),
                 "year": field("year"),
                 "doi": field("doi"),
+                "journal": field("journal"),
+                "volume": field("volume"),
+                "eprint": field("eprint"),
+                "booktitle": field("booktitle"),
+                "pages": field("pages"),
             }
         )
         pos = end
@@ -68,6 +88,22 @@ def parse_bib(path: Path) -> List[Dict[str, str]]:
 def normalized_title(title: str) -> str:
     plain = re.sub(r"[{}\\]", "", title).lower()
     return re.sub(r"[^a-z0-9]+", "", plain)
+
+
+def normalized_person(name: str) -> str:
+    substitutions = {
+        r"{\'E}": "É", r"{\'e}": "é", r"{\'o}": "ó", r"{\`a}": "à",
+        r"{\"u}": "ü", r"{\"o}": "ö",
+    }
+    plain = name
+    for source, target in substitutions.items():
+        plain = plain.replace(source, target)
+    plain = re.sub(r"[{}\\]", "", plain).lower()
+    return re.sub(r"[^a-z0-9]+", "", plain)
+
+
+def bib_authors(author_field: str) -> List[str]:
+    return [part.strip() for part in author_field.split(" and ") if part.strip()]
 
 
 def manuscript_citations(project_root: Path) -> Mapping[str, Set[str]]:
@@ -125,7 +161,7 @@ def audit() -> Dict[str, object]:
         row = audit_by_key.get(entry["bib_key"], {})
         missing = sorted(field for field in required_audit_fields if not row.get(field, "").strip())
         require(not missing, f"{entry['bib_key']}: empty audit fields {missing}", failures)
-        require(row.get("metadata_status") == "verified", f"{entry['bib_key']}: metadata not verified", failures)
+        require(row.get("metadata_status") in {"verified","externally-checked"}, f"{entry['bib_key']}: unsupported metadata status", failures)
         require(row.get("citation_status") == "cited-and-relevant", f"{entry['bib_key']}: citation relevance not accepted", failures)
         require(row.get("year") == entry["year"], f"{entry['bib_key']}: year differs between audit and BibTeX", failures)
         require(row.get("entry_type") == entry["entry_type"], f"{entry['bib_key']}: entry type differs between audit and BibTeX", failures)
@@ -136,6 +172,39 @@ def audit() -> Dict[str, object]:
             expected_record = "https://doi.org/" + entry["doi"]
             require(row.get("identifier", "").lower() == expected_identifier.lower(), f"{entry['bib_key']}: DOI identifier mismatch", failures)
             require(row.get("primary_record", "").lower() == expected_record.lower(), f"{entry['bib_key']}: DOI record mismatch", failures)
+
+    identity_path = ROOT / "results" / "bibliographic-identity-check.json"
+    identity_data = json.loads(identity_path.read_text(encoding="utf-8"))
+    identity_rows = {row["bib_key"]: row for row in identity_data.get("records", [])}
+    require(set(identity_rows) == set(EXPECTED_EXTERNAL_IDENTITIES), "external identity receipt key coverage differs", failures)
+    by_key = {entry["bib_key"]: entry for entry in entries}
+    for key, expected in EXPECTED_EXTERNAL_IDENTITIES.items():
+        entry = by_key[key]; row = audit_by_key[key]; identity = identity_rows.get(key, {})
+        require(entry["entry_type"] == expected["entry_type"], f"{key}: corrected entry type mismatch", failures)
+        require(entry["year"] == expected["year"], f"{key}: corrected year mismatch", failures)
+        require(entry["doi"].lower() == expected["doi"].lower(), f"{key}: corrected DOI mismatch", failures)
+        require(row.get("identifier", "").lower() == expected["identifier"].lower(), f"{key}: external identifier mismatch", failures)
+        require(row.get("primary_record", "").lower() == expected["primary_record"].lower(), f"{key}: external primary record mismatch", failures)
+        require(row.get("metadata_status") == "externally-checked", f"{key}: external check status missing", failures)
+        require(identity.get("entry_type") == expected["entry_type"] and identity.get("year") == expected["year"], f"{key}: external identity receipt differs", failures)
+        require(identity.get("identifier", "").lower() == expected["identifier"].lower(), f"{key}: external identity receipt identifier differs", failures)
+        authors = bib_authors(entry.get("author", ""))
+        require(len(authors) == expected["author_count"], f"{key}: corrected author count mismatch", failures)
+        if authors:
+            require(normalized_person(authors[0]) == normalized_person(expected["first_author"]), f"{key}: corrected first author mismatch", failures)
+            require(normalized_person(authors[-1]) == normalized_person(expected["last_author"]), f"{key}: corrected last author mismatch", failures)
+        require(identity.get("author_count") == expected["author_count"], f"{key}: external receipt author count differs", failures)
+        require(normalized_person(identity.get("first_author", "")) == normalized_person(expected["first_author"]), f"{key}: external receipt first author differs", failures)
+        require(normalized_person(identity.get("last_author", "")) == normalized_person(expected["last_author"]), f"{key}: external receipt last author differs", failures)
+        if key == "lowepower2020gem5":
+            require(entry.get("journal") == expected["journal"], f"{key}: corrected journal mismatch", failures)
+            require(entry.get("volume") == expected["volume"], f"{key}: corrected volume mismatch", failures)
+            require(entry.get("eprint") == expected["eprint"], f"{key}: corrected arXiv identifier mismatch", failures)
+            require("others" not in entry.get("author", "").lower(), f"{key}: truncated author list", failures)
+        if key == "ubal2007multi2sim":
+            require(expected["booktitle_contains"] in entry.get("booktitle", ""), f"{key}: corrected venue mismatch", failures)
+            require("ISPASS" not in entry.get("booktitle", "").upper(), f"{key}: stale ISPASS venue remains", failures)
+            require(entry.get("pages") == expected["pages"], f"{key}: corrected pages mismatch", failures)
 
     with (SCHOLARLY / "citation-usage.csv").open(newline="", encoding="utf-8") as handle:
         usage_rows = list(csv.DictReader(handle))
@@ -174,6 +243,8 @@ def audit() -> Dict[str, object]:
         "references": len(entries),
         "doi_records": len(dois),
         "official_non_doi_records": len(entries) - len(dois),
+        "externally_rechecked_records": len(EXPECTED_EXTERNAL_IDENTITIES),
+        "external_identity_live_query": False,
         "cited_references": sum(bool(usage.get(key, "").strip()) for key in keys),
         "unused_references": sorted(set(keys) - set(usage)),
         "calibration_rows": len(calibration),

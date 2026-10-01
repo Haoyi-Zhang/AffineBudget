@@ -159,9 +159,9 @@
   ],
   "interpretation": "guard completeness is about order, not all true makespan error bounds",
   "measurement": {
-    "cpu_seconds": 0.0011789280000000027,
-    "wall_seconds": 0.002183713000249554,
-    "peak_rss_kib": 9472,
+    "cpu_seconds": 0.0005844550000000011,
+    "wall_seconds": 0.0016325870000173381,
+    "peak_rss_kib": 92708,
     "workers": 1
   }
 }
