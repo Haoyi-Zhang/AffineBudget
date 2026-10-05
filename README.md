@@ -8,7 +8,9 @@ A candidate resource order is an actual eager FCFS order precisely when its cand
 
 The retained campaign contains 48 generated models, 648 dynamic parameter points, 2,089 continuous-domain small comparison oracles, 112 catalog entries, six independent-join models with 126 sign-corner executions, and 512 Boolean-formula reduction checks with 6,144 assignments. These are synthetic mathematical models, not application, hardware, human, or production-simulator measurements. The checker and producer share the model/envelope implementation; independence from LP search is not independent implementation or independent peer review.
 
-The prescribed 12 same-venue, five influential, and five adjacent full-paper calibration is complete in `literature-calibration.csv`. The closest parametric work is broader in scheduler/event-network semantics and full-domain partitioning; this repository instead supports a narrower one-box FCFS membership query with an exact order-and-error certificate. No dominance, runtime advantage, hardware fidelity, or production-simulator significance is inferred. There is no public repository address or external submission.
+The related-work comparison is recorded in `literature-calibration.csv`. The closest parametric work is broader in scheduler/event-network semantics and full-domain partitioning; this repository instead supports a narrower one-box FCFS membership query with an exact order-and-error certificate. No dominance, runtime advantage, hardware fidelity, or production-simulator significance is inferred.
+
+The pilot numbers in the manuscript refer to `results/pilot.json`; the model CPU sum and maximum RSS in `results/summary.json` summarize the 48 retained `results/models/case-*.json` receipts. Separately retained resource records can describe other executions. These summaries do not represent a new campaign run.
 
 ## Offline verification (no third-party Python packages)
 
