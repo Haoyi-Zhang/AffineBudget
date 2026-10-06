@@ -4,15 +4,54 @@
 Exact bounds and verdicts must match. Solver weights may differ only if the
 checker still validates their recorded outcomes. No tolerance is used.
 """
-import argparse,json
+import argparse,itertools,json
 from pathlib import Path
 from simcert.checker import check
 from simcert.algebra import rational,mixture_bound,exact_small_oracle
+from simcert.model import simulate
 ROOT=Path(__file__).resolve().parent
 
 def load(p):return json.loads(p.read_text())
 def require(condition,why):
     if not condition:raise AssertionError(why)
+def verify_dynamic_samples(model,verdict,samples):
+    """Recompute the reported grid, errors and conditional execution guarantee."""
+    k=len(model["domain"])
+    expected=list(itertools.product((-1,0,1),repeat=k))
+    require([tuple(row["point"]) for row in samples]==expected,
+            "incomplete, duplicate or reordered dynamic grid")
+    nominal=simulate(model,[0]*k)
+    bound=rational(verdict["global_bound"])
+    for row in samples:
+        actual=simulate(model,row["point"])
+        same=actual["orders"]==nominal["orders"]
+        error=abs(actual["makespan"]-nominal["makespan"])
+        require(str(actual["makespan"])==row["makespan"],"incorrect sampled makespan")
+        require(type(row["same_order"]) is bool and row["same_order"]==same,
+                "incorrect sampled resource-order verdict")
+        require(str(error)==row["absolute_error"],"incorrect sampled absolute error")
+        if verdict["order_certified"]:
+            require(same,"certified order contradicted by dynamic execution")
+            require(error<=bound,"certified makespan bound contradicted by dynamic execution")
+    return len(samples)
+
+def verify_oracle_result(data):
+    """Check arithmetic and the recorded exact-agreement/arrangement fields."""
+    ps=[tuple(map(rational,p)) for p in data["left"]]
+    qs=[tuple(map(rational,q)) for q in data["right"]]
+    b=tuple(map(rational,data["radii"]))
+    require(len(data["weights"])==len(ps),"incomplete oracle left coverage")
+    bound=max(mixture_bound(p,qs,w,b) for p,w in zip(ps,data["weights"]))
+    (exact,point),vertices=exact_small_oracle(ps,qs,b)
+    require(bound==rational(data["bound"]),"incorrect oracle witness bound")
+    require(exact==rational(data["oracle"]),"incorrect exact oracle value")
+    require(bound>=exact,"unsound oracle comparison bound")
+    require(type(data["equal"]) is bool and data["equal"]==(bound==exact),
+            "incorrect oracle exact-agreement annotation")
+    require(data["point"]==list(map(str,point)),"incorrect oracle maximizing point")
+    require(type(data["vertices"]) is int and data["vertices"]==vertices,
+            "incorrect oracle arrangement vertex count")
+    return bound==exact
 def compare_input_bytes(reference_inputs,fresh_inputs,names):
     require({p.name for p in fresh_inputs.glob("*.json")}==set(names),
             f"incomplete fresh inputs: {fresh_inputs}")
@@ -36,15 +75,10 @@ def compare(reference,fresh):
             if group=="models":
                 model=load(fresh/"inputs"/name)
                 require(check(model,new["certificate"])==new["verdict"],f"unvalidated fresh certificate {name}")
+                verify_dynamic_samples(model,new["verdict"],new["samples"])
                 fields=("case_id","family","clients","seed","jobs","verdict","samples")
             elif group=="oracles":
-                ps=[tuple(map(rational,p)) for p in new["left"]]
-                qs=[tuple(map(rational,q)) for q in new["right"]]
-                b=tuple(map(rational,new["radii"]))
-                bound=max(mixture_bound(p,qs,w,b) for p,w in zip(ps,new["weights"]))
-                require(len(new["weights"])==len(ps),f"incomplete fresh oracle {name}")
-                require(bound==rational(new["bound"]),f"invalid fresh oracle witness {name}")
-                require(exact_small_oracle(ps,qs,b)[0][0]==rational(new["oracle"]),f"invalid fresh oracle value {name}")
+                verify_oracle_result(new)
                 fields=("id","left","right","radii","bound","oracle","point","vertices","equal")
             elif group=="structure":
                 model=load(fresh/"inputs"/name)

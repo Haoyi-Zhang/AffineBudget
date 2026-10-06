@@ -26,12 +26,15 @@ class Certificates(unittest.TestCase):
         self.assertEqual({p.stem for p in (ROOT/"inputs").glob("*.json")},
                          {f"case-{i:03d}" for i in range(48)}|{f"join-{m}" for m in range(1,7)})
     def test_reference_audit(self):
-        from audit_references import audit
+        from audit_references import audit,parse_bib
         report=audit()
         self.assertEqual(report["status"],"pass")
         self.assertEqual(report["references"],65)
         self.assertEqual(report["cited_references"],65)
         self.assertEqual(report["calibration_groups"],{"same venue":12,"influential":5,"adjacent":5})
+        entries={e["bib_key"]:e for e in parse_bib(ROOT/"scholarly/references.bib")}
+        self.assertIn("Stephan Thesing",entries["reineke2006anomalies"]["author"])
+        self.assertNotIn("Stefan Thesing",entries["reineke2006anomalies"]["author"])
 
     def test_generated_inputs_are_byte_exact_and_mutations_are_detected(self):
         from input_audit import audit
@@ -118,22 +121,38 @@ class Certificates(unittest.TestCase):
         m=copy.deepcopy(self.model);m["jobs"][0]["deps"]=[m["jobs"][-1]["id"]]
         with self.assertRaises(ValueError):validate(m)
     def test_all_stored_certificates_and_dynamic_points(self):
+        from compare_results import verify_dynamic_samples
         for file in sorted((ROOT/"results/models").glob("*.json")):
             data=json.loads(file.read_text());model=json.loads((ROOT/"inputs"/file.name).read_text())
             self.assertEqual(check(model,data["certificate"]),data["verdict"])
-            n=simulate(model,[0]*len(model["domain"]))
-            for sample in data["samples"]:
-                a=simulate(model,sample["point"])
-                self.assertEqual(str(a["makespan"]),sample["makespan"])
-                self.assertEqual(a["orders"]==n["orders"],sample["same_order"])
+            self.assertEqual(verify_dynamic_samples(model,data["verdict"],data["samples"]),
+                             3**len(model["domain"]))
     def test_all_oracle_witnesses(self):
+        from compare_results import verify_oracle_result
         for file in sorted((ROOT/"results/oracles").glob("*.json")):
-            d=json.loads(file.read_text());k=len(d["radii"])
-            ps=[form(x,k) for x in d["left"]];qs=[form(x,k) for x in d["right"]];b=tuple(map(Q,d["radii"]))
-            bound=max(mixture_bound(p,qs,w,b) for p,w in zip(ps,d["weights"]))
-            (exact,pt),nv=exact_small_oracle(ps,qs,b)
-            self.assertEqual(str(bound),d["bound"]);self.assertEqual(str(exact),d["oracle"])
-            self.assertGreaterEqual(bound,exact)
+            self.assertTrue(verify_oracle_result(json.loads(file.read_text())))
+    def test_incorrect_dynamic_error_and_bound_are_rejected(self):
+        from compare_results import verify_dynamic_samples
+        data=json.loads((ROOT/"results/models/case-001.json").read_text())
+        samples=copy.deepcopy(data["samples"])
+        next(row for row in samples if row["absolute_error"]!="0")["absolute_error"]="0"
+        with self.assertRaisesRegex(AssertionError,"absolute error"):
+            verify_dynamic_samples(self.model,data["verdict"],samples)
+        verdict=copy.deepcopy(data["verdict"]);verdict["global_bound"]="0"
+        with self.assertRaisesRegex(AssertionError,"makespan bound"):
+            verify_dynamic_samples(self.model,verdict,data["samples"])
+    def test_dynamic_grid_coverage_is_required(self):
+        from compare_results import verify_dynamic_samples
+        data=json.loads((ROOT/"results/models/case-001.json").read_text())
+        for samples in (data["samples"][:-1],data["samples"][:-1]+data["samples"][:1]):
+            with self.assertRaisesRegex(AssertionError,"dynamic grid"):
+                verify_dynamic_samples(self.model,data["verdict"],samples)
+    def test_incorrect_oracle_annotations_are_rejected(self):
+        from compare_results import verify_oracle_result
+        original=json.loads((ROOT/"results/oracles/oracle-0000.json").read_text())
+        for field,value in (("equal",False),("point",["2"]),("vertices",-1)):
+            data=copy.deepcopy(original);data[field]=value
+            with self.assertRaises(AssertionError):verify_oracle_result(data)
     def test_all_catalog_candidates_and_optima(self):
         for file in sorted((ROOT/"results/allocation").glob("*.json")):
             data=json.loads(file.read_text());model=json.loads((ROOT/"inputs"/file.name).read_text())

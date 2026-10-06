@@ -16,12 +16,30 @@ if phase in previous and not (out/("phase-"+previous[phase]+".json")).is_file():
 if (out/("phase-"+phase+".json")).exists():raise SystemExit("Phase already complete")
 os.environ.update(OPENBLAS_NUM_THREADS="1",OMP_NUM_THREADS="1",MKL_NUM_THREADS="1",NUMEXPR_NUM_THREADS="1")
 start=time.perf_counter();before=resource.getrusage(resource.RUSAGE_CHILDREN);own=time.process_time();steps=0
+raw=out/"raw-output"/(phase+"-"+str(time.time_ns()))
+raw.mkdir(parents=True)
 
 def run(arguments,receipt=None):
     global steps
     print("RUN", " ".join(arguments),flush=True)
-    r=subprocess.run([sys.executable]+arguments,cwd=ROOT,env=os.environ,check=True,
-          capture_output=True,text=True,timeout=45)
+    prefix=raw/(f"step-{steps:02d}")
+    command=[sys.executable,"-B"]+arguments
+    prefix.with_suffix(".command.json").write_text(json.dumps(command)+"\n",encoding="utf-8")
+    def retain(stdout,stderr):
+        for suffix,stream in ((".stdout.txt",stdout),(".stderr.txt",stderr)):
+            if isinstance(stream,bytes):stream=stream.decode("utf-8",errors="replace")
+            prefix.with_suffix(suffix).write_text(stream or "",encoding="utf-8")
+    try:
+        r=subprocess.run(command,cwd=ROOT,env=os.environ,check=False,
+              capture_output=True,text=True,timeout=45)
+    except subprocess.TimeoutExpired as exc:
+        retain(exc.stdout,exc.stderr)
+        raise
+    retain(r.stdout,r.stderr)
+    if r.returncode:
+        print(r.stdout[-1000:],end="",flush=True)
+        print(r.stderr[-2000:],end="",file=sys.stderr,flush=True)
+    r.check_returncode()
     if receipt:(out/receipt).write_text(r.stdout)
     steps+=1;print(r.stdout[-1000:],end="",flush=True)
 
