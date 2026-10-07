@@ -1,5 +1,6 @@
 """A deterministic, eager FCFS, nonpreemptive finite job model."""
 from fractions import Fraction as Q
+from heapq import heapify, heappop, heappush
 from .algebra import rational, form, value, upper, add, reduce_forms
 
 MAX_JOBS=512
@@ -85,12 +86,13 @@ def graph_for(model,orders):
         edges.append((c,"m",z))
     incoming={v:[] for v in nodes};outgoing={v:[] for v in nodes}
     for u,v,w in edges:incoming[v].append((u,w));outgoing[u].append(v)
-    degree={v:len(incoming[v]) for v in nodes};todo=sorted(v for v in nodes if not degree[v]);topo=[]
+    degree={v:len(incoming[v]) for v in nodes};todo=[v for v in nodes if not degree[v]];topo=[]
+    heapify(todo)
     while todo:
-        u=todo.pop(0);topo.append(u)
+        u=heappop(todo);topo.append(u)
         for v in outgoing[u]:
             degree[v]-=1
-            if not degree[v]:todo.append(v);todo.sort()
+            if not degree[v]:heappush(todo,v)
     if len(topo)!=len(nodes) or topo[0]!="s":raise ValueError("candidate graph cyclic or disconnected")
     guards=[]
     for r,seq in sorted(orders.items()):
