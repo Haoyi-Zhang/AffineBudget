@@ -5,6 +5,12 @@ on:
     branches: [main]
   pull_request:
   workflow_dispatch:
+    inputs:
+      run_refreshed_catalog:
+        description: 'Also run the separate 112-point refreshed-witness supplement'
+        type: boolean
+        required: false
+        default: false
 
 permissions:
   contents: read
@@ -48,6 +54,17 @@ jobs:
               python -B reproduce.py "$RUNNER_TEMP/p040-scientific/fresh" "$phase"
             done
           ' 2>&1 | tee "$RUNNER_TEMP/p040-scientific/run.log"
+      - name: Refreshed finite-catalog supplement
+        if: github.event_name == 'push' || (github.event_name == 'workflow_dispatch' && inputs.run_refreshed_catalog)
+        shell: bash
+        run: |
+          set -euo pipefail
+          timeout --signal=TERM --kill-after=10s 600s bash -euo pipefail -c '
+            ulimit -v 3145728
+            ulimit -t 300
+            python -B refresh_allocation.py --output "$RUNNER_TEMP/p040-scientific/refreshed"
+            python -B -S refresh_allocation.py --reconcile "$RUNNER_TEMP/p040-scientific/refreshed"
+          ' 2>&1 | tee "$RUNNER_TEMP/p040-scientific/refreshed.log"
       - name: Retain raw outputs, including failures
         if: always()
         uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02

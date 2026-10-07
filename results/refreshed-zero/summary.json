@@ -1,0 +1,110 @@
+{
+  "claim": "Four nominal-point certificates only; no full numerical refreshed-catalog result.",
+  "target": "1",
+  "case_ids": [
+    "case-007",
+    "case-019",
+    "case-031",
+    "case-043"
+  ],
+  "all_frozen_fields_equal": true,
+  "all_zero_full_verdicts_equal": true,
+  "frozen_rows_rechecked": 112,
+  "records": [
+    {
+      "case_id": "case-007",
+      "frozen_feasible": 11,
+      "frozen_points": 16,
+      "frozen_selected": {
+        "bound": "1",
+        "feasible": true,
+        "indices": [
+          2,
+          2
+        ],
+        "radii": [
+          "1/2",
+          "1/2"
+        ],
+        "score": 6
+      },
+      "frozen_zero_bound": "0",
+      "independent_nominal_makespan": "16",
+      "nominal_guard_records": 4,
+      "nominal_onehot_bound": "0",
+      "nominal_onehot_certified": true
+    },
+    {
+      "case_id": "case-019",
+      "frozen_feasible": 13,
+      "frozen_points": 16,
+      "frozen_selected": {
+        "bound": "7/8",
+        "feasible": true,
+        "indices": [
+          3,
+          2
+        ],
+        "radii": [
+          "1",
+          "1/2"
+        ],
+        "score": 7
+      },
+      "frozen_zero_bound": "0",
+      "independent_nominal_makespan": "49",
+      "nominal_guard_records": 62,
+      "nominal_onehot_bound": "0",
+      "nominal_onehot_certified": true
+    },
+    {
+      "case_id": "case-031",
+      "frozen_feasible": 11,
+      "frozen_points": 16,
+      "frozen_selected": {
+        "bound": "7/8",
+        "feasible": true,
+        "indices": [
+          2,
+          2
+        ],
+        "radii": [
+          "1/2",
+          "1/2"
+        ],
+        "score": 6
+      },
+      "frozen_zero_bound": "1/2",
+      "independent_nominal_makespan": "65",
+      "nominal_guard_records": 62,
+      "nominal_onehot_bound": "0",
+      "nominal_onehot_certified": true
+    },
+    {
+      "case_id": "case-043",
+      "frozen_feasible": 0,
+      "frozen_points": 64,
+      "frozen_selected": null,
+      "frozen_zero_bound": "12/7",
+      "independent_nominal_makespan": "48",
+      "nominal_guard_records": 62,
+      "nominal_onehot_bound": "0",
+      "nominal_onehot_certified": true
+    }
+  ],
+  "scope": "actual supplied checker; no LP, full campaign or timing",
+  "zero_certificates_rechecked": 4,
+  "numerical_refreshed_catalog_executed": false,
+  "nonzero_refreshed_points_executed": 0,
+  "original_allocation_results_modified": false,
+  "original_checker_changed": false,
+  "frozen_fields_rechecked": ["indices", "radii", "score", "feasible", "bound", "selected", "target"],
+  "independent_reference_scope": "Test-local literal earliest-start scan of nominal jobs; no event heap or project envelope evaluator.",
+  "before_current_comparison_scope": "Actual original and candidate checkers in separate processes; exact scientific outputs identical. POSIX campaign.allocate and numerical producer not executed on this Windows host.",
+  "caps_scope": "Native supplement keeps original per-child and outer limits; POSIX failure-controller behavior and numerical completion unverified locally.",
+  "limitations": [
+    "No refreshed optimum or nonzero allowance established.",
+    "No runtime, hardware or continuous-domain claim.",
+    "No external primary-reference, remote CI or general-proof certification."
+  ]
+}

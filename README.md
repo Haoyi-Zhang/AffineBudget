@@ -32,8 +32,11 @@ regressions in `tests/test_ready_order.py`. From the artifact root, run
 lexicographic min-heap against a test-local declarative ordering reference,
 retained certificates, mixed-width identifiers, job limits, cycle refusal, and
 the changed-order/constant-makespan boundary. These finite checks are not a new
-production campaign or a speed measurement. Full discovery now contains 44
-tests; the historical 38-test campaign receipts remain unchanged.
+production campaign or a speed measurement. These extend the retained suite
+to 44 tests; the historical 38-test campaign receipts remain unchanged. With
+the thirteen refreshed-catalog regressions below, full current discovery contains
+57 tests. The thirteen new tests are portable and included in the existing
+`verify.py` discovery; they do not run the numerical supplement.
 
 ## Fresh production and reproduction
 
@@ -86,6 +89,70 @@ The frozen-witness allocator is optimal only over its enumerated catalog and fix
 `results/pilot.json` retains the three-job negative control: nominal makespan 202, perturbed 101.99, fixed-graph bound zero, order guard +1/100 and refusal. The proof gives unbounded amplification as the long service grows. The independent-join data show linear form counts `15m+4` alongside `2^m` designated readiness-selector patterns; dense coefficient storage is quadratic, and no runtime comparison with another symbolic executor is claimed.
 
 A separate three-job control in `results/boundary-control.json` has a blocker followed by two unit services. Their FCFS order changes but the total makespan remains exactly five. It is correctly refused by the fixed-order guard. This establishes that order-guard completeness is not completeness for all true global-error guarantees; the control is outside the unchanged 48-case campaign.
+
+## Separate refreshed-witness supplement
+
+`refresh_allocation.py` adds a separate evaluation policy; it does not replace
+`campaign.py allocate` or its retained results. Selection remains case-007,
+case-019, case-031 and case-043 (eight clients, seed one in each family), target
+one, the original filtered levels and original score/lexicographic tie-break.
+There are exactly 16 + 16 + 16 + 64 = 112 points, below the 256-point ceiling.
+The numerical arm performs at most 112 construction calls and 112 checker
+calls, plus four zero-only constructions and four fallback checks: 232
+combined calls. Each call is recorded exclusively before invocation, with
+per-model ceilings 34, 34, 34 and 130. Frozen fields in this arm are copied,
+not freshly certified. The separate portable reconciliation rechecks all
+112 frozen entries and at most 116 fresh attempts (228 checker calls),
+including full verdicts, selections, errors, point coverage and call records.
+No numerical construction occurs during reconciliation. Repeated regression
+runs are separate checks, not a cumulative 256-call receipt.
+Each point first uses the existing numerical construction and unchanged exact
+checker. Only a refused or failed zero-radius proposal may try a nominal
+one-hot witness; that witness must pass every unchanged checker obligation.
+All attempts, errors, refusals, losses and selected entries are retained.
+Fresh and frozen feasible sets are not unioned. Failed numerical attempts
+remain recorded even if zero fallback succeeds, and make the native
+supplement exit nonzero rather than disappearing behind that fallback.
+
+The delivered `results/refreshed-zero/zero-certificates.json` contains only
+four zero-radius certificates, independently checked against a test-local
+nominal-schedule reference. All four pass with bound zero; case-043's original
+frozen zero-radius bound remains 12/7 and refusal. This recovers a nominal
+point, not a nonzero allowance or an optimum for the refreshed catalog.
+No full numerical refreshed-catalog result or timing is claimed by these data.
+
+Portable checks from the artifact root:
+
+```sh
+python -B -S -m unittest discover -s tests -p test_catalog_refresh.py
+```
+
+The numerical supplement requires the existing NumPy/SciPy environment and
+POSIX resource controls. Each of four sequential model children keeps the
+3 GiB address-space limit, 35-second CPU ceiling and 45-second wall watchdog.
+Run it in a new external destination with the same whole-run guards:
+
+```sh
+timeout --signal=TERM --kill-after=10s 600s bash -euo pipefail -c '
+  ulimit -v 3145728
+  ulimit -t 300
+  python -B refresh_allocation.py --output NEW_EXTERNAL_DIRECTORY
+  python -B -S refresh_allocation.py --reconcile NEW_EXTERNAL_DIRECTORY
+'
+```
+
+Pushes and manual dispatches with `run_refreshed_catalog` set to true run both
+commands after the original full gates. All discovered tests and the original
+reproduction remain unchanged; pull requests run those original gates without
+the supplement. The supplement refuses existing
+destinations and unsupported OS caps; partial point records and complete
+stdout/stderr survive failed children. The numerical summary alone is not a
+successful scientific reconciliation;
+both commands must succeed, with a fresh `reconciliation.json` receipt.
+The supplement reports no timing metrics and establishes neither
+continuous-box optimality nor hardware/simulator speed.
+The manuscript's allocation table and its original negative results remain
+the frozen-policy study.
 
 ## Files
 
