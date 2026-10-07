@@ -119,7 +119,54 @@ four zero-radius certificates, independently checked against a test-local
 nominal-schedule reference. All four pass with bound zero; case-043's original
 frozen zero-radius bound remains 12/7 and refusal. This recovers a nominal
 point, not a nonzero allowance or an optimum for the refreshed catalog.
-No full numerical refreshed-catalog result or timing is claimed by these data.
+These zero-only data are distinct from the full catalog comparison below.
+
+The separate numerical run retains every point in the same predeclared
+catalog. Its existing producer and unchanged full checker give:
+
+| Case / family | Frozen feasible | Refreshed feasible | Refreshed selected radii | Score | Checked bound |
+|---|---:|---:|---|---:|---:|
+| 007 / shared prefix | 11/16 | 11/16 | (1/2, 1/2) | 6 | 1 |
+| 019 / staggered bank | 13/16 | 13/16 | (1, 1/2) | 7 | 7/8 |
+| 031 / fork--join | 11/16 | 11/16 | (1/2, 1/2) | 6 | 7/8 |
+| 043 / pipeline | 0/64 | 12/64 | (1, 0, 1/4) | 6 | 15/16 |
+
+The first three selections are unchanged. The pipeline gains 12 accepted
+entries, with no lost certification in any of the four cases. Each selected
+entry is the unique highest-score entry among the accepted proposals.
+All 112 order verdicts pass; the 65 remaining refusals fail target one,
+including 52 pipeline entries. Bounds tighten at seven fork--join and
+32 pipeline points, stay equal at the other 73 points, and never loosen in
+this comparison. Tighter fork--join bounds do not improve its selection.
+There are 112 existing-producer attempts and 112 checker calls, no
+numerical/checker errors and no nominal fallback attempts. A separate
+portable reconciliation uses 224 full checker calls for the frozen and
+refreshed entries and agrees with every retained verdict and selection.
+
+The selected pipeline box has zero radius in its second coordinate, so it
+does not supply positive allowances in all three dimensions. The result is
+best only among the produced, checked witnesses in this finite catalog;
+the floating-point producer remains incomplete. Extra witness-production
+cost is not measured, and no continuous optimum, hardware benefit or
+speedup is inferred. The frozen pipeline result and all original inputs,
+outputs and controls remain unchanged.
+
+`results/refreshed-catalog.zip` is a data-only supplement containing all four
+comparisons, 112 point records, 224 call events, the plan, numerical summary
+and full reconciliation receipt. Certificate blocks are compressed, not
+removed. Ephemeral command paths and stdout/stderr streams are not
+needed by the consumer and are retained separately in the full run archive.
+Extract once to a new directory outside this
+artifact, then use the existing read-only standard-library consumer:
+
+```sh
+python -B -S -m zipfile -e results/refreshed-catalog.zip NEW_EXTERNAL_DIRECTORY
+python -B -S -c "import json; from simcert.catalog_reconcile import reconcile_directory; print(json.dumps(reconcile_directory('.', 'NEW_EXTERNAL_DIRECTORY'), indent=2))"
+```
+
+This does not run the numerical producer or overwrite a retained receipt.
+The output should equal the extracted `reconciliation.json`; a mismatch
+or failed obligation is not a successful reproduction.
 
 Portable checks from the artifact root:
 
