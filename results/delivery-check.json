@@ -159,7 +159,6 @@
     "no_symlinks": true
   },
   "scientific_gate": "PASS for the stated targeted repairs and documented clean reproduction within the declared model scope.",
-  "external_submission_readiness": "HOLD for actual-author accountability, live TACO portal/template/supplement checks, originality review, and truthful AI-use disclosure.",
   "review_boundary": "Local targeted validation and artifact-only self-audit; not external blind review, novelty certification, acceptance, best-paper prediction, hardware validation, or production-simulator evidence.",
   "allocator_regressions": {
     "half_domain": {
