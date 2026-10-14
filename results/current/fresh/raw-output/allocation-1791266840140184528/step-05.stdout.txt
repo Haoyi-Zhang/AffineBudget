@@ -1,0 +1,14 @@
+{
+  "summary": {
+    "formulas": 512,
+    "assignments": 6144,
+    "satisfiable_formulas": 488,
+    "mismatches": 0
+  },
+  "measurement": {
+    "cpu_seconds": 0.045968509000000005,
+    "wall_seconds": 0.04579027799999835,
+    "peak_rss_kib": 14196,
+    "workers": 1
+  }
+}

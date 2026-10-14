@@ -10,6 +10,7 @@ import sys
 
 ROOT = Path(__file__).resolve().parent
 from simcert.catalog_refresh import CASE_IDS, catalog, compare_catalog
+from simcert.algebra import same_data
 
 
 def cohort_counts(models):
@@ -18,7 +19,7 @@ def cohort_counts(models):
         raise ValueError("supplement requires the four predeclared models")
     counts = {}
     for model, case, family in zip(models, CASE_IDS, families):
-        if (model.get("case_id"), model.get("family"), model.get("clients"), model.get("seed")) != (case, family, 8, 1):
+        if not same_data((model.get("case_id"), model.get("family"), model.get("clients"), model.get("seed")), (case, family, 8, 1)):
             raise ValueError("predeclared structural selection changed")
         counts[case] = len(catalog(model))
     if list(counts.values()) != [16, 16, 16, 64] or sum(counts.values()) != 112:

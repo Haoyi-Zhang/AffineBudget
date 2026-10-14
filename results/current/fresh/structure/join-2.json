@@ -1,0 +1,147 @@
+{
+  "certificate": {
+    "guards": [
+      {
+        "guard": {
+          "jobs": [
+            4,
+            5
+          ],
+          "left": "a4",
+          "right": "a5",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            9,
+            10
+          ],
+          "left": "a9",
+          "right": "a10",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      }
+    ],
+    "lower_weights": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "1"
+    ],
+    "orders": {
+      "a-pre0": [
+        1
+      ],
+      "a-pre1": [
+        6
+      ],
+      "b-minus0": [
+        3
+      ],
+      "b-minus1": [
+        8
+      ],
+      "b-plus0": [
+        2
+      ],
+      "b-plus1": [
+        7
+      ],
+      "bank0": [
+        4,
+        5
+      ],
+      "bank1": [
+        9,
+        10
+      ],
+      "prefix": [
+        0
+      ]
+    },
+    "radii": [
+      "1",
+      "1"
+    ]
+  },
+  "jobs": 11,
+  "m": 2,
+  "samples": [
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        1
+      ],
+      "same_order": true
+    }
+  ],
+  "selector_patterns": 4,
+  "verdict": {
+    "certified": true,
+    "downward_bound": "0",
+    "global_bound": "1/4",
+    "guard_bounds": [
+      "-1/4",
+      "-1/4"
+    ],
+    "interval_bounds": [
+      "3/4",
+      "3/4"
+    ],
+    "interval_order_certified": false,
+    "nominal_makespan": "9",
+    "order_certified": true,
+    "single_bounds": [
+      "3/4",
+      "3/4"
+    ],
+    "single_order_certified": false,
+    "stats": {
+      "edges": 47,
+      "max_frontier": 5,
+      "total_forms": 34,
+      "vertices": 24
+    },
+    "upward_bound": "1/4"
+  }
+}

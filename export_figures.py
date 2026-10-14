@@ -27,6 +27,29 @@ def export(results,output):
     with (output/"structure.csv").open("w",newline="") as f:
         w=csv.DictWriter(f,fieldnames=list(rows[0]));w.writeheader();w.writerows(rows)
 
+def export_exact_catalog(results,output):
+    """Inert data export; no producer or optimization call."""
+    rows=[json.loads(line) for line in (results/"catalog.jsonl").read_text(encoding="utf-8").splitlines()]
+    rows=[row for row in rows if row["case_id"]=="case-043"]
+    indices=[tuple(row["catalog_point"]["indices"]) for row in rows]
+    import itertools
+    expected=list(itertools.product(range(4),repeat=3))
+    if indices!=expected or any(type(i) is not int for entry in indices for i in entry):
+        raise ValueError("need the complete original 64-point pipeline catalog")
+    output.mkdir(parents=True,exist_ok=True)
+    path=output/"exact-catalog.csv"
+    with path.open("x",encoding="utf-8",newline="") as f:
+        fields=("first_index","second_index","third_index","feasible","bound")
+        writer=csv.DictWriter(f,fieldnames=fields,lineterminator="\n");writer.writeheader()
+        for row,index in zip(rows,indices):
+            verdict=row["reconstruction"]["verdict"]
+            if type(verdict["certified"]) is not bool:
+                raise ValueError("mistyped exact catalog verdict")
+            writer.writerow(dict(zip(fields[:3],index),feasible=int(verdict["certified"]),bound=verdict["global_bound"]))
+
 if __name__=="__main__":
     p=argparse.ArgumentParser();p.add_argument("--results",type=Path,default=ROOT/"results")
-    p.add_argument("--output",type=Path,required=True);a=p.parse_args();export(a.results,a.output)
+    p.add_argument("--output",type=Path,required=True)
+    p.add_argument("--exact-catalog",action="store_true")
+    a=p.parse_args()
+    export_exact_catalog(a.results,a.output) if a.exact_catalog else export(a.results,a.output)

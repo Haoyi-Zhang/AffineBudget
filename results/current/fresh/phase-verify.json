@@ -1,0 +1,10 @@
+{
+  "phase": "verify",
+  "complete": true,
+  "steps": 4,
+  "child_failures": 0,
+  "workers": 1,
+  "wall_seconds": 19.805010457999998,
+  "aggregate_cpu_seconds": 19.802326033999996,
+  "peak_child_rss_kib": 23896
+}

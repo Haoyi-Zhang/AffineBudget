@@ -1,0 +1,9 @@
+{
+  "cpu_seconds": 1.5704689470000002,
+  "mode": "models",
+  "peak_rss_kib": 78544,
+  "start": 12,
+  "stop": 24,
+  "wall_seconds": 1.5710211730000054,
+  "workers": 1
+}

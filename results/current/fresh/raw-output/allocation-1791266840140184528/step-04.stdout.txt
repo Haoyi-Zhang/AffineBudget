@@ -1,0 +1,6 @@
+independent joins 1 {'vertices': 14, 'edges': 25, 'max_frontier': 3, 'total_forms': 19}
+independent joins 2 {'vertices': 24, 'edges': 47, 'max_frontier': 5, 'total_forms': 34}
+independent joins 3 {'vertices': 34, 'edges': 69, 'max_frontier': 7, 'total_forms': 49}
+independent joins 4 {'vertices': 44, 'edges': 91, 'max_frontier': 9, 'total_forms': 64}
+independent joins 5 {'vertices': 54, 'edges': 113, 'max_frontier': 11, 'total_forms': 79}
+independent joins 6 {'vertices': 64, 'edges': 135, 'max_frontier': 13, 'total_forms': 94}

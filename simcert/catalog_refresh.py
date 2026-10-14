@@ -3,7 +3,7 @@ from __future__ import annotations
 import copy
 import itertools
 from fractions import Fraction as Q
-from .algebra import rational
+from .algebra import rational, same_data
 from .checker import check
 from .model import prepare, validate
 
@@ -112,7 +112,7 @@ def compare_catalog(model, certificate, retained, propose=None, record=None,
         # Numerical arm only. These copied fields are not a fresh certification:
         # the separate portable reconciler must recheck both arms in full.
         frozen = copy.deepcopy(retained["candidates"])
-        if [{k: row[k] for k in ("indices", "radii", "score")} for row in frozen] != points:
+        if not same_data([{k: row[k] for k in ("indices", "radii", "score")} for row in frozen], points):
             raise ValueError("retained frozen point coverage changed")
         if any(type(row["feasible"]) is not bool for row in frozen):
             raise ValueError("invalid retained feasibility field")
@@ -120,7 +120,7 @@ def compare_catalog(model, certificate, retained, propose=None, record=None,
                 "objective": "sum((dimension+1)*level_index)",
                 "restriction": "frozen maximum-domain witnesses and finite catalog only",
                 "selected": selected(frozen), "candidates": frozen}
-    if expected != retained:
+    if not same_data(expected, retained):
         raise ValueError("retained frozen catalog differs; no resealing")
     rows = []
     for point, old in zip(points, frozen):

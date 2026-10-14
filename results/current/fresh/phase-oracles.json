@@ -1,0 +1,10 @@
+{
+  "phase": "oracles",
+  "complete": true,
+  "steps": 9,
+  "child_failures": 0,
+  "workers": 1,
+  "wall_seconds": 10.141337537999995,
+  "aggregate_cpu_seconds": 10.134825607,
+  "peak_child_rss_kib": 79960
+}

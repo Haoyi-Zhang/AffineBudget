@@ -8,7 +8,6 @@ import argparse
 import itertools
 import json
 import random
-import resource
 import time
 from pathlib import Path
 
@@ -38,13 +37,14 @@ def evaluate(n,cnf):
         is_sat=all(t>=-1 for t in literal_sums)
         u=2*n+sum(abs(v) for v in x)
         v=max([3*n]+[3*n-1-t for t in literal_sums])
-        assert u<=v
-        assert (u==v)==is_sat
+        if u>v or (u==v)!=is_sat:
+            raise AssertionError("reduction equality characterization differs")
         sat+=is_sat;equal+=u==v;count+=1
     return {'satisfying_assignments':sat,'equality_assignments':equal,'assignments':count}
 
 
 def main():
+    import resource
     parser=argparse.ArgumentParser()
     parser.add_argument('--output',type=Path,default=ROOT/'results/reduction.json')
     args=parser.parse_args()

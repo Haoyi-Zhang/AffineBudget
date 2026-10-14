@@ -1,0 +1,85 @@
+{
+  "complete": true,
+  "phases": [
+    {
+      "phase": "models",
+      "complete": true,
+      "steps": 5,
+      "child_failures": 0,
+      "workers": 1,
+      "wall_seconds": 9.915863514000002,
+      "aggregate_cpu_seconds": 9.484293427999999,
+      "peak_child_rss_kib": 80632
+    },
+    {
+      "phase": "oracles",
+      "complete": true,
+      "steps": 9,
+      "child_failures": 0,
+      "workers": 1,
+      "wall_seconds": 10.141337537999995,
+      "aggregate_cpu_seconds": 10.134825607,
+      "peak_child_rss_kib": 79960
+    },
+    {
+      "phase": "allocation",
+      "complete": true,
+      "steps": 7,
+      "child_failures": 0,
+      "workers": 1,
+      "wall_seconds": 5.650048393999995,
+      "aggregate_cpu_seconds": 5.648594085,
+      "peak_child_rss_kib": 79664
+    },
+    {
+      "phase": "verify",
+      "complete": true,
+      "steps": 4,
+      "child_failures": 0,
+      "workers": 1,
+      "wall_seconds": 19.805010457999998,
+      "aggregate_cpu_seconds": 19.802326033999996,
+      "peak_child_rss_kib": 23896
+    }
+  ],
+  "steps": 25,
+  "child_failures": 0,
+  "workers": 1,
+  "wall_seconds": 45.51225990399999,
+  "aggregate_cpu_seconds": 45.07003915399999,
+  "peak_child_rss_kib": 80632,
+  "reconciliation": {
+    "scientific_fields_equal": true,
+    "counts": {
+      "inputs": 54,
+      "models": 48,
+      "oracles": 2089,
+      "allocation": 4,
+      "structure": 6,
+      "reduction_formulas": 512,
+      "changed_order_constant_makespan_control": 1
+    },
+    "tolerance": 0,
+    "not_compared": "solver weight vectors and measurement times; fresh inputs compared byte for byte and fresh witnesses checked against them"
+  },
+  "verification": {
+    "tests": 38,
+    "failures": 0,
+    "errors": 0,
+    "cpu_seconds": 14.163151567,
+    "wall_seconds": 14.166814778000003,
+    "peak_rss_kib": 21832,
+    "workers": 1,
+    "input_reproducibility": {
+      "generated_inputs": 54,
+      "byte_equal_inputs": 54,
+      "temporary_directory_generation": true,
+      "coefficient_mutation_detected": true,
+      "source_inputs_unchanged": true,
+      "serialization": "json.dumps(indent=2, sort_keys=True) plus one LF",
+      "scope": "canonical generated-input identity and source-tree immutability; not scientific theorem validation"
+    },
+    "scope": "finite exact tests; not mechanized general proofs"
+  },
+  "scope": "clean generation and scientific reconciliation; not independent review or mechanized proof"
+}

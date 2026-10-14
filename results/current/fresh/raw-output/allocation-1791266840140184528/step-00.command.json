@@ -1,0 +1,1 @@
+["/opt/hostedtoolcache/Python/3.12.14/x64/bin/python", "-B", "campaign.py", "allocate", "--start", "7", "--stop", "8", "--output", "/home/runner/work/_temp/p040-scientific/fresh"]

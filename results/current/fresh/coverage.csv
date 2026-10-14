@@ -1,0 +1,5 @@
+family,cases,mixture,single,interval,sample_changed_cases,max_jobs,max_frontier
+fork-join,12,12,12,3,0,147,8
+pipeline,12,10,10,3,2,144,9
+shared-prefix,12,12,0,0,0,41,3
+staggered-bank,12,8,8,5,4,144,3

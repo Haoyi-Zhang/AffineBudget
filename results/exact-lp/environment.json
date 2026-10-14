@@ -1,0 +1,28 @@
+{
+  "native_exact_runtime": "CPython standard library with -B -S; NumPy/SciPy unused",
+  "os_name": "nt",
+  "packages": {
+    "numpy": {
+      "distribution_version": "2.3.5",
+      "import_spec_present": true
+    },
+    "reportlab": {
+      "distribution_version": "4.4.9",
+      "import_spec_present": true
+    },
+    "scipy": {
+      "distribution_version": null,
+      "import_spec_present": false
+    }
+  },
+  "packages_installed": false,
+  "platform": "Windows-11-10.0.28000-SP0",
+  "posix_numerical_campaign_executed": false,
+  "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+  "tools_on_path": {
+    "bibtex": "D:\\LaTeXTools\\texlive\\2024\\bin\\windows\\bibtex.EXE",
+    "pdflatex": "D:\\LaTeXTools\\texlive\\2024\\bin\\windows\\pdflatex.EXE",
+    "wsl": "C:\\windows\\system32\\wsl.EXE"
+  },
+  "windows_hard_posix_limits_claimed": false
+}

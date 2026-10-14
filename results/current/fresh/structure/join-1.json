@@ -1,0 +1,93 @@
+{
+  "certificate": {
+    "guards": [
+      {
+        "guard": {
+          "jobs": [
+            4,
+            5
+          ],
+          "left": "a4",
+          "right": "a5",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      }
+    ],
+    "lower_weights": [
+      "0",
+      "0",
+      "1"
+    ],
+    "orders": {
+      "a-pre0": [
+        1
+      ],
+      "b-minus0": [
+        3
+      ],
+      "b-plus0": [
+        2
+      ],
+      "bank0": [
+        4,
+        5
+      ],
+      "prefix": [
+        0
+      ]
+    },
+    "radii": [
+      "1"
+    ]
+  },
+  "jobs": 6,
+  "m": 1,
+  "samples": [
+    {
+      "makespan": "37/4",
+      "point": [
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1
+      ],
+      "same_order": true
+    }
+  ],
+  "selector_patterns": 2,
+  "verdict": {
+    "certified": true,
+    "downward_bound": "0",
+    "global_bound": "1/4",
+    "guard_bounds": [
+      "-1/4"
+    ],
+    "interval_bounds": [
+      "3/4"
+    ],
+    "interval_order_certified": false,
+    "nominal_makespan": "9",
+    "order_certified": true,
+    "single_bounds": [
+      "3/4"
+    ],
+    "single_order_certified": false,
+    "stats": {
+      "edges": 25,
+      "max_frontier": 3,
+      "total_forms": 19,
+      "vertices": 14
+    },
+    "upward_bound": "1/4"
+  }
+}

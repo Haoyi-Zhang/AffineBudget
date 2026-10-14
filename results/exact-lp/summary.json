@@ -1,0 +1,157 @@
+{
+  "actual_environment": {
+    "PYTHONDONTWRITEBYTECODE": "1",
+    "platform": "Windows-11-10.0.28000-SP0",
+    "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+    "site_disabled": 1
+  },
+  "baseline_scope": "same full order/two-sided-error contract and complete envelopes; ordinary exhaustive primal-vertex LP, not a competitive optimized library; shared model and elimination; no independent complete-simulator claim",
+  "batches": 29,
+  "catalog": [
+    {
+      "case_id": "case-007",
+      "exact_feasible": 11,
+      "fixed_order_catalog_optimum": true,
+      "frozen_feasible": 11,
+      "ordinary_primal_feasible": 11,
+      "points": 16,
+      "selected": {
+        "bound": "1",
+        "indices": [
+          2,
+          2
+        ],
+        "radii": [
+          "1/2",
+          "1/2"
+        ],
+        "score": 6
+      }
+    },
+    {
+      "case_id": "case-019",
+      "exact_feasible": 13,
+      "fixed_order_catalog_optimum": true,
+      "frozen_feasible": 13,
+      "ordinary_primal_feasible": 13,
+      "points": 16,
+      "selected": {
+        "bound": "7/8",
+        "indices": [
+          3,
+          2
+        ],
+        "radii": [
+          "1",
+          "1/2"
+        ],
+        "score": 7
+      }
+    },
+    {
+      "case_id": "case-031",
+      "exact_feasible": 11,
+      "fixed_order_catalog_optimum": true,
+      "frozen_feasible": 11,
+      "ordinary_primal_feasible": 11,
+      "points": 16,
+      "selected": {
+        "bound": "7/8",
+        "indices": [
+          2,
+          2
+        ],
+        "radii": [
+          "1/2",
+          "1/2"
+        ],
+        "score": 6
+      }
+    },
+    {
+      "case_id": "case-043",
+      "exact_feasible": 12,
+      "fixed_order_catalog_optimum": true,
+      "frozen_feasible": 0,
+      "ordinary_primal_feasible": 12,
+      "points": 64,
+      "selected": {
+        "bound": "15/16",
+        "indices": [
+          3,
+          0,
+          1
+        ],
+        "radii": [
+          "1",
+          "0",
+          "1/4"
+        ],
+        "score": 6
+      }
+    }
+  ],
+  "catalog_points": 112,
+  "cost_scope": "single sequential Windows run; per-arm own envelope construction and full certificate/optimality replay included, common parsing/generation and dynamic/I/O separately retained; working-set peak is whole-child, not per arm or Linux address space; no HiGHS/hardware/production speedup claim",
+  "costs": {
+    "catalog": {
+      "direct_primal_reference": {
+        "cpu_seconds": 24.5,
+        "wall_seconds": 24.694968999770936
+      },
+      "exact_production": {
+        "cpu_seconds": 18.203125,
+        "wall_seconds": 18.289837000047555
+      },
+      "frozen_full_checker": {
+        "cpu_seconds": 1.9375,
+        "wall_seconds": 1.9428045001404826
+      },
+      "full_certificate_and_optimality_reconstruction": {
+        "cpu_seconds": 3.75,
+        "wall_seconds": 3.8260675000492483
+      },
+      "load_and_generator": {
+        "cpu_seconds": 1.109375,
+        "wall_seconds": 1.1626508001645561
+      }
+    },
+    "models": {
+      "direct_primal_reference": {
+        "cpu_seconds": 1.765625,
+        "wall_seconds": 1.8978751000831835
+      },
+      "exact_production": {
+        "cpu_seconds": 1.234375,
+        "wall_seconds": 1.2046969000948593
+      },
+      "frozen_full_checker": {
+        "cpu_seconds": 0.40625,
+        "wall_seconds": 0.457088399969507
+      },
+      "full_certificate_and_optimality_reconstruction": {
+        "cpu_seconds": 0.90625,
+        "wall_seconds": 0.9089372999733314
+      },
+      "load_and_generator": {
+        "cpu_seconds": 0.359375,
+        "wall_seconds": 0.4798480999888852
+      }
+    }
+  },
+  "hard_posix_caps_applied": false,
+  "historical_numerical_campaign_rerun": false,
+  "maximum_peak_working_set_bytes": 25206784,
+  "model_certified": 42,
+  "model_dynamic_points": 648,
+  "models": 48,
+  "native_errors_or_timeouts": 0,
+  "oracles": 2089,
+  "original_inputs_results_timings_preserved": true,
+  "parent_startup_io_exit_wall_seconds_sum": 62.435159699991345,
+  "process_cpu_seconds_at_receipts_sum": 60.234375,
+  "record_io_wall_seconds_sum": 58.84998050011927,
+  "schema": "order-stable.bounded-exact-lp.v1",
+  "scientific_scope": "one-to-three-dimensional explicit envelopes, at most 12 right forms and 4096 basis trials; successful exact primal/dual equality proves each optimum; catalog optimality restricted to invariant-order certificates, not all true error invariants",
+  "scipy_present": false
+}

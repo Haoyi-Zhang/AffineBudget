@@ -1,0 +1,9 @@
+{
+  "cpu_seconds": 0.815658019,
+  "mode": "oracles",
+  "peak_rss_kib": 78020,
+  "start": 0,
+  "stop": 256,
+  "wall_seconds": 0.818071695999997,
+  "workers": 1
+}

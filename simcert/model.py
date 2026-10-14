@@ -20,6 +20,8 @@ def validate(model):
         if not isinstance(j["resource"],str) or not j["resource"]:
             raise ValueError("bad resource")
         ds=j["deps"]
+        if any(type(d) is not int for d in ds):
+            raise ValueError("predecessor IDs must be integers")
         if len(ds)!=len(set(ds)) or not set(ds)<=seen:
             raise ValueError("jobs must be in dependency-topological order")
         rel=form(j["release"],k);srv=form(j["service"],k)
@@ -71,7 +73,7 @@ def graph_for(model,orders):
     for resource,seq in orders.items():
         last=None
         for i in seq:
-            if i not in jobs or jobs[i]["resource"]!=resource:raise ValueError("bad resource order")
+            if type(i) is not int or i not in jobs or jobs[i]["resource"]!=resource:raise ValueError("bad resource order")
             flat.append(i)
             if last is not None:previous[i]=last
             last=i

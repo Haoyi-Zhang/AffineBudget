@@ -2,7 +2,7 @@
 from __future__ import annotations
 import json
 from pathlib import Path
-from .algebra import rational
+from .algebra import rational, same_data
 from .catalog_refresh import CASE_IDS, catalog, frozen_row, selected
 from .checker import check
 
@@ -27,15 +27,15 @@ def reconcile_record(model, certificate, retained, comparison):
                 "objective": "sum((dimension+1)*level_index)",
                 "restriction": "frozen maximum-domain witnesses and finite catalog only",
                 "selected": selected(frozen), "candidates": frozen}
-    if expected != retained:
+    if not same_data(expected, retained):
         raise ValueError("frozen reconciliation failed; no resealing")
     rows = comparison["rows"]
-    if len(rows) != len(points) or [r["frozen"] for r in rows] != frozen:
+    if len(rows) != len(points) or not same_data([r["frozen"] for r in rows], frozen):
         raise ValueError("missing, duplicate or changed frozen rows")
     fresh, errors, checked = [], 0, len(frozen)
     for point, row in zip(points, rows):
         new = row["refreshed"]
-        if {k: new[k] for k in ("indices", "radii", "score")} != point:
+        if not same_data({k: new[k] for k in ("indices", "radii", "score")}, point):
             raise ValueError("fresh point coverage changed")
         attempts = new["attempts"]
         if not 1 <= len(attempts) <= 2 or attempts[0]["policy"] != "existing-numerical-producer":
@@ -72,7 +72,7 @@ def reconcile_record(model, certificate, retained, comparison):
                 errors += 1
             else:
                 if (status != ("certified" if verdict["certified"] else "refused")
-                        or attempt.get("verdict") != verdict):
+                        or not same_data(attempt.get("verdict"), verdict)):
                     raise ValueError("fresh full verdict mismatch")
         chosen = attempts[0]
         if len(attempts) == 2 and attempts[1]["status"] == "certified":
@@ -81,7 +81,7 @@ def reconcile_record(model, certificate, retained, comparison):
         expected_new = dict(point, feasible=chosen["status"] == "certified",
                             bound=verdict["global_bound"] if verdict else None,
                             status=chosen["status"], attempts=attempts)
-        if new != expected_new:
+        if not same_data(new, expected_new):
             raise ValueError("fresh row selection/bound changed")
         fresh.append(new)
     totals = {"case_id": model["case_id"], "target": "1", "points": len(points),
@@ -90,7 +90,7 @@ def reconcile_record(model, certificate, retained, comparison):
               "lost_certifications": sum(a["feasible"] and not b["feasible"] for a, b in zip(frozen, fresh)),
               "numerical_or_checker_errors": errors, "complete_catalog_visited": True,
               "frozen_rechecked": False}
-    if any(comparison.get(key) != value for key, value in totals.items()):
+    if any(not same_data(comparison.get(key), value) for key, value in totals.items()):
         raise ValueError("changed comparison totals/selection")
     kinds = call_kinds(rows)
     if len(kinds) > 2 * len(points) + 2:
@@ -104,13 +104,13 @@ def reconcile_files(folder, comparison):
     rows = comparison["rows"]
     point_paths = sorted(folder.glob("point-*.json"))
     if ([p.name for p in point_paths] != ["point-%03d.json" % i for i in range(len(rows))]
-            or [json.loads(p.read_text()) for p in point_paths] != rows):
+            or not same_data([json.loads(p.read_text()) for p in point_paths], rows)):
         raise ValueError("partial or changed point records")
     event_paths = sorted(folder.glob("call-*.json"))
     kinds = call_kinds(rows)
     expected_events = [{"index": i, "kind": kind} for i, kind in enumerate(kinds)]
     if ([p.name for p in event_paths] != ["call-%03d.json" % i for i in range(len(kinds))]
-            or [json.loads(p.read_text()) for p in event_paths] != expected_events):
+            or not same_data([json.loads(p.read_text()) for p in event_paths], expected_events)):
         raise ValueError("partial or changed call records")
     return len(kinds)
 
@@ -125,7 +125,7 @@ def reconcile_directory(root, output):
     for case, family, outcome in zip(CASE_IDS, families, numerical["outcomes"]):
         folder = output / case
         model = json.loads((root / "inputs" / (case + ".json")).read_text())
-        if (model.get("case_id"), model.get("family"), model.get("clients"), model.get("seed")) != (case, family, 8, 1):
+        if not same_data((model.get("case_id"), model.get("family"), model.get("clients"), model.get("seed")), (case, family, 8, 1)):
             raise ValueError("changed structural cohort")
         certificate = json.loads((root / "results/models" / (case + ".json")).read_text())["certificate"]
         retained = json.loads((root / "results/allocation" / (case + ".json")).read_text())
@@ -134,16 +134,16 @@ def reconcile_directory(root, output):
         expected_outcome = {"case_id": case, "status": "completed", "returncode": 0,
                             "expected_points": len(catalog(model)), "retained_point_records": len(comparison["rows"]),
                             "comparison_present": True, "recorded_calls": recorded_calls}
-        if outcome != expected_outcome:
+        if not same_data(outcome, expected_outcome):
             raise ValueError("failed or changed numerical outcome")
         records.append(reconcile_record(model, certificate, retained, comparison))
     checks = sum(r["exact_checker_calls"] for r in records)
     calls = sum(r["numerical_calls"] for r in records)
-    if ([r["points"] for r in records] != [16, 16, 16, 64] or checks > 256 or calls > 256
+    if (not same_data([r["points"] for r in records], [16, 16, 16, 64]) or checks > 256 or calls > 256
             or sum(r["errors_retained"] for r in records)
             or numerical.get("numerical_arm_complete_without_errors") is not True
-            or numerical.get("expected_points") != 112
-            or numerical.get("recorded_calls") != calls):
+            or not same_data(numerical.get("expected_points"), 112)
+            or not same_data(numerical.get("recorded_calls"), calls)):
         raise ValueError("incomplete, failed or over-budget numerical arm")
     return {"scientific_fields_reconciled": True, "points": 112,
             "exact_checker_calls": checks, "numerical_construct_check_calls": calls,

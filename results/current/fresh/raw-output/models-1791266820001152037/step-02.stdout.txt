@@ -1,0 +1,12 @@
+case-012 True {'vertices': 26, 'edges': 54, 'max_frontier': 1, 'total_forms': 26}
+case-013 True {'vertices': 38, 'edges': 84, 'max_frontier': 1, 'total_forms': 38}
+case-014 True {'vertices': 26, 'edges': 54, 'max_frontier': 1, 'total_forms': 26}
+case-015 True {'vertices': 50, 'edges': 110, 'max_frontier': 1, 'total_forms': 50}
+case-016 True {'vertices': 74, 'edges': 170, 'max_frontier': 1, 'total_forms': 74}
+case-017 True {'vertices': 50, 'edges': 110, 'max_frontier': 2, 'total_forms': 59}
+case-018 True {'vertices': 98, 'edges': 222, 'max_frontier': 2, 'total_forms': 105}
+case-019 True {'vertices': 146, 'edges': 342, 'max_frontier': 3, 'total_forms': 169}
+case-020 False {'vertices': 98, 'edges': 222, 'max_frontier': 2, 'total_forms': 111}
+case-021 False {'vertices': 194, 'edges': 446, 'max_frontier': 2, 'total_forms': 195}
+case-022 False {'vertices': 290, 'edges': 686, 'max_frontier': 1, 'total_forms': 290}
+case-023 False {'vertices': 194, 'edges': 446, 'max_frontier': 2, 'total_forms': 204}

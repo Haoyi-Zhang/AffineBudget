@@ -1,0 +1,930 @@
+[
+  {
+    "batch": "native-catalog-0000-0008",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 14540800,
+      "peak_working_set_bytes": 23822336,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "catalog",
+    "native_records_sha256": "254c64f5df9134d7ed0188c645379e055ba842e166c25dd94a99cfcd90b11705",
+    "parent_startup_io_exit_wall_seconds": 0.40332099999068305,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 0.359375,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 0.265625,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 0,
+    "status": "completed",
+    "stop": 8,
+    "wall_seconds_through_record_io": 0.25859610000043176
+  },
+  {
+    "batch": "native-catalog-0008-0016",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 14741504,
+      "peak_working_set_bytes": 23904256,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "catalog",
+    "native_records_sha256": "282ea1d233f98cc089f1738267f5d490c4e8f87b71b7ca733668860e375e8f44",
+    "parent_startup_io_exit_wall_seconds": 0.40258080000057817,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 0.34375,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 0.25,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 8,
+    "status": "completed",
+    "stop": 16,
+    "wall_seconds_through_record_io": 0.25741089999792166
+  },
+  {
+    "batch": "native-catalog-0016-0024",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 15532032,
+      "peak_working_set_bytes": 24096768,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "catalog",
+    "native_records_sha256": "f49964bcdfab069205cfb83b907558ebee08caf6284c02d60c867092de1a90db",
+    "parent_startup_io_exit_wall_seconds": 0.8794731999805663,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 0.8125,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 0.71875,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 16,
+    "status": "completed",
+    "stop": 24,
+    "wall_seconds_through_record_io": 0.7294102000014391
+  },
+  {
+    "batch": "native-catalog-0024-0032",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 16154624,
+      "peak_working_set_bytes": 24383488,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "catalog",
+    "native_records_sha256": "629951d6e09c47e8843d00252785ef9fa19d640de68170ee73ecaf02fdd222fe",
+    "parent_startup_io_exit_wall_seconds": 0.8712583000015002,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 0.8125,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 0.71875,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 24,
+    "status": "completed",
+    "stop": 32,
+    "wall_seconds_through_record_io": 0.7235721000179183
+  },
+  {
+    "batch": "native-catalog-0032-0040",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 15564800,
+      "peak_working_set_bytes": 23912448,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "catalog",
+    "native_records_sha256": "b7ab51c7cf3e0228237bd7a9de05a00b994027efd1d3d4a31c9d784c3cd7932f",
+    "parent_startup_io_exit_wall_seconds": 2.710079599986784,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 2.65625,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 2.5625,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 32,
+    "status": "completed",
+    "stop": 40,
+    "wall_seconds_through_record_io": 2.5662295000220183
+  },
+  {
+    "batch": "native-catalog-0040-0048",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 15581184,
+      "peak_working_set_bytes": 24076288,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "catalog",
+    "native_records_sha256": "e4a560d0cbae5439fff84ca76063d63bf4d644755deb7375bccc887ae1bf9257",
+    "parent_startup_io_exit_wall_seconds": 2.6482802999962587,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 2.546875,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 2.453125,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 40,
+    "status": "completed",
+    "stop": 48,
+    "wall_seconds_through_record_io": 2.5022374000109266
+  },
+  {
+    "batch": "native-catalog-0048-0056",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 15400960,
+      "peak_working_set_bytes": 24010752,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "catalog",
+    "native_records_sha256": "afdbef45cf92875ad88a319ff7588425f213d8d7f55d4ff095fbea2e0891e3b1",
+    "parent_startup_io_exit_wall_seconds": 5.602530399977695,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 5.515625,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 5.421875,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 48,
+    "status": "completed",
+    "stop": 56,
+    "wall_seconds_through_record_io": 5.457859400019515
+  },
+  {
+    "batch": "native-catalog-0056-0064",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 15294464,
+      "peak_working_set_bytes": 24006656,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "catalog",
+    "native_records_sha256": "1f3d2e1d4205fa799a88b9e68cf55c2ff3371ba495919af206b62b3c05d495f9",
+    "parent_startup_io_exit_wall_seconds": 5.333625200000824,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 5.265625,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 5.171875,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 56,
+    "status": "completed",
+    "stop": 64,
+    "wall_seconds_through_record_io": 5.18723450001562
+  },
+  {
+    "batch": "native-catalog-0064-0072",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 16138240,
+      "peak_working_set_bytes": 24559616,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "catalog",
+    "native_records_sha256": "dc5ea4fe85a1ed02ddd563d318e95d02f402a40f780e87391a47cfd106fa3ea6",
+    "parent_startup_io_exit_wall_seconds": 5.615034400019795,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 5.515625,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 5.421875,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 64,
+    "status": "completed",
+    "stop": 72,
+    "wall_seconds_through_record_io": 5.467831900023157
+  },
+  {
+    "batch": "native-catalog-0072-0080",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 16072704,
+      "peak_working_set_bytes": 24301568,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "catalog",
+    "native_records_sha256": "e3592e186b2d2b5474c37ea63a7338876fa308b4608064dd9b8d53594a44dbf4",
+    "parent_startup_io_exit_wall_seconds": 5.399936100002378,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 5.296875,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 5.203125,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 72,
+    "status": "completed",
+    "stop": 80,
+    "wall_seconds_through_record_io": 5.2533768999855965
+  },
+  {
+    "batch": "native-catalog-0080-0088",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 15376384,
+      "peak_working_set_bytes": 24104960,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "catalog",
+    "native_records_sha256": "77cc96c0daf19c5949889b03ea1699c1e894f12a1b9b09259db517be8b4cedfd",
+    "parent_startup_io_exit_wall_seconds": 5.62300670001423,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 5.546875,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 5.453125,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 80,
+    "status": "completed",
+    "stop": 88,
+    "wall_seconds_through_record_io": 5.476838599977782
+  },
+  {
+    "batch": "native-catalog-0088-0096",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 15335424,
+      "peak_working_set_bytes": 24072192,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "catalog",
+    "native_records_sha256": "688f7e8e163aea6baa7c6d69c38f0a745c9c2041c83565938a4f0ba1fc27d5ab",
+    "parent_startup_io_exit_wall_seconds": 5.519647200009786,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 5.421875,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 5.328125,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 88,
+    "status": "completed",
+    "stop": 96,
+    "wall_seconds_through_record_io": 5.366937999991933
+  },
+  {
+    "batch": "native-catalog-0096-0104",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 15654912,
+      "peak_working_set_bytes": 24248320,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "catalog",
+    "native_records_sha256": "ccbdd7b684bf7b839c90c37b03c705d93011bd0c02e34ada351b97c248c1b2ba",
+    "parent_startup_io_exit_wall_seconds": 5.677179899998009,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 5.546875,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 5.453125,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 96,
+    "status": "completed",
+    "stop": 104,
+    "wall_seconds_through_record_io": 5.527915500017116
+  },
+  {
+    "batch": "native-catalog-0104-0112",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 15609856,
+      "peak_working_set_bytes": 24334336,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "catalog",
+    "native_records_sha256": "6a0bb0555faddf7c18067594fcf31e7b49208c0d3fbb2a251fb1e49a11a7b0ae",
+    "parent_startup_io_exit_wall_seconds": 5.406973200006178,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 5.296875,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 5.203125,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 104,
+    "status": "completed",
+    "stop": 112,
+    "wall_seconds_through_record_io": 5.26201229999424
+  },
+  {
+    "batch": "native-models-0000-0008",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 14262272,
+      "peak_working_set_bytes": 23617536,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "models",
+    "native_records_sha256": "f49b477324faebcbdf1609a102105b03cb63aaf819214e67116663a41dbe4c00",
+    "parent_startup_io_exit_wall_seconds": 0.40658979999716394,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 0.34375,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 0.296875,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 0,
+    "status": "completed",
+    "stop": 8,
+    "wall_seconds_through_record_io": 0.2961977999948431
+  },
+  {
+    "batch": "native-models-0008-0016",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 14344192,
+      "peak_working_set_bytes": 23875584,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "models",
+    "native_records_sha256": "2ee04c0fcb29bb98497dd68f40fb865458bbe015a379e50a3cab1b71e28dec2e",
+    "parent_startup_io_exit_wall_seconds": 0.5359406000061426,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 0.5,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 0.4375,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 8,
+    "status": "completed",
+    "stop": 16,
+    "wall_seconds_through_record_io": 0.43452420001267456
+  },
+  {
+    "batch": "native-models-0016-0024",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 15851520,
+      "peak_working_set_bytes": 24453120,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "models",
+    "native_records_sha256": "460eed9442a6ebc13410d94974da328e11396605428441db9af788ed9e8c3214",
+    "parent_startup_io_exit_wall_seconds": 1.1063263000105508,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 1.015625,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 0.953125,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 16,
+    "status": "completed",
+    "stop": 24,
+    "wall_seconds_through_record_io": 1.0056484999950044
+  },
+  {
+    "batch": "native-models-0024-0032",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 14360576,
+      "peak_working_set_bytes": 23805952,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "models",
+    "native_records_sha256": "e7398f740c51c7665be9273361e4c1623b2c505cc2b6003d88b9ac094fc7a742",
+    "parent_startup_io_exit_wall_seconds": 0.9791902999859303,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 0.78125,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 0.734375,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 24,
+    "status": "completed",
+    "stop": 32,
+    "wall_seconds_through_record_io": 0.8812967999838293
+  },
+  {
+    "batch": "native-models-0032-0040",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 15863808,
+      "peak_working_set_bytes": 25206784,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "models",
+    "native_records_sha256": "2c3ab2c8fa36bf2ac1d733c152f963bbcc3034d8f005175950557a548cf5985b",
+    "parent_startup_io_exit_wall_seconds": 2.1546030000026803,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 2.078125,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 2.03125,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 32,
+    "status": "completed",
+    "stop": 40,
+    "wall_seconds_through_record_io": 2.053469300008146
+  },
+  {
+    "batch": "native-models-0040-0048",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 15781888,
+      "peak_working_set_bytes": 24788992,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "models",
+    "native_records_sha256": "4ad688c23ff831014233e08d31ddb3df58a014806f9204b5a3a4289336994f81",
+    "parent_startup_io_exit_wall_seconds": 2.6601779999909922,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 2.546875,
+    "records_completed": 8,
+    "scientific_cpu_seconds": 2.515625,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 40,
+    "status": "completed",
+    "stop": 48,
+    "wall_seconds_through_record_io": 2.559689299989259
+  },
+  {
+    "batch": "native-oracles-0000-0256",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 13336576,
+      "peak_working_set_bytes": 21954560,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "oracles",
+    "native_records_sha256": "36341e343676b64b7c62c494c6249fb8a312cc8a572142c7b7e057c4bd376c12",
+    "parent_startup_io_exit_wall_seconds": 0.20213150000199676,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 0.140625,
+    "records_completed": 256,
+    "scientific_cpu_seconds": 0.09375,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 0,
+    "status": "completed",
+    "stop": 256,
+    "wall_seconds_through_record_io": 0.10257099999580532
+  },
+  {
+    "batch": "native-oracles-0256-0512",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 13299712,
+      "peak_working_set_bytes": 21852160,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "oracles",
+    "native_records_sha256": "0425c5912935de1b28b79694f01aa07b0bb14756be17cda18857fb802cb3055c",
+    "parent_startup_io_exit_wall_seconds": 0.22900019999360666,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 0.171875,
+    "records_completed": 256,
+    "scientific_cpu_seconds": 0.125,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 256,
+    "status": "completed",
+    "stop": 512,
+    "wall_seconds_through_record_io": 0.1314923000172712
+  },
+  {
+    "batch": "native-oracles-0512-0768",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 13352960,
+      "peak_working_set_bytes": 22171648,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "oracles",
+    "native_records_sha256": "6f14e1de2ff4fb571e7b3a7ee725761015597720a6699eed55137d8bc8c8303c",
+    "parent_startup_io_exit_wall_seconds": 0.27416110000922345,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 0.25,
+    "records_completed": 256,
+    "scientific_cpu_seconds": 0.1875,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 512,
+    "status": "completed",
+    "stop": 768,
+    "wall_seconds_through_record_io": 0.1770581000018865
+  },
+  {
+    "batch": "native-oracles-0768-1024",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 13246464,
+      "peak_working_set_bytes": 21942272,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "oracles",
+    "native_records_sha256": "7fa88607001291080f7a894a16da383111411d025bf9d521e6d59698e616f614",
+    "parent_startup_io_exit_wall_seconds": 0.2695778000052087,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 0.21875,
+    "records_completed": 256,
+    "scientific_cpu_seconds": 0.171875,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 768,
+    "status": "completed",
+    "stop": 1024,
+    "wall_seconds_through_record_io": 0.1721986000193283
+  },
+  {
+    "batch": "native-oracles-1024-1280",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 13201408,
+      "peak_working_set_bytes": 22077440,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "oracles",
+    "native_records_sha256": "ecc48e9d39c6f46358e4ad4add82cd3ae3ddf73a5f1a9f9d82fbf1d179eaaa2a",
+    "parent_startup_io_exit_wall_seconds": 0.2723802000109572,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 0.21875,
+    "records_completed": 256,
+    "scientific_cpu_seconds": 0.171875,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 1024,
+    "status": "completed",
+    "stop": 1280,
+    "wall_seconds_through_record_io": 0.17159909999463707
+  },
+  {
+    "batch": "native-oracles-1280-1536",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 13144064,
+      "peak_working_set_bytes": 21778432,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "oracles",
+    "native_records_sha256": "1a2b67bdb75e5f0fb3b2f35d9384b0f058666db1ea61c11c964ec4c08b46e2c3",
+    "parent_startup_io_exit_wall_seconds": 0.30152420001104474,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 0.234375,
+    "records_completed": 256,
+    "scientific_cpu_seconds": 0.1875,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 1280,
+    "status": "completed",
+    "stop": 1536,
+    "wall_seconds_through_record_io": 0.18678879999788478
+  },
+  {
+    "batch": "native-oracles-1536-1792",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 13205504,
+      "peak_working_set_bytes": 21843968,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "oracles",
+    "native_records_sha256": "732d39ad4e1065bb59ed5650360f6c066e9db05ecb9b3c8a8e12aec5c6d6cd67",
+    "parent_startup_io_exit_wall_seconds": 0.28577330001280643,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 0.234375,
+    "records_completed": 256,
+    "scientific_cpu_seconds": 0.171875,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 1536,
+    "status": "completed",
+    "stop": 1792,
+    "wall_seconds_through_record_io": 0.182349200011231
+  },
+  {
+    "batch": "native-oracles-1792-2048",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 13139968,
+      "peak_working_set_bytes": 21909504,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "oracles",
+    "native_records_sha256": "9efd77f746586a8982971cc92931dd63712f1143130bc408f17147bf72835b66",
+    "parent_startup_io_exit_wall_seconds": 0.3966047999856528,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 0.34375,
+    "records_completed": 256,
+    "scientific_cpu_seconds": 0.296875,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 1792,
+    "status": "completed",
+    "stop": 2048,
+    "wall_seconds_through_record_io": 0.29533819999778643
+  },
+  {
+    "batch": "native-oracles-2048-2089",
+    "caps": {
+      "hard_address_space_bytes": null,
+      "hard_cpu_seconds": null,
+      "scope": "explicit owned bounded-fixture Windows run; parent wall watchdog required, not POSIX-cap equivalence"
+    },
+    "environment": {
+      "PYTHONDONTWRITEBYTECODE": "1",
+      "platform": "Windows-11-10.0.28000-SP0",
+      "python": "3.12.14 (main, Aug 25 2026, 14:01:42) [MSC v.1944 64 bit (AMD64)]",
+      "site_disabled": 1
+    },
+    "error": null,
+    "memory": {
+      "peak_commit_bytes": 13242368,
+      "peak_working_set_bytes": 22036480,
+      "source": "Windows GetProcessMemoryInfo; own process only"
+    },
+    "mode": "oracles",
+    "native_records_sha256": "115516c3065ad247697a3e0ef2edaf1e193f9b524ebeb8cc9e3645e474fc419d",
+    "parent_startup_io_exit_wall_seconds": 0.2682522999821231,
+    "parent_watchdog_seconds": 45,
+    "process_cpu_seconds_at_receipt": 0.21875,
+    "records_completed": 41,
+    "scientific_cpu_seconds": 0.15625,
+    "scope": "actual standard-library rational production/reference/reconstruction; no SciPy/HiGHS invocation, hardware trace or simulator acceleration",
+    "start": 2048,
+    "status": "completed",
+    "stop": 2089,
+    "wall_seconds_through_record_io": 0.16229600002407096
+  }
+]

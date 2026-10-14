@@ -5,6 +5,24 @@ from itertools import combinations, product
 MAX_BITS = 4096
 MAX_FORMS = 2048
 
+def same_data(left, right):
+    """Typed structural equality for replayed records, not rational equivalence.
+
+    JSON bool/float values must not substitute for integer IDs/counts. Object
+    member ordering is immaterial; arrays, scalar types and values are exact.
+    """
+    if type(left) is not type(right):
+        return False
+    if isinstance(left, dict):
+        if (any(type(key) is not str for key in left)
+                or any(type(key) is not str for key in right)
+                or left.keys() != right.keys()):
+            return False
+        return all(same_data(value, right[key]) for key, value in left.items())
+    if isinstance(left, (list, tuple)):
+        return len(left) == len(right) and all(same_data(a, b) for a, b in zip(left, right))
+    return left == right
+
 def rational(x):
     if isinstance(x, bool) or isinstance(x, float):
         raise ValueError("integers or rational strings required")

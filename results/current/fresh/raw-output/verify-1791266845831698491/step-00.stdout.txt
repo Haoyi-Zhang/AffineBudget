@@ -1,0 +1,51 @@
+{
+  "families": [
+    {
+      "family": "fork-join",
+      "cases": 12,
+      "mixture": 12,
+      "single": 12,
+      "interval": 3,
+      "sample_changed_cases": 0,
+      "max_jobs": 147,
+      "max_frontier": 8
+    },
+    {
+      "family": "pipeline",
+      "cases": 12,
+      "mixture": 10,
+      "single": 10,
+      "interval": 3,
+      "sample_changed_cases": 2,
+      "max_jobs": 144,
+      "max_frontier": 9
+    },
+    {
+      "family": "shared-prefix",
+      "cases": 12,
+      "mixture": 12,
+      "single": 0,
+      "interval": 0,
+      "sample_changed_cases": 0,
+      "max_jobs": 41,
+      "max_frontier": 3
+    },
+    {
+      "family": "staggered-bank",
+      "cases": 12,
+      "mixture": 8,
+      "single": 8,
+      "interval": 5,
+      "sample_changed_cases": 4,
+      "max_jobs": 144,
+      "max_frontier": 3
+    }
+  ],
+  "models": 48,
+  "oracles": 2089,
+  "oracle_equal": 2089,
+  "oracle_unsound": 0,
+  "dynamic_points": 648,
+  "model_cpu_seconds": 8.324001193,
+  "max_rss_kib": 78844
+}

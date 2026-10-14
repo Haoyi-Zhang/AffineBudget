@@ -1,0 +1,10 @@
+{
+  "phase": "models",
+  "complete": true,
+  "steps": 5,
+  "child_failures": 0,
+  "workers": 1,
+  "wall_seconds": 9.915863514000002,
+  "aggregate_cpu_seconds": 9.484293427999999,
+  "peak_child_rss_kib": 80632
+}

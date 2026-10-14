@@ -1,4 +1,4 @@
-# Error-budgeted parallel simulation
+# Order-stable error budgets for affine-timed resource models
 
 This standalone repository accompanies **Order-Stable Error Budgets for Affine-Timed Resource Models**. It contains a finite deterministic FCFS timing model, numerical certificate producer, exact rational checker, complete mathematical arguments, exact generated inputs, and measured results. It does not require the manuscript directory, a network connection for verification, private data, or a missing controller.
 
@@ -20,7 +20,7 @@ From this directory, with ordinary CPython on Linux:
 python -S verify.py
 ```
 
-The retained suite described here contains 38 tests; the additional ready-set regressions below extend current discovery. A dedicated input audit serializes all 48 main inputs and six join inputs with the repository's canonical JSON writer into an operating-system temporary directory, compares all 54 files byte for byte with the retained inputs, and mutates one service coefficient to confirm that the comparison fails. A separate before/after snapshot check establishes that this temporary generation did not modify the retained source files. The remaining tests check exact file coverage, reconstruct every certificate, replay the 648 + 126 dynamic points, rerun every exact arrangement oracle, rederive all 112 retained unit-domain allocation decisions and selected optima, exercise zero-, half-, and mixed-domain allocator catalogs, check all 512 reduction formulas, rerun the changed-order/constant-makespan control, and audit the 65 cited bibliography records and the fields/counts of the retained 12/5/5 calibration matrix. The offline citation audit does not fetch or reread those papers. Main-grid replay also checks point coverage, reported absolute errors, and the order and makespan bounds of accepted certificates. Oracle replay checks the recorded equality flags, maximizing points, and arrangement vertex counts. Three added regression tests require altered errors, bounds, point coverage, and oracle annotations to be rejected. Success exits zero. The JSON printed to standard output records input-audit facts with test counts, CPU and wall time, peak resident memory, and worker count; test details go to standard error. The stored `results/verification.json` is the historical 35-test Linux receipt and is not a measurement of the expanded suite. `-S` demonstrates that site packages, including SciPy, are not needed for this path. Do not use Python optimization flags that suppress assertions.
+The retained suite described here contains 38 tests; the additional ready-set regressions below extend current discovery. A dedicated input audit serializes all 48 main inputs and six join inputs with the repository's canonical JSON writer into an operating-system temporary directory, compares all 54 files byte for byte with the retained inputs, and mutates one service coefficient to confirm that the comparison fails. A separate before/after snapshot check establishes that this temporary generation did not modify the retained source files. The remaining tests check exact file coverage, reconstruct every certificate, replay the 648 + 126 dynamic points, rerun every exact arrangement oracle, rederive all 112 retained unit-domain allocation decisions and selected optima, exercise zero-, half-, and mixed-domain allocator catalogs, check all 512 reduction formulas, rerun the changed-order/constant-makespan control, and audit the 65 cited bibliography records and the fields/counts of the retained 12/5/5 calibration matrix. The offline citation audit does not fetch or reread those papers. Main-grid replay also checks point coverage, reported absolute errors, and the order and makespan bounds of accepted certificates. Oracle replay checks the recorded equality flags, maximizing points, and arrangement vertex counts. Three added regression tests require altered errors, bounds, point coverage, and oracle annotations to be rejected. Success exits zero. The JSON printed to standard output records input-audit facts with test counts, CPU and wall time, peak resident memory, and worker count; test details go to standard error. The stored `results/verification.json` is the historical 35-test Linux receipt and is not a measurement of the expanded suite. `-S` demonstrates that site packages, including SciPy, are not needed for this path. Current scientific conditions use explicit exceptions and also remain active under optimized Python; the historical assertion-dependent receipts are not relabeled.
 
 Tests are finite executable evidence, not a mechanization of the general theorems. The trusted base includes CPython rational arithmetic, input parsing, the model semantics, complete-envelope reconstruction, and the checker.
 
@@ -35,7 +35,7 @@ the changed-order/constant-makespan boundary. These finite checks are not a new
 production campaign or a speed measurement. These extend the retained suite
 to 44 tests; the historical 38-test campaign receipts remain unchanged. With
 the thirteen refreshed-catalog regressions below, full current discovery contains
-57 tests. The thirteen new tests are portable and included in the existing
+57 tests before the bounded exact-workflow controls; current discovery contains 81. The thirteen new tests are portable and included in the existing
 `verify.py` discovery; they do not run the numerical supplement.
 
 ## Fresh production and reproduction
@@ -200,6 +200,21 @@ The supplement reports no timing metrics and establishes neither
 continuous-box optimality nor hardware/simulator speed.
 The manuscript's allocation table and its original negative results remain
 the frozen-policy study.
+
+## Bounded exact production and complete costs
+
+The separate standard-library `simcert/exact_lp.py` backend now produces feasible
+primal/checked dual optimum pairs on the bounded one-to-three-dimensional
+interface. Its full-contract ordinary primal-vertex reference receives the same
+envelopes, radii and guarantee and gives identical answers. The executed cohort
+is all 48 original models, 112 catalog queries and 2089 comparisons; no new
+coverage gain over the retained refreshed numerical supplement is claimed.
+All native raw records, costs and source/data bindings are in
+`results/exact-lp/`. [Exact workflow and limits](exact-workflow.md) explains the
+invariant-order catalog optimality, red/green type/dependency/newline/optimized
+controls, and safe entrypoints. Production plus full replay is slower on the
+main models in this run; timings are not simulator speedups. The original frozen
+negative results and POSIX numerical resource guards are preserved.
 
 ## Files
 

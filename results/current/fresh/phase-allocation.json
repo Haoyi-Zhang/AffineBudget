@@ -1,0 +1,10 @@
+{
+  "phase": "allocation",
+  "complete": true,
+  "steps": 7,
+  "child_failures": 0,
+  "workers": 1,
+  "wall_seconds": 5.650048393999995,
+  "aggregate_cpu_seconds": 5.648594085,
+  "peak_child_rss_kib": 79664
+}

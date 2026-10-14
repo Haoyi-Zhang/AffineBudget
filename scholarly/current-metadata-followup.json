@@ -1,0 +1,100 @@
+{
+  "schema": "current-bibliographic-identity-followup-v1",
+  "checked_on": "2026-10-14",
+  "selected_identity_count": 1,
+  "full_text_read_complete": false,
+  "citation_entailment_validated": false,
+  "scope": "One selected publisher/author identity metadata correction only; the other64 bibliography entries retain historical records and offline consistency checks. No new fulltext, novelty, scientific or submission validation.",
+  "source_bindings": {
+    "scholarly/references.bib": "91796802fef0cb6c9058d8f7e0f312e8073863c7841f78bbf81249fc056abb24",
+    "bibliography-audit.csv": "7ea796814ca6393313c84d92c6c256b23a3ff91d7b11898f3b4df479ab2e4927",
+    "results/bibliographic-identity-check.json": "dd37d8b8e995c1ba8a54e05862f4b0581f6ea0c15880797a01324ad6d7e40956"
+  },
+  "records": {
+    "castro2015cere": {
+      "historical_audit_row": {
+        "bib_key": "castro2015cere",
+        "title": "CERE: LLVM-Based Codelet Extractor and Replayer for Piecewise Benchmarking and Optimization",
+        "year": "2015",
+        "entry_type": "article",
+        "identifier": "doi:10.1145/2744295.2724717",
+        "primary_record": "https://doi.org/10.1145/2744295.2724717",
+        "record_type": "publisher DOI record",
+        "verification_scope": "full text plus primary bibliographic record",
+        "metadata_status": "verified",
+        "manuscript_contexts": "context",
+        "citation_status": "cited-and-relevant",
+        "audit_note": "metadata retained after identifier/title/venue/year consistency review",
+        "verified_on": "2026-09-17"
+      },
+      "current_bibliographic_record": {
+        "bib_key": "castro2015cere",
+        "entry_type": "article",
+        "title": "{CERE}: {LLVM}-Based Codelet Extractor and Replayer for Piecewise Benchmarking and Optimization",
+        "author": "Pablo de Oliveira Castro and Chadi Akel and Eric Petit and Mihail Popov and William Jalby",
+        "year": "2015",
+        "doi": "10.1145/2724717",
+        "journal": "ACM Transactions on Architecture and Code Optimization",
+        "volume": "12",
+        "eprint": "",
+        "booktitle": "",
+        "pages": "1--24",
+        "number": "1",
+        "articleno": "",
+        "numpages": "24",
+        "url": ""
+      },
+      "changed_fields": [
+        "doi",
+        "numpages",
+        "articleno",
+        "pages"
+      ],
+      "identifier": "doi:10.1145/2724717",
+      "primary_record": "https://doi.org/10.1145/2724717",
+      "primary_identity": {
+        "title": "CERE: LLVM-Based Codelet Extractor and Replayer for Piecewise Benchmarking and Optimization",
+        "authors": [
+          "Pablo de Oliveira Castro",
+          "Chadi Akel",
+          "Eric Petit",
+          "Mihail Popov",
+          "William Jalby"
+        ],
+        "year": 2015,
+        "doi": "10.1145/2724717",
+        "venue": "ACM Transactions on Architecture and Code Optimization",
+        "volume": "12",
+        "number": "1",
+        "pages": "1--24",
+        "registered_title": "CERE",
+        "optional_article_number_not_confirmed": true
+      },
+      "primary_sources": [
+        {
+          "url": "https://api.crossref.org/works/10.1145%2F2724717",
+          "read_scope": "Fresh2026-10-14 publisher-deposited DOI, shorttitle CERE, all5authors,year2015,TACO12(1),pages1-24; no articleno exposed. Registered family capitalization was not copied into the native Bib."
+        },
+        {
+          "url": "https://api.crossref.org/works/10.1145%2F2724717",
+          "read_scope": "Publisher-deposited DOI/title/all authors/venue/date/pages/aliases fields personally read",
+          "observation": "Retrieved exact publisher DOI 10.1145/2724717; no alias to the wrong requested value appears in this record."
+        },
+        {
+          "url": "https://cv.hal.science/pablooliveira",
+          "read_scope": "Author-maintained matching CERE publication record",
+          "observation": "Author confirms fullsubtitle/all5authors,TACO12(1),1-24,DOI2724717."
+        },
+        {
+          "url": "https://www.liparad.uvsq.fr/2015",
+          "read_scope": "Matching publication item21",
+          "observation": "Author lab lists TACO12(1):6; currentarticleno1/numpages25 conflict. Article6 requires publisher header/export cross-check before changing that field."
+        }
+      ],
+      "unverified_fields": {
+        "articleno": "Optional field omitted. Author-maintained bibliography and lab records give article6, while the author draft header gives article1; the publisher-deposited record supplies pages1-24 but no article number. The current citation uses the verified page range without choosing an unconfirmed article number."
+      },
+      "historical_source_reading_not_extended": true
+    }
+  }
+}

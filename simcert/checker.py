@@ -1,6 +1,6 @@
 """Exact certificate checker. This module never imports the LP producer."""
 from fractions import Fraction as Q
-from .algebra import rational, mixture_bound, upper, interval_bound,single_path_bound
+from .algebra import rational, mixture_bound, upper, interval_bound,single_path_bound,same_data
 from .model import prepare,validate
 
 def check(model,cert,goal=None):
@@ -8,11 +8,11 @@ def check(model,cert,goal=None):
     if len(b)!=len(domain) or any(x<0 or x>y for x,y in zip(b,domain)):
         raise ValueError("certificate outside declared domain")
     nom,fs,guards,stats=prepare(model)
-    if nom["orders"]!=cert["orders"]:raise ValueError("nominal order mismatch")
+    if not same_data(nom["orders"],cert["orders"]):raise ValueError("nominal order mismatch")
     if len(cert["guards"])!=len(guards):raise ValueError("missing or extra guard")
     bounds=[];interval=[];single=[];stable=True
     for g,rec in zip(guards,cert["guards"]):
-        if g!=rec["guard"]:raise ValueError("wrong guard")
+        if not same_data(g,rec["guard"]):raise ValueError("wrong guard")
         ps=fs[g["left"]];qs=fs[g["right"]]
         if len(rec["weights"])!=len(ps):raise ValueError("incomplete left envelope coverage")
         u=max(mixture_bound(p,qs,w,b) for p,w in zip(ps,rec["weights"]))

@@ -2,7 +2,7 @@
 """Resumable one-worker experiments, exact checking and deterministic outputs."""
 import os
 os.environ.update(OPENBLAS_NUM_THREADS="1",OMP_NUM_THREADS="1",MKL_NUM_THREADS="1",NUMEXPR_NUM_THREADS="1")
-import argparse,copy,csv,itertools,json,random,resource,time
+import argparse,copy,csv,itertools,json,random,time
 from pathlib import Path
 from fractions import Fraction as Q
 from simcert.algebra import *
@@ -16,10 +16,11 @@ ROOT=Path(__file__).resolve().parent
 def save(path,obj):
     path.parent.mkdir(parents=True,exist_ok=True)
     temporary=path.with_suffix(path.suffix+".tmp")
-    temporary.write_text(json.dumps(obj,indent=2,sort_keys=True)+"\n")
+    temporary.write_text(json.dumps(obj,indent=2,sort_keys=True)+"\n",encoding="utf-8",newline="\n")
     temporary.replace(path)
 
 def case_run(model):
+    import resource  # POSIX measurement is required only by the native campaign.
     begin=time.perf_counter();cpu=time.process_time()
     cert=make_certificate(model,[1]*len(model["domain"]));produced=time.perf_counter()
     verdict=check(model,cert);checked=time.perf_counter()
@@ -65,6 +66,7 @@ def allocate(model,certificate,target=Q(1)):
     return {"case_id":model["case_id"],"target":str(target),"objective":"sum((dimension+1)*level_index)","restriction":"frozen maximum-domain witnesses and finite catalog only","selected":best,"candidates":rows}
 
 def main():
+    import resource
     parser=argparse.ArgumentParser();parser.add_argument("mode",choices=["models","oracles","allocate","structure","summarize"])
     parser.add_argument("--start",type=int,default=0);parser.add_argument("--stop",type=int,default=48)
     parser.add_argument("--output",type=Path,default=ROOT/"results");args=parser.parse_args()
@@ -82,11 +84,13 @@ def main():
     elif args.mode=="structure":
         for m in range(max(1,args.start),min(7,args.stop)):
             model=orthant_family(m);cert=make_certificate(model,[1]*m);v=check(model,cert)
-            assert v["certified"] and Q(v["global_bound"])==Q(1,4)
+            if not v["certified"] or Q(v["global_bound"])!=Q(1,4):
+                raise AssertionError("independent-join certificate differs")
             nom=simulate(model,[0]*m);rows=[]
             for point in itertools.product([-1,1],repeat=m):
                 actual=simulate(model,point)
-                assert actual["orders"]==nom["orders"] and actual["makespan"]==Q(37,4)
+                if actual["orders"]!=nom["orders"] or actual["makespan"]!=Q(37,4):
+                    raise AssertionError("independent-join dynamic observation differs")
                 rows.append({"point":list(point),"makespan":str(actual["makespan"]),"same_order":True})
             save(out/"inputs"/(model["case_id"]+".json"),model)
             save(out/"structure"/(model["case_id"]+".json"),{"m":m,"jobs":len(model["jobs"]),"selector_patterns":len(rows),"certificate":cert,"verdict":v,"samples":rows})

@@ -1,0 +1,19 @@
+{
+  "tests": 38,
+  "failures": 0,
+  "errors": 0,
+  "cpu_seconds": 14.163151567,
+  "wall_seconds": 14.166814778000003,
+  "peak_rss_kib": 21832,
+  "workers": 1,
+  "input_reproducibility": {
+    "generated_inputs": 54,
+    "byte_equal_inputs": 54,
+    "temporary_directory_generation": true,
+    "coefficient_mutation_detected": true,
+    "source_inputs_unchanged": true,
+    "serialization": "json.dumps(indent=2, sort_keys=True) plus one LF",
+    "scope": "canonical generated-input identity and source-tree immutability; not scientific theorem validation"
+  },
+  "scope": "finite exact tests; not mechanized general proofs"
+}

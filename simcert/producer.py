@@ -6,10 +6,10 @@ from .model import prepare,validate
 
 def optimize_mixture(p,qs,b):
     # The LP may propose a poor rational witness; it cannot certify it.
-    import numpy as np
-    from scipy.optimize import linprog
     n=len(qs);k=len(b)
     if n==1:return [Q(1)]
+    import numpy as np
+    from scipy.optimize import linprog
     c=[-float(q[0]) for q in qs]+[float(x) for x in b]
     A=[];rhs=[]
     for i in range(k):

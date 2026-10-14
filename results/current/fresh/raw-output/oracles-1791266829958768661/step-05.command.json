@@ -1,0 +1,1 @@
+["/opt/hostedtoolcache/Python/3.12.14/x64/bin/python", "-B", "campaign.py", "oracles", "--start", "1280", "--stop", "1536", "--output", "/home/runner/work/_temp/p040-scientific/fresh"]

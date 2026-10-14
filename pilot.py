@@ -16,7 +16,8 @@ for m in [shared_prefix(2,1),staged('fork-join',4,0),unstable()]:
 ps=[(Q(0),Q(0))];qs=[(Q(1,4),Q(1)),(Q(1,4),Q(-1))]
 from simcert.producer import optimize_mixture
 w=optimize_mixture(ps[0],qs,[Q(1)])
-assert mixture_bound(ps[0],qs,w,[Q(1)])==exact_small_oracle(ps,qs,[Q(1)])[0][0]
+if mixture_bound(ps[0],qs,w,[Q(1)])!=exact_small_oracle(ps,qs,[Q(1)])[0][0]:
+    raise AssertionError("pilot mixture differs from exact oracle")
 record={'phase':'pilot','workers':1,'wall_seconds':time.perf_counter()-t,'cpu_seconds':time.process_time()-c,'peak_rss_kib':resource.getrusage(resource.RUSAGE_SELF).ru_maxrss,'rows':rows,'mixture_oracle':str(mixture_bound(ps[0],qs,w,[Q(1)]))}
 print(json.dumps(record,indent=2))
 from pathlib import Path

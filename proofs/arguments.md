@@ -124,3 +124,45 @@ All results are conditional on the exact supplied timing interface. No calibrati
 Let a single bank contain a blocker (release0, service3), A (release1, service1), and B (release1+theta/2, service1), with IDs blocker<A<B and theta in [-1,1]. The blocker begins at zero. Both other jobs are ready by 3/2<3, so after its completion they consume two unit services with no idle gap. B precedes A when theta<0, while A precedes B when theta>=0 by the stated tie rule. Makespan is exactly5 throughout the box. The nominal fixed-order guard A_arrival<=B_arrival has contrast -theta/2 and exact maximum1/2, so it must be refused over the box. The fixed-order sink nevertheless also equals5.
 
 Thus order self-consistency is necessary and sufficient for those resource sequences, not necessary for a small true makespan error. Even ideal comparisons do not make the whole order-and-error procedure a complete decision method for arbitrary error budgets. An order-independent invariant or multiple order regions could accept this model, but those mechanisms are not implemented. This control and the amplification example prevent interpreting every refusal as a large timing error or every constant candidate sink as safe.
+
+## 11. Bounded exact optimality evidence and catalog interpretation
+
+For one left form p, a feasible primal point (theta,z) has z >= max Q(theta), so
+p(theta)-z is a lower bound on max_box(p-max Q). A simplex witness supplies the
+upper bound U by Section 2. If those rational endpoints are equal, the common
+value is optimal. This is ordinary weak duality and does not depend on trusting
+the search algorithm or a floating-point success flag.
+
+The bounded backend constructs candidate vertices of the standard primal LP by
+exact square-system elimination. Nonnegative multipliers of an active basis's
+transposed system produce a dual-feasible simplex. A feasible point and zero gap
+are rechecked; singular, nonoptimal or infeasible bases do not supply a result.
+The ordinary reference visits every feasible primal vertex instead. The box is
+bounded and the epigraph LP has a finite optimum and vertices (including zero
+radius degeneracies); a successful completed enumeration therefore yields the
+same optimum. Both implementations share rational elimination and model code;
+this is not independent development of a complete simulator or a new LP method.
+
+The operational interface is limited to at most three parameters, twelve right
+forms and 4096 basis trials per comparison, with existing rational input/witness
+budgets. Hitting any limit or arithmetic failure means no completed query, not
+proof of infeasibility. General rational LP attainment remains the statement of
+Section 2, not an unconditional completeness promise for capped implementation.
+
+`verify_exact_evidence` reconstructs the nominal schedule and complete envelopes,
+requires exact typed guard/left-form coverage, binds each optimum's simplex to
+the certificate actually checked, and rechecks every feasible primal/dual pair
+including the sink. Thus successful full coverage gives the exact guard maxima
+and exact downward error. The upward error is already exact by Section 4.
+When every point in a finite catalog is solved this way, feasibility and the
+score/lexicographic optimum are exact among invariant-order certificates on that
+catalog, not merely among a fixed set of supplied weights. They still do not
+decide error invariants after an order change or optimize continuous boxes.
+
+The current native cohort uses all original 48 models, 112 catalog points and
+2089 comparison problems. Ordinary exact LP returns the same full-contract
+answers. Four catalog feasible counts are 11/16, 13/16, 11/16 and 12/64, matching
+the earlier refreshed numerical supplement. Production plus full optimality
+replay is slower than the ordinary reference on the main models in this run;
+full staged costs, working-set scope, and Windows/POSIX-cap differences are
+reported in the method note. No hardware or general solver speedup follows.

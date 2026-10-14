@@ -8,6 +8,7 @@ snapshots against the live manuscript bibliography and citation commands.
 from __future__ import annotations
 
 import csv
+import hashlib
 import json
 import re
 import sys
@@ -79,6 +80,10 @@ def parse_bib(path: Path) -> List[Dict[str, str]]:
                 "eprint": field("eprint"),
                 "booktitle": field("booktitle"),
                 "pages": field("pages"),
+                "number": field("number"),
+                "articleno": field("articleno"),
+                "numpages": field("numpages"),
+                "url": field("url"),
             }
         )
         pos = end
@@ -123,6 +128,52 @@ def require(condition: bool, message: str, failures: List[str]) -> None:
         failures.append(message)
 
 
+def current_metadata_followup(entries: List[Dict[str, str]], audit_by_key: Mapping[str, dict]) -> dict:
+    """Bind one metadata correction without rewriting the historical source audit."""
+    def unique_object(pairs):
+        result = {}
+        for key, value in pairs:
+            if key in result:
+                raise ValueError(f"duplicate metadata followup key: {key}")
+            result[key] = value
+        return result
+
+    data = json.loads((SCHOLARLY / "current-metadata-followup.json").read_text(encoding="utf-8"), object_pairs_hook=unique_object)
+    if (data.get("schema") != "current-bibliographic-identity-followup-v1"
+            or type(data.get("selected_identity_count")) is not int
+            or data["selected_identity_count"] != 1
+            or data.get("full_text_read_complete") is not False
+            or data.get("citation_entailment_validated") is not False
+            or set(data.get("records", {})) != {"castro2015cere"}):
+        raise ValueError("invalid metadata followup scope")
+    bindings = data.get("source_bindings", {})
+    expected_paths = {"scholarly/references.bib", "bibliography-audit.csv", "results/bibliographic-identity-check.json"}
+    if set(bindings) != expected_paths:
+        raise ValueError("metadata followup source coverage mismatch")
+    for relative, expected in bindings.items():
+        if hashlib.sha256((ROOT / relative).read_bytes()).hexdigest() != expected:
+            raise ValueError(f"metadata followup source changed: {relative}")
+    record = data["records"]["castro2015cere"]
+    current = next(entry for entry in entries if entry["bib_key"] == "castro2015cere")
+    if (record.get("current_bibliographic_record") != current
+            or current["doi"] != "10.1145/2724717" or current["numpages"] != "24"
+            or current["pages"] != "1--24" or current["articleno"] != ""
+            or record.get("identifier") != "doi:10.1145/2724717"
+            or record.get("primary_record") != "https://doi.org/10.1145/2724717"
+            or record.get("changed_fields") != ["doi", "numpages", "articleno", "pages"]
+            or record.get("historical_source_reading_not_extended") is not True):
+        raise ValueError("CERE current metadata followup mismatch")
+    historical = audit_by_key["castro2015cere"]
+    if (record.get("historical_audit_row") != historical
+            or historical["identifier"] != "doi:10.1145/2744295.2724717"
+            or historical["primary_record"] != "https://doi.org/10.1145/2744295.2724717"):
+        raise ValueError("CERE historical audit binding mismatch")
+    sources = record.get("primary_sources", [])
+    if not sources or not all(item.get("url", "").startswith("https://") and item.get("read_scope") for item in sources):
+        raise ValueError("CERE primary metadata source scope missing")
+    return data
+
+
 def audit() -> Dict[str, object]:
     failures: List[str] = []
     bib_path = SCHOLARLY / "references.bib"
@@ -143,6 +194,7 @@ def audit() -> Dict[str, object]:
     audit_by_key = {row["bib_key"]: row for row in audit_rows}
     require(len(audit_rows) == EXPECTED_REFERENCES, f"expected {EXPECTED_REFERENCES} audit rows, found {len(audit_rows)}", failures)
     require(set(audit_by_key) == set(keys), "bibliography audit key coverage differs from BibTeX", failures)
+    followup = current_metadata_followup(entries, audit_by_key)
     required_audit_fields = {
         "title",
         "year",
@@ -170,8 +222,9 @@ def audit() -> Dict[str, object]:
         if entry["doi"]:
             expected_identifier = "doi:" + entry["doi"]
             expected_record = "https://doi.org/" + entry["doi"]
-            require(row.get("identifier", "").lower() == expected_identifier.lower(), f"{entry['bib_key']}: DOI identifier mismatch", failures)
-            require(row.get("primary_record", "").lower() == expected_record.lower(), f"{entry['bib_key']}: DOI record mismatch", failures)
+            metadata_row = followup["records"].get(entry["bib_key"], row)
+            require(metadata_row.get("identifier", "").lower() == expected_identifier.lower(), f"{entry['bib_key']}: DOI identifier mismatch", failures)
+            require(metadata_row.get("primary_record", "").lower() == expected_record.lower(), f"{entry['bib_key']}: DOI record mismatch", failures)
 
     identity_path = ROOT / "results" / "bibliographic-identity-check.json"
     identity_data = json.loads(identity_path.read_text(encoding="utf-8"))
@@ -245,6 +298,11 @@ def audit() -> Dict[str, object]:
         "official_non_doi_records": len(entries) - len(dois),
         "externally_rechecked_records": len(EXPECTED_EXTERNAL_IDENTITIES),
         "external_identity_live_query": False,
+        "current_metadata_followup_keys": sorted(followup["records"]),
+        "current_metadata_followup_count": followup["selected_identity_count"],
+        "current_metadata_followup_scope": followup["scope"],
+        "full_text_read_by_this_check": False,
+        "citation_entailment_validated_by_this_check": False,
         "cited_references": sum(bool(usage.get(key, "").strip()) for key in keys),
         "unused_references": sorted(set(keys) - set(usage)),
         "calibration_rows": len(calibration),

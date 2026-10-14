@@ -1,0 +1,1027 @@
+{
+  "certificate": {
+    "guards": [
+      {
+        "guard": {
+          "jobs": [
+            4,
+            5
+          ],
+          "left": "a4",
+          "right": "a5",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            9,
+            10
+          ],
+          "left": "a9",
+          "right": "a10",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            14,
+            15
+          ],
+          "left": "a14",
+          "right": "a15",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            19,
+            20
+          ],
+          "left": "a19",
+          "right": "a20",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            24,
+            25
+          ],
+          "left": "a24",
+          "right": "a25",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      },
+      {
+        "guard": {
+          "jobs": [
+            29,
+            30
+          ],
+          "left": "a29",
+          "right": "a30",
+          "strict": false
+        },
+        "weights": [
+          [
+            "1/2",
+            "1/2"
+          ]
+        ]
+      }
+    ],
+    "lower_weights": [
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "0",
+      "1"
+    ],
+    "orders": {
+      "a-pre0": [
+        1
+      ],
+      "a-pre1": [
+        6
+      ],
+      "a-pre2": [
+        11
+      ],
+      "a-pre3": [
+        16
+      ],
+      "a-pre4": [
+        21
+      ],
+      "a-pre5": [
+        26
+      ],
+      "b-minus0": [
+        3
+      ],
+      "b-minus1": [
+        8
+      ],
+      "b-minus2": [
+        13
+      ],
+      "b-minus3": [
+        18
+      ],
+      "b-minus4": [
+        23
+      ],
+      "b-minus5": [
+        28
+      ],
+      "b-plus0": [
+        2
+      ],
+      "b-plus1": [
+        7
+      ],
+      "b-plus2": [
+        12
+      ],
+      "b-plus3": [
+        17
+      ],
+      "b-plus4": [
+        22
+      ],
+      "b-plus5": [
+        27
+      ],
+      "bank0": [
+        4,
+        5
+      ],
+      "bank1": [
+        9,
+        10
+      ],
+      "bank2": [
+        14,
+        15
+      ],
+      "bank3": [
+        19,
+        20
+      ],
+      "bank4": [
+        24,
+        25
+      ],
+      "bank5": [
+        29,
+        30
+      ],
+      "prefix": [
+        0
+      ]
+    },
+    "radii": [
+      "1",
+      "1",
+      "1",
+      "1",
+      "1",
+      "1"
+    ]
+  },
+  "jobs": 31,
+  "m": 6,
+  "samples": [
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        -1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        -1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        -1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        -1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        -1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        -1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        -1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        -1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        -1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        -1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        -1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        -1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        -1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        -1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        -1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        -1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        -1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        -1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        -1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        1,
+        -1,
+        -1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        1,
+        -1,
+        -1,
+        1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        1,
+        -1,
+        1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        1,
+        -1,
+        1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        1,
+        -1,
+        1,
+        1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        1,
+        1,
+        -1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        1,
+        1,
+        -1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        1,
+        1,
+        -1,
+        1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        1,
+        1,
+        1,
+        -1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        1,
+        1,
+        1,
+        -1,
+        1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        -1
+      ],
+      "same_order": true
+    },
+    {
+      "makespan": "37/4",
+      "point": [
+        1,
+        1,
+        1,
+        1,
+        1,
+        1
+      ],
+      "same_order": true
+    }
+  ],
+  "selector_patterns": 64,
+  "verdict": {
+    "certified": true,
+    "downward_bound": "0",
+    "global_bound": "1/4",
+    "guard_bounds": [
+      "-1/4",
+      "-1/4",
+      "-1/4",
+      "-1/4",
+      "-1/4",
+      "-1/4"
+    ],
+    "interval_bounds": [
+      "3/4",
+      "3/4",
+      "3/4",
+      "3/4",
+      "3/4",
+      "3/4"
+    ],
+    "interval_order_certified": false,
+    "nominal_makespan": "9",
+    "order_certified": true,
+    "single_bounds": [
+      "3/4",
+      "3/4",
+      "3/4",
+      "3/4",
+      "3/4",
+      "3/4"
+    ],
+    "single_order_certified": false,
+    "stats": {
+      "edges": 135,
+      "max_frontier": 13,
+      "total_forms": 94,
+      "vertices": 64
+    },
+    "upward_bound": "1/4"
+  }
+}

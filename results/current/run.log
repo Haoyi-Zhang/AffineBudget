@@ -1,0 +1,383 @@
+{
+  "check": "repository-material-integrity",
+  "python_sources_parsed": 18,
+  "research_sources_present": 17,
+  "minimum_supplied_sources": 1,
+  "usage_document_present": true,
+  "errors": [],
+  "scope": "Documentation and source/configuration integrity only. Research programs, proofs and experiments are not executed."
+}
+RUN pilot.py /home/runner/work/_temp/p040-scientific/fresh/pilot.json
+         "-21/4"
+        ],
+        "stats": {
+          "vertices": 54,
+          "edges": 124,
+          "max_frontier": 5,
+          "total_forms": 98
+        }
+      },
+      "nominal": "28",
+      "negative_corner": "113/4"
+    },
+    {
+      "family": "order-change-control",
+      "jobs": 3,
+      "verdict": {
+        "certified": false,
+        "order_certified": false,
+        "global_bound": "0",
+        "upward_bound": "0",
+        "downward_bound": "0",
+        "nominal_makespan": "202",
+        "guard_bounds": [
+          "1/100"
+        ],
+        "interval_order_certified": false,
+        "single_order_certified": false,
+        "interval_bounds": [
+          "1/100"
+        ],
+        "single_bounds": [
+          "1/100"
+        ],
+        "stats": {
+          "vertices": 8,
+          "edges": 11,
+          "max_frontier": 1,
+          "total_forms": 8
+        }
+      },
+      "nominal": "202",
+      "negative_corner": "10199/100"
+    }
+  ],
+  "mixture_oracle": "-1/4"
+}
+RUN campaign.py models --start 0 --stop 12 --output /home/runner/work/_temp/p040-scientific/fresh
+case-000 True {'vertices': 14, 'edges': 25, 'max_frontier': 3, 'total_forms': 19}
+case-001 True {'vertices': 14, 'edges': 25, 'max_frontier': 3, 'total_forms': 19}
+case-002 True {'vertices': 14, 'edges': 25, 'max_frontier': 3, 'total_forms': 19}
+case-003 True {'vertices': 24, 'edges': 47, 'max_frontier': 3, 'total_forms': 32}
+case-004 True {'vertices': 24, 'edges': 47, 'max_frontier': 3, 'total_forms': 32}
+case-005 True {'vertices': 24, 'edges': 47, 'max_frontier': 3, 'total_forms': 32}
+case-006 True {'vertices': 44, 'edges': 91, 'max_frontier': 3, 'total_forms': 58}
+case-007 True {'vertices': 44, 'edges': 91, 'max_frontier': 3, 'total_forms': 58}
+case-008 True {'vertices': 44, 'edges': 91, 'max_frontier': 3, 'total_forms': 58}
+case-009 True {'vertices': 84, 'edges': 179, 'max_frontier': 3, 'total_forms': 110}
+case-010 True {'vertices': 84, 'edges': 179, 'max_frontier': 3, 'total_forms': 110}
+case-011 True {'vertices': 84, 'edges': 179, 'max_frontier': 3, 'total_forms': 110}
+RUN campaign.py models --start 12 --stop 24 --output /home/runner/work/_temp/p040-scientific/fresh
+2 True {'vertices': 26, 'edges': 54, 'max_frontier': 1, 'total_forms': 26}
+case-013 True {'vertices': 38, 'edges': 84, 'max_frontier': 1, 'total_forms': 38}
+case-014 True {'vertices': 26, 'edges': 54, 'max_frontier': 1, 'total_forms': 26}
+case-015 True {'vertices': 50, 'edges': 110, 'max_frontier': 1, 'total_forms': 50}
+case-016 True {'vertices': 74, 'edges': 170, 'max_frontier': 1, 'total_forms': 74}
+case-017 True {'vertices': 50, 'edges': 110, 'max_frontier': 2, 'total_forms': 59}
+case-018 True {'vertices': 98, 'edges': 222, 'max_frontier': 2, 'total_forms': 105}
+case-019 True {'vertices': 146, 'edges': 342, 'max_frontier': 3, 'total_forms': 169}
+case-020 False {'vertices': 98, 'edges': 222, 'max_frontier': 2, 'total_forms': 111}
+case-021 False {'vertices': 194, 'edges': 446, 'max_frontier': 2, 'total_forms': 195}
+case-022 False {'vertices': 290, 'edges': 686, 'max_frontier': 1, 'total_forms': 290}
+case-023 False {'vertices': 194, 'edges': 446, 'max_frontier': 2, 'total_forms': 204}
+RUN campaign.py models --start 24 --stop 36 --output /home/runner/work/_temp/p040-scientific/fresh
+24 True {'vertices': 30, 'edges': 64, 'max_frontier': 1, 'total_forms': 30}
+case-025 True {'vertices': 44, 'edges': 99, 'max_frontier': 1, 'total_forms': 44}
+case-026 True {'vertices': 30, 'edges': 64, 'max_frontier': 2, 'total_forms': 47}
+case-027 True {'vertices': 54, 'edges': 124, 'max_frontier': 5, 'total_forms': 98}
+case-028 True {'vertices': 80, 'edges': 191, 'max_frontier': 1, 'total_forms': 80}
+case-029 True {'vertices': 54, 'edges': 124, 'max_frontier': 4, 'total_forms': 118}
+case-030 True {'vertices': 102, 'edges': 244, 'max_frontier': 3, 'total_forms': 158}
+case-031 True {'vertices': 152, 'edges': 375, 'max_frontier': 4, 'total_forms': 311}
+case-032 True {'vertices': 102, 'edges': 244, 'max_frontier': 3, 'total_forms': 161}
+case-033 True {'vertices': 198, 'edges': 484, 'max_frontier': 3, 'total_forms': 302}
+case-034 True {'vertices': 296, 'edges': 743, 'max_frontier': 4, 'total_forms': 599}
+case-035 True {'vertices': 198, 'edges': 484, 'max_frontier': 8, 'total_forms': 540}
+RUN campaign.py models --start 36 --stop 48 --output /home/runner/work/_temp/p040-scientific/fresh
+036 True {'vertices': 26, 'edges': 54, 'max_frontier': 1, 'total_forms': 26}
+case-037 True {'vertices': 38, 'edges': 84, 'max_frontier': 1, 'total_forms': 38}
+case-038 True {'vertices': 26, 'edges': 54, 'max_frontier': 1, 'total_forms': 26}
+case-039 True {'vertices': 50, 'edges': 110, 'max_frontier': 1, 'total_forms': 50}
+case-040 True {'vertices': 74, 'edges': 170, 'max_frontier': 2, 'total_forms': 80}
+case-041 True {'vertices': 50, 'edges': 110, 'max_frontier': 2, 'total_forms': 59}
+case-042 True {'vertices': 98, 'edges': 222, 'max_frontier': 3, 'total_forms': 121}
+case-043 True {'vertices': 146, 'edges': 342, 'max_frontier': 9, 'total_forms': 247}
+case-044 True {'vertices': 98, 'edges': 222, 'max_frontier': 3, 'total_forms': 118}
+case-045 True {'vertices': 194, 'edges': 446, 'max_frontier': 2, 'total_forms': 195}
+case-046 False {'vertices': 290, 'edges': 686, 'max_frontier': 2, 'total_forms': 300}
+case-047 False {'vertices': 194, 'edges': 446, 'max_frontier': 3, 'total_forms': 214}
+{
+  "phase": "models",
+  "complete": true,
+  "steps": 5,
+  "child_failures": 0,
+  "workers": 1,
+  "wall_seconds": 9.915863514000002,
+  "aggregate_cpu_seconds": 9.484293427999999,
+  "peak_child_rss_kib": 80632
+}
+RUN campaign.py oracles --start 0 --stop 256 --output /home/runner/work/_temp/p040-scientific/fresh
+oracles 0 256
+RUN campaign.py oracles --start 256 --stop 512 --output /home/runner/work/_temp/p040-scientific/fresh
+oracles 256 512
+RUN campaign.py oracles --start 512 --stop 768 --output /home/runner/work/_temp/p040-scientific/fresh
+oracles 512 768
+RUN campaign.py oracles --start 768 --stop 1024 --output /home/runner/work/_temp/p040-scientific/fresh
+oracles 768 1024
+RUN campaign.py oracles --start 1024 --stop 1280 --output /home/runner/work/_temp/p040-scientific/fresh
+oracles 1024 1280
+RUN campaign.py oracles --start 1280 --stop 1536 --output /home/runner/work/_temp/p040-scientific/fresh
+oracles 1280 1536
+RUN campaign.py oracles --start 1536 --stop 1792 --output /home/runner/work/_temp/p040-scientific/fresh
+oracles 1536 1792
+RUN campaign.py oracles --start 1792 --stop 2048 --output /home/runner/work/_temp/p040-scientific/fresh
+oracles 1792 2048
+RUN campaign.py oracles --start 2048 --stop 2089 --output /home/runner/work/_temp/p040-scientific/fresh
+oracles 2048 2089
+{
+  "phase": "oracles",
+  "complete": true,
+  "steps": 9,
+  "child_failures": 0,
+  "workers": 1,
+  "wall_seconds": 10.141337537999995,
+  "aggregate_cpu_seconds": 10.134825607,
+  "peak_child_rss_kib": 79960
+}
+RUN campaign.py allocate --start 7 --stop 8 --output /home/runner/work/_temp/p040-scientific/fresh
+RUN campaign.py allocate --start 19 --stop 20 --output /home/runner/work/_temp/p040-scientific/fresh
+RUN campaign.py allocate --start 31 --stop 32 --output /home/runner/work/_temp/p040-scientific/fresh
+RUN campaign.py allocate --start 43 --stop 44 --output /home/runner/work/_temp/p040-scientific/fresh
+RUN campaign.py structure --start 1 --stop 7 --output /home/runner/work/_temp/p040-scientific/fresh
+independent joins 1 {'vertices': 14, 'edges': 25, 'max_frontier': 3, 'total_forms': 19}
+independent joins 2 {'vertices': 24, 'edges': 47, 'max_frontier': 5, 'total_forms': 34}
+independent joins 3 {'vertices': 34, 'edges': 69, 'max_frontier': 7, 'total_forms': 49}
+independent joins 4 {'vertices': 44, 'edges': 91, 'max_frontier': 9, 'total_forms': 64}
+independent joins 5 {'vertices': 54, 'edges': 113, 'max_frontier': 11, 'total_forms': 79}
+independent joins 6 {'vertices': 64, 'edges': 135, 'max_frontier': 13, 'total_forms': 94}
+RUN reduction_check.py --output /home/runner/work/_temp/p040-scientific/fresh/reduction.json
+{
+  "summary": {
+    "formulas": 512,
+    "assignments": 6144,
+    "satisfiable_formulas": 488,
+    "mismatches": 0
+  },
+  "measurement": {
+    "cpu_seconds": 0.045968509000000005,
+    "wall_seconds": 0.04579027799999835,
+    "peak_rss_kib": 14196,
+    "workers": 1
+  }
+}
+RUN -S boundary_check.py --output /home/runner/work/_temp/p040-scientific/fresh/boundary-control.json
+{
+  "certified": false,
+  "order_certified": false,
+  "global_bound": "0",
+  "upward_bound": "0",
+  "downward_bound": "0",
+  "nominal_makespan": "5",
+  "guard_bounds": [
+    "-1",
+    "1/2"
+  ],
+  "interval_order_certified": false,
+  "single_order_certified": false,
+  "interval_bounds": [
+    "-1",
+    "1/2"
+  ],
+  "single_bounds": [
+    "-1",
+    "1/2"
+  ],
+  "stats": {
+    "vertices": 8,
+    "edges": 11,
+    "max_frontier": 1,
+    "total_forms": 8
+  }
+}
+{
+  "phase": "allocation",
+  "complete": true,
+  "steps": 7,
+  "child_failures": 0,
+  "workers": 1,
+  "wall_seconds": 5.650048393999995,
+  "aggregate_cpu_seconds": 5.648594085,
+  "peak_child_rss_kib": 79664
+}
+RUN campaign.py summarize --output /home/runner/work/_temp/p040-scientific/fresh
+amilies": [
+    {
+      "family": "fork-join",
+      "cases": 12,
+      "mixture": 12,
+      "single": 12,
+      "interval": 3,
+      "sample_changed_cases": 0,
+      "max_jobs": 147,
+      "max_frontier": 8
+    },
+    {
+      "family": "pipeline",
+      "cases": 12,
+      "mixture": 10,
+      "single": 10,
+      "interval": 3,
+      "sample_changed_cases": 2,
+      "max_jobs": 144,
+      "max_frontier": 9
+    },
+    {
+      "family": "shared-prefix",
+      "cases": 12,
+      "mixture": 12,
+      "single": 0,
+      "interval": 0,
+      "sample_changed_cases": 0,
+      "max_jobs": 41,
+      "max_frontier": 3
+    },
+    {
+      "family": "staggered-bank",
+      "cases": 12,
+      "mixture": 8,
+      "single": 8,
+      "interval": 5,
+      "sample_changed_cases": 4,
+      "max_jobs": 144,
+      "max_frontier": 3
+    }
+  ],
+  "models": 48,
+  "oracles": 2089,
+  "oracle_equal": 2089,
+  "oracle_unsound": 0,
+  "dynamic_points": 648,
+  "model_cpu_seconds": 8.324001193,
+  "max_rss_kib": 78844
+}
+RUN -S export_figures.py --results /home/runner/work/_temp/p040-scientific/fresh --output /home/runner/work/_temp/p040-scientific/fresh/figure-data
+RUN -S compare_results.py /home/runner/work/_temp/p040-scientific/fresh
+{
+  "scientific_fields_equal": true,
+  "counts": {
+    "inputs": 54,
+    "models": 48,
+    "oracles": 2089,
+    "allocation": 4,
+    "structure": 6,
+    "reduction_formulas": 512,
+    "changed_order_constant_makespan_control": 1
+  },
+  "tolerance": 0,
+  "not_compared": "solver weight vectors and measurement times; fresh inputs compared byte for byte and fresh witnesses checked against them"
+}
+RUN -S verify.py
+{
+  "tests": 38,
+  "failures": 0,
+  "errors": 0,
+  "cpu_seconds": 14.163151567,
+  "wall_seconds": 14.166814778000003,
+  "peak_rss_kib": 21832,
+  "workers": 1,
+  "input_reproducibility": {
+    "generated_inputs": 54,
+    "byte_equal_inputs": 54,
+    "temporary_directory_generation": true,
+    "coefficient_mutation_detected": true,
+    "source_inputs_unchanged": true,
+    "serialization": "json.dumps(indent=2, sort_keys=True) plus one LF",
+    "scope": "canonical generated-input identity and source-tree immutability; not scientific theorem validation"
+  },
+  "scope": "finite exact tests; not mechanized general proofs"
+}
+{
+  "complete": true,
+  "phases": [
+    {
+      "phase": "models",
+      "complete": true,
+      "steps": 5,
+      "child_failures": 0,
+      "workers": 1,
+      "wall_seconds": 9.915863514000002,
+      "aggregate_cpu_seconds": 9.484293427999999,
+      "peak_child_rss_kib": 80632
+    },
+    {
+      "phase": "oracles",
+      "complete": true,
+      "steps": 9,
+      "child_failures": 0,
+      "workers": 1,
+      "wall_seconds": 10.141337537999995,
+      "aggregate_cpu_seconds": 10.134825607,
+      "peak_child_rss_kib": 79960
+    },
+    {
+      "phase": "allocation",
+      "complete": true,
+      "steps": 7,
+      "child_failures": 0,
+      "workers": 1,
+      "wall_seconds": 5.650048393999995,
+      "aggregate_cpu_seconds": 5.648594085,
+      "peak_child_rss_kib": 79664
+    },
+    {
+      "phase": "verify",
+      "complete": true,
+      "steps": 4,
+      "child_failures": 0,
+      "workers": 1,
+      "wall_seconds": 19.805010457999998,
+      "aggregate_cpu_seconds": 19.802326033999996,
+      "peak_child_rss_kib": 23896
+    }
+  ],
+  "steps": 25,
+  "child_failures": 0,
+  "workers": 1,
+  "wall_seconds": 45.51225990399999,
+  "aggregate_cpu_seconds": 45.07003915399999,
+  "peak_child_rss_kib": 80632,
+  "reconciliation": {
+    "scientific_fields_equal": true,
+    "counts": {
+      "inputs": 54,
+      "models": 48,
+      "oracles": 2089,
+      "allocation": 4,
+      "structure": 6,
+      "reduction_formulas": 512,
+      "changed_order_constant_makespan_control": 1
+    },
+    "tolerance": 0,
+    "not_compared": "solver weight vectors and measurement times; fresh inputs compared byte for byte and fresh witnesses checked against them"
+  },
+  "verification": {
+    "tests": 38,
+    "failures": 0,
+    "errors": 0,
+    "cpu_seconds": 14.163151567,
+    "wall_seconds": 14.166814778000003,
+    "peak_rss_kib": 21832,
+    "workers": 1,
+    "input_reproducibility": {
+      "generated_inputs": 54,
+      "byte_equal_inputs": 54,
+      "temporary_directory_generation": true,
+      "coefficient_mutation_detected": true,
+      "source_inputs_unchanged": true,
+      "serialization": "json.dumps(indent=2, sort_keys=True) plus one LF",
+      "scope": "canonical generated-input identity and source-tree immutability; not scientific theorem validation"
+    },
+    "scope": "finite exact tests; not mechanized general proofs"
+  },
+  "scope": "clean generation and scientific reconciliation; not independent review or mechanized proof"
+}

@@ -7,7 +7,7 @@ checker still validates their recorded outcomes. No tolerance is used.
 import argparse,itertools,json
 from pathlib import Path
 from simcert.checker import check
-from simcert.algebra import rational,mixture_bound,exact_small_oracle
+from simcert.algebra import rational,mixture_bound,exact_small_oracle,same_data
 from simcert.model import simulate
 ROOT=Path(__file__).resolve().parent
 
@@ -74,7 +74,7 @@ def compare(reference,fresh):
             old=load(reference/group/name);new=load(fresh/group/name)
             if group=="models":
                 model=load(fresh/"inputs"/name)
-                require(check(model,new["certificate"])==new["verdict"],f"unvalidated fresh certificate {name}")
+                require(same_data(check(model,new["certificate"]),new["verdict"]),f"unvalidated fresh certificate {name}")
                 verify_dynamic_samples(model,new["verdict"],new["samples"])
                 fields=("case_id","family","clients","seed","jobs","verdict","samples")
             elif group=="oracles":
@@ -82,23 +82,23 @@ def compare(reference,fresh):
                 fields=("id","left","right","radii","bound","oracle","point","vertices","equal")
             elif group=="structure":
                 model=load(fresh/"inputs"/name)
-                require(check(model,new["certificate"])==new["verdict"],f"unvalidated fresh structural certificate {name}")
+                require(same_data(check(model,new["certificate"]),new["verdict"]),f"unvalidated fresh structural certificate {name}")
                 fields=("m","jobs","selector_patterns","verdict","samples")
             else:fields=tuple(old)
-            for field in fields:require(old[field]==new[field],f"scientific difference: {group}/{name}:{field}")
+            for field in fields:require(same_data(old[field],new[field]),f"scientific difference: {group}/{name}:{field}")
         counts[group]=len(names)
     for file,fields in [("pilot.json",("rows","mixture_oracle")),
                         ("summary.json",("families","models","oracles","oracle_equal","oracle_unsound","dynamic_points"))]:
         old=load(reference/file);new=load(fresh/file)
-        for field in fields:require(old[field]==new[field],f"scientific difference: {file}:{field}")
+        for field in fields:require(same_data(old[field],new[field]),f"scientific difference: {file}:{field}")
     old=load(reference/"reduction.json");new=load(fresh/"reduction.json")
     for field in old:
-        if field not in ("measurement",):require(old[field]==new[field],f"reduction difference: {field}")
+        if field not in ("measurement",):require(same_data(old[field],new[field]),f"reduction difference: {field}")
     counts["reduction_formulas"]=len(old["formulas"])
     from boundary_check import evaluate
     old=load(reference/"boundary-control.json");new=load(fresh/"boundary-control.json")
     for field,value in evaluate().items():
-        require(old[field]==new[field]==value,f"boundary control difference: {field}")
+        require(same_data(old[field],new[field]) and same_data(new[field],value),f"boundary control difference: {field}")
     counts["changed_order_constant_makespan_control"]=1
     return {"scientific_fields_equal":True,"counts":counts,"tolerance":0,
       "not_compared":"solver weight vectors and measurement times; fresh inputs compared byte for byte and fresh witnesses checked against them"}

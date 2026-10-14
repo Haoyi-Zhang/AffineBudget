@@ -1,0 +1,9 @@
+{
+  "cpu_seconds": 2.825596379,
+  "mode": "allocate",
+  "peak_rss_kib": 17772,
+  "start": 43,
+  "stop": 44,
+  "wall_seconds": 2.826106967000001,
+  "workers": 1
+}
