@@ -248,7 +248,7 @@ python -S export_figures.py --results results --output exported-figure-data
 
 The repository does not require LaTeX. The accompanying complete project separately includes the unmodified ACM class, manuscript source, TikZ/PGFPlots figures, and compiled paper.
 
-## Reproduction and disclosure boundary
+## Reproduction boundary
 
 A clean extraction was used for the documented verification and complete regeneration; see `results/clean-reproduction.json`. Successful execution supports repeatability of these delivered cases, not the truth of every mathematical theorem or an independent review. There is no version/commit/checksum manifest. Exact input data are supplied, but cross-installation bit-identical numerical witness generation is not asserted. The exact checker establishes whether any proposed witness is acceptable.
 
