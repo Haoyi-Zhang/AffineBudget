@@ -31,7 +31,9 @@ Taking the finite maximum over p proves a sound upper bound on D=max_{theta in B
 
     max_theta [p(theta)-<Q>(theta)] = min_{lambda in simplex(Q)} U_b(p,lambda).
 
-An optimum rational lambda exists for rational data. Finite maximization over p commutes with maximization over theta, proving D=max_p min_lambda U_b(p,lambda). This is an application of standard LP duality, not a new general duality theorem. The producer's floating-point solve and rational reconstruction need not attain this ideal; a poor but valid witness remains sound and may cause refusal.
+Rational attainment also follows directly. Linearize each absolute residual with t_h and add 0 <= t_h <= |a_ph| + max_q |a_qh|. Every residual of a simplex mixture obeys this upper bound. Since b_h >= 0, replacing t_h by the absolute residual never increases the objective, so these extra bounds preserve the minimum. The feasible set is a nonempty compact rational polytope. A linear objective attains its optimum at a vertex determined by a nonsingular rational active subsystem, giving rational optimal weights. This includes zero-radius coordinates.
+
+Finite maximization over p commutes with maximization over theta, proving D=max_p min_lambda U_b(p,lambda). The result identifies the complete ideal comparison contract by standard LP duality. The producer's floating-point solve and rational reconstruction need not attain this ideal; a poor but valid witness remains sound and may cause refusal.
 
 The envelope difference is continuous on a compact box. Thus a strict universal comparison <P><<Q> holds exactly when D<0, and a non-strict one exactly when D<=0. The compactness qualification prevents replacing a strict universal assertion with an invalid zero-margin argument on an open domain.
 
