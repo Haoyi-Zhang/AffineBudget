@@ -20,6 +20,16 @@ From this directory, with ordinary CPython on Linux:
 python -S verify.py
 ```
 
+On Windows, the `resource`-based wrapper is unavailable. Run the current
+81-test standard-library suite directly instead:
+
+```sh
+python -B -S -m unittest discover -s tests -v
+```
+
+This includes the input audit and retained-result checks, but does not apply
+the POSIX wrapper's CPU/address-space limits or report its resource summary.
+
 The retained suite described here contains 38 tests; the additional ready-set regressions below extend current discovery. A dedicated input audit serializes all 48 main inputs and six join inputs with the repository's canonical JSON writer into an operating-system temporary directory, compares all 54 files byte for byte with the retained inputs, and mutates one service coefficient to confirm that the comparison fails. A separate before/after snapshot check establishes that this temporary generation did not modify the retained source files. The remaining tests check exact file coverage, reconstruct every certificate, replay the 648 + 126 dynamic points, rerun every exact arrangement oracle, rederive all 112 retained unit-domain allocation decisions and selected optima, exercise zero-, half-, and mixed-domain allocator catalogs, check all 512 reduction formulas, rerun the changed-order/constant-makespan control, and audit the 65 cited bibliography records and the fields/counts of the retained 12/5/5 calibration matrix. The offline citation audit does not fetch or reread those papers. Main-grid replay also checks point coverage, reported absolute errors, and the order and makespan bounds of accepted certificates. Oracle replay checks the recorded equality flags, maximizing points, and arrangement vertex counts. Three added regression tests require altered errors, bounds, point coverage, and oracle annotations to be rejected. Success exits zero. The JSON printed to standard output records input-audit facts with test counts, CPU and wall time, peak resident memory, and worker count; test details go to standard error. The stored `results/verification.json` is the historical 35-test Linux receipt and is not a measurement of the expanded suite. `-S` demonstrates that site packages, including SciPy, are not needed for this path. Current scientific conditions use explicit exceptions and also remain active under optimized Python; the historical assertion-dependent receipts are not relabeled.
 
 Tests are finite executable evidence, not a mechanization of the general theorems. The trusted base includes CPython rational arithmetic, input parsing, the model semantics, complete-envelope reconstruction, and the checker.
@@ -41,6 +51,16 @@ the thirteen refreshed-catalog regressions below, full current discovery contain
 ## Fresh production and reproduction
 
 New witness production requires NumPy and SciPy with the HiGHS backend. They are used unmodified through their public interfaces; no external simulator baseline is vendored. The standard-library checker is separate. In an environment without those libraries, the offline verification command above still checks all delivered witnesses and exact data. The dependency declarations in `requirements.txt` identify required packages but deliberately do not promise bit-identical solver behavior across installations. The final producer recheck used CPython 3.13.5, NumPy 2.3.5, and SciPy 1.17.0 on x86-64 Linux with glibc 2.41; these tested versions are reported here as context, not as a toolchain fingerprint or a claim that other conforming installations fail.
+
+For numerical production on a POSIX host, use a Python environment with these
+dependencies installed. From the artifact root:
+
+```sh
+python -m pip install -r requirements.txt
+```
+
+The bounded exact backend below and offline verification do not need this
+installation. Figure-only exports also use the standard library.
 
 Run the full production campaign sequentially, with each child limited to one numerical thread, 3 GiB address space, and 35 CPU seconds; the parent uses a 45-second wall-clock watchdog so ordinary scheduling or output delay does not consume the entire CPU-limit margin:
 
