@@ -60,7 +60,10 @@ python -m pip install -r requirements.txt
 ```
 
 The bounded exact backend below and offline verification do not need this
-installation. Figure-only exports also use the standard library.
+installation. CSV figure-data exports also use the standard library. Optional
+symbolic diagram regeneration uses Matplotlib from figures/requirements.txt:
+run python -B figures/build_figures.py --outdir /path/to/output. The diagram
+generator uses no TeX backend and does not rerun the scientific campaign.
 
 Run the full production campaign sequentially, with each child limited to one numerical thread, 3 GiB address space, and 35 CPU seconds; the parent uses a 45-second wall-clock watchdog so ordinary scheduling or output delay does not consume the entire CPU-limit margin:
 
