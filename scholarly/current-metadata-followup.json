@@ -6,8 +6,8 @@
   "citation_entailment_validated": false,
   "scope": "One selected publisher/author identity metadata correction only; the other64 bibliography entries retain historical records and offline consistency checks. No new fulltext, novelty, scientific or submission validation.",
   "source_bindings": {
-    "scholarly/references.bib": "91796802fef0cb6c9058d8f7e0f312e8073863c7841f78bbf81249fc056abb24",
-    "bibliography-audit.csv": "7ea796814ca6393313c84d92c6c256b23a3ff91d7b11898f3b4df479ab2e4927",
+    "scholarly/references.bib": "cb58bac18d5318e36b6ac6b191fbb20a7858ddb879d072384f0d1bf9594f0a06",
+    "bibliography-audit.csv": "df34a1b87722702a76bb90526eb3aea5a90ae5c1c801a072f9521e2bc230a01d",
     "results/bibliographic-identity-check.json": "dd37d8b8e995c1ba8a54e05862f4b0581f6ea0c15880797a01324ad6d7e40956"
   },
   "records": {
