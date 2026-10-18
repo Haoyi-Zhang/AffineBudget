@@ -256,3 +256,7 @@ The repository does not require LaTeX. The accompanying complete project separat
 A clean extraction was used for the documented verification and complete regeneration; see `results/clean-reproduction.json`. Successful execution supports repeatability of these delivered cases, not the truth of every mathematical theorem or an independent review. There is no version/commit/checksum manifest. Exact input data are supplied, but cross-installation bit-identical numerical witness generation is not asserted. The exact checker establishes whether any proposed witness is acceptable.
 
 No external human validation, external submission, or deployed behavior is asserted. All original repository files are offered under `LICENSE`; external software and scholarly works retain their separate rights, as recorded in the resource ledger. No third-party paper PDF, font, or simulator source is redistributed here.
+
+## Portable path notation
+
+Published execution records use `<PYTHON_ROOT>`, `<NODE_ROOT>`, `<RUNTIME_ROOT>` and `<PROJECTS_ROOT>` for machine-local installation and workspace prefixes. These are path aliases, not literal directories; substitute the corresponding local roots when replaying a command. Recorded interpreter and dependency versions, inputs, measurements and outcomes are unchanged. File inventories bind the published portable serializations; any `recorded_` identity denotes the pre-normalization bytes.
