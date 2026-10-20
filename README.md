@@ -249,7 +249,7 @@ negative results and POSIX numerical resource guards are preserved.
 python -S export_figures.py --results results --output exported-figure-data
 ```
 
-The repository does not require LaTeX. The accompanying complete project separately includes the unmodified ACM class, manuscript source, TikZ/PGFPlots figures, and compiled paper.
+The standalone scientific repository does not require LaTeX. The accompanying complete project separately includes the unmodified ACM class, manuscript source, Python-generated vector figures, and compiled paper. The two conceptual diagrams are drawn directly with Matplotlib by `figures/build_figures.py`; the three quantitative plots are drawn with ReportLab by the paper-side `figures/draw_evaluation.py` and `figures/draw_exact_catalog.py`. The manuscript's figure `.tex` files include these PDFs rather than draw them with TikZ/PGFPlots.
 
 ## Reproduction boundary
 
