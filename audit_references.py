@@ -129,7 +129,7 @@ def require(condition: bool, message: str, failures: List[str]) -> None:
 
 
 def current_metadata_followup(entries: List[Dict[str, str]], audit_by_key: Mapping[str, dict]) -> dict:
-    """Bind one metadata correction without rewriting the historical source audit."""
+    """Bind selected metadata corrections without rewriting the historical source audit."""
     def unique_object(pairs):
         result = {}
         for key, value in pairs:
@@ -141,10 +141,10 @@ def current_metadata_followup(entries: List[Dict[str, str]], audit_by_key: Mappi
     data = json.loads((SCHOLARLY / "current-metadata-followup.json").read_text(encoding="utf-8"), object_pairs_hook=unique_object)
     if (data.get("schema") != "current-bibliographic-identity-followup-v1"
             or type(data.get("selected_identity_count")) is not int
-            or data["selected_identity_count"] != 1
+            or data["selected_identity_count"] != 2
             or data.get("full_text_read_complete") is not False
             or data.get("citation_entailment_validated") is not False
-            or set(data.get("records", {})) != {"castro2015cere"}):
+            or set(data.get("records", {})) != {"castro2015cere", "li2020dramsim3"}):
         raise ValueError("invalid metadata followup scope")
     bindings = data.get("source_bindings", {})
     expected_paths = {"scholarly/references.bib", "bibliography-audit.csv", "results/bibliographic-identity-check.json"}
@@ -171,6 +171,21 @@ def current_metadata_followup(entries: List[Dict[str, str]], audit_by_key: Mappi
     sources = record.get("primary_sources", [])
     if not sources or not all(item.get("url", "").startswith("https://") and item.get("read_scope") for item in sources):
         raise ValueError("CERE primary metadata source scope missing")
+    record = data["records"]["li2020dramsim3"]
+    current = next(entry for entry in entries if entry["bib_key"] == "li2020dramsim3")
+    if (record.get("current_bibliographic_record") != current
+            or current["doi"] != "10.1109/LCA.2020.2973991"
+            or current["pages"] != "106--109"
+            or record.get("previous_page_range") != "110--113"
+            or record.get("changed_fields") != ["pages"]
+            or record.get("identifier") != "doi:10.1109/LCA.2020.2973991"
+            or record.get("primary_record") != "https://doi.org/10.1109/LCA.2020.2973991"
+            or record.get("historical_audit_row") != audit_by_key["li2020dramsim3"]
+            or record.get("historical_source_reading_not_extended") is not True):
+        raise ValueError("DRAMsim3 current metadata followup mismatch")
+    sources = record.get("primary_sources", [])
+    if not sources or not all(item.get("url", "").startswith("https://") and item.get("read_scope") for item in sources):
+        raise ValueError("DRAMsim3 primary metadata source scope missing")
     return data
 
 

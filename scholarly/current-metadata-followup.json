@@ -1,12 +1,12 @@
 {
   "schema": "current-bibliographic-identity-followup-v1",
-  "checked_on": "2026-10-14",
-  "selected_identity_count": 1,
+  "checked_on": "2026-10-22",
+  "selected_identity_count": 2,
   "full_text_read_complete": false,
   "citation_entailment_validated": false,
-  "scope": "One selected publisher/author identity metadata correction only; the other64 bibliography entries retain historical records and offline consistency checks. No new fulltext, novelty, scientific or submission validation.",
+  "scope": "Two selected publisher/author identity metadata corrections only; the other63 bibliography entries retain historical records and offline consistency checks. No new fulltext, novelty, scientific or submission validation.",
   "source_bindings": {
-    "scholarly/references.bib": "cb58bac18d5318e36b6ac6b191fbb20a7858ddb879d072384f0d1bf9594f0a06",
+    "scholarly/references.bib": "f1d24c956d00752cc4c3dcddf03629e9004543b27f967fae0fbb09395268647c",
     "bibliography-audit.csv": "df34a1b87722702a76bb90526eb3aea5a90ae5c1c801a072f9521e2bc230a01d",
     "results/bibliographic-identity-check.json": "dd37d8b8e995c1ba8a54e05862f4b0581f6ea0c15880797a01324ad6d7e40956"
   },
@@ -94,6 +94,53 @@
       "unverified_fields": {
         "articleno": "Optional field omitted. Author-maintained bibliography and lab records give article6, while the author draft header gives article1; the publisher-deposited record supplies pages1-24 but no article number. The current citation uses the verified page range without choosing an unconfirmed article number."
       },
+      "historical_source_reading_not_extended": true
+    },
+    "li2020dramsim3": {
+      "historical_audit_row": {
+        "bib_key": "li2020dramsim3",
+        "title": "DRAMsim3: A Cycle-Accurate, Thermal-Capable DRAM Simulator",
+        "year": "2020",
+        "entry_type": "article",
+        "identifier": "doi:10.1109/LCA.2020.2973991",
+        "primary_record": "https://doi.org/10.1109/LCA.2020.2973991",
+        "record_type": "publisher DOI record",
+        "verification_scope": "primary bibliographic record and manuscript-use check",
+        "metadata_status": "verified",
+        "manuscript_contexts": "context",
+        "citation_status": "cited-and-relevant",
+        "audit_note": "corrected second author spelling and added DOI",
+        "verified_on": "2026-09-17"
+      },
+      "current_bibliographic_record": {
+        "bib_key": "li2020dramsim3",
+        "entry_type": "article",
+        "title": "{DRAMsim3}: A Cycle-Accurate, Thermal-Capable {DRAM} Simulator",
+        "author": "Shang Li and Zhiyuan Yang and Dhiraj Reddy and Ankur Srivastava and Bruce Jacob",
+        "year": "2020",
+        "doi": "10.1109/LCA.2020.2973991",
+        "journal": "IEEE Computer Architecture Letters",
+        "volume": "19",
+        "eprint": "",
+        "booktitle": "",
+        "pages": "106--109",
+        "number": "2",
+        "articleno": "",
+        "numpages": "",
+        "url": ""
+      },
+      "previous_page_range": "110--113",
+      "changed_fields": [
+        "pages"
+      ],
+      "identifier": "doi:10.1109/LCA.2020.2973991",
+      "primary_record": "https://doi.org/10.1109/LCA.2020.2973991",
+      "primary_sources": [
+        {
+          "url": "https://doi.org/10.1109/LCA.2020.2973991",
+          "read_scope": "2026-10-22 primary IEEE publisher record, title/DOI/venue/volume19/issue2/year2020/pages106-109. This check corrects the page range only; it does not certify new full-original entailment."
+        }
+      ],
       "historical_source_reading_not_extended": true
     }
   }

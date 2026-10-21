@@ -4,6 +4,11 @@ This standalone repository accompanies **Order-Stable Error Budgets for Affine-T
 
 ## What is established
 
+The current bibliography is checked offline with `python -B audit_references.py`.
+Run `python -B tests/metadata_followup_regression.py` for the separate metadata
+regressions, including rejection of the superseded DRAMsim3 page range. These
+checks do not fetch originals or certify new citation entailment.
+
 A candidate resource order is an actual eager FCFS order precisely when its candidate readiness comparisons are self-consistent, with identifier-sensitive strictness. Complete max-affine envelopes and rational convex mixtures certify those comparisons over a parameter box. A successful certificate then establishes a two-sided makespan bound. The ideal explicit-envelope comparison is exact by LP duality; the floating-point producer is sound only through exact checking and is potentially incomplete. See `proofs/arguments.md`.
 
 The retained campaign contains 48 generated models, 648 dynamic parameter points, 2,089 continuous-domain small comparison oracles, 112 catalog entries, six independent-join models with 126 sign-corner executions, and 512 Boolean-formula reduction checks with 6,144 assignments. These are synthetic mathematical models, not application, hardware, human, or production-simulator measurements. The checker and producer share the model/envelope implementation; independence from LP search is not independent implementation or independent peer review.
